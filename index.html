@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Semiconductor Subsidies Explorer</title>
+  <title>Global Semiconductor Industrial Policy Tracker</title>
   <style>
     :root {
       --bg: #0f172a; /* slate-900 */
@@ -45,7 +45,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>Semiconductor Subsidies Explorer</h1>
+      <h1>Global Semiconductor Industrial Policy Tracker</h1>
       <nav>
         <!-- Link back to your main personal site -->
         <a href="https://ranzhuo17.github.io/" title="Back to ranzhuo17.github.io">↩︎ Main site</a>
@@ -54,7 +54,7 @@
 
     <div id="app" class="card" aria-live="polite"></div>
 
-    <p class="footer">💡 Tip: This page reads from <code>subsidies.json</code>. Update that file to change what appears here.</p>
+    <p class="footer"> Data is compiled from publicly available sources and will be updated periodically. It may not be fully comprehensive, and some policies across regions or time periods may not be captured.</p>
   </div>
 
   <script>
@@ -67,16 +67,16 @@
     let SUBSIDIES = [];
 async function loadData(){
   try{
-    const res = await fetch('subsidies.json', { cache: 'no-store' });
+    const res = await fetch('policies.json', { cache: 'no-store' });
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     SUBSIDIES = await res.json();
   }catch(err){
-    console.error('Failed to load subsidies.json', err);
+    console.error('Failed to load policies.json', err);
     SUBSIDIES = [];
     const app = document.getElementById('app');
     if(app && !app.dataset.errorShown){
       app.dataset.errorShown = '1';
-      app.innerHTML = `<p class="muted">Couldn’t load data. Add <code>subsidies.json</code> (an array of subsidy objects) to populate this page.</p>`;
+      app.innerHTML = `<p class="muted">Couldn’t load data. Add <code>policies.json</code> (an array of policy objects) to populate this page.</p>`;
     }
   }
 }
@@ -109,7 +109,7 @@ async function loadData(){
       const toolbar = document.createElement('div');
       toolbar.className = 'toolbar';
       toolbar.innerHTML = `
-        <input id="q" type="search" placeholder="Search by name, country, year…" aria-label="Search subsidies" />
+        <input id="q" type="search" placeholder="Search by name, country, year…" aria-label="Search policies" />
         <button class="btn" id="clearBtn" type="button">Clear</button>
       `;
 
