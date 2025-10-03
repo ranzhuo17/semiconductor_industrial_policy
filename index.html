@@ -118,8 +118,8 @@ async function loadData(){
         <thead>
           <tr>
             <th>Name</th>
-            <th class="hide-sm">Country</th>
-            <th class="hide-sm">Year</th>
+            <th>Country</th>
+            <th>Year</th>
             <th>Total</th>
           </tr>
         </thead>
@@ -141,8 +141,8 @@ async function loadData(){
             <td>
               <a href="#/subsidy/${s.id}" aria-label="Open ${s.name}">${s.name}</a>
             </td>
-            <td class="hide-sm">${s.country}</td>
-            <td class="hide-sm">${s.year}</td>
+            <td>${s.country}</td>
+            <td>${s.year}</td>
             <td><span class="stat">${fmtMoney(s.total_amount)}</span></td>
           </tr>
         `).join('');
@@ -185,18 +185,18 @@ async function loadData(){
             <thead>
               <tr>
                 <th>Recipient</th>
-                <th class="hide-sm">Location</th>
+                <th>Location</th>
                 <th>Amount</th>
-                <th class="hide-sm">Notes</th>
+                <th>Notes</th>
               </tr>
             </thead>
             <tbody>
               ${(s.distributions||[]).map(r => `
                 <tr>
                   <td>${r.recipient||''}</td>
-                  <td class="hide-sm">${r.location||''}</td>
+                  <td>${r.location||''}</td>
                   <td>${fmtMoney(Number(r.amount)||0)}</td>
-                  <td class="hide-sm">${r.notes||''}</td>
+                  <td>${r.notes||''}</td>
                 </tr>
               `).join('')}
             </tbody>
