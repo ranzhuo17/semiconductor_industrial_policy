@@ -11,5 +11,28 @@
   "distributions": [
     {"recipient": "Org A", "location": "State/City", "amount": 1000000, "notes": "optional"}
   ]
-}
+},
+  {
+    "id": "test-a",
+    "name": "Test Subsidy A",
+    "country": "—",
+    "year": "—",
+    "total_amount": 0,
+    "sources": [],
+    "distributions": [
+      { "recipient": "Example Co. Alpha", "location": "—", "amount": 0, "notes": "Test row" },
+      { "recipient": "Example Co. Beta",  "location": "—", "amount": 0, "notes": "Test row" }
+    ]
+  },
+  {
+    "id": "test-b",
+    "name": "Test Subsidy B",
+    "country": "—",
+    "year": "—",
+    "total_amount": 0,
+    "sources": [],
+    "distributions": [
+      { "recipient": "Sample Org One", "location": "—", "amount": 0, "notes": "Test row" }
+    ]
+  }
 ]
