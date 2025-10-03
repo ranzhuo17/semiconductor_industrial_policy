@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semiconductor Subsidies Explorer</title>
+  <style>
+    :root {
+      --bg: #0f172a; /* slate-900 */
+      --card: #111827; /* gray-900 */
+      --muted: #9ca3af; /* gray-400 */
+      --fg: #e5e7eb; /* gray-200 */
+      --accent: #60a5fa; /* blue-400 */
+      --accent-2: #34d399; /* emerald-400 */
+      --border: #1f2937; /* gray-800 */
+    }
+    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap: 12px; margin-bottom: 20px; }
+    h1 { font-size: clamp(22px, 3vw, 32px); margin: 0; letter-spacing: 0.2px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    .toolbar { display:flex; gap:12px; flex-wrap: wrap; align-items:center; margin-bottom: 12px; }
+    .toolbar input { flex: 1 1 260px; padding: 10px 12px; border-radius: 10px; background: #0b1220; color: var(--fg); border: 1px solid var(--border); }
+    .toolbar .btn { padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border); background: #0b1220; color: var(--fg); cursor: pointer; }
+    .toolbar .btn:hover { border-color: #334155; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { text-align: left; font-weight: 600; color: var(--muted); }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .pill { display:inline-flex; align-items:center; gap:6px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); background: #0b1220; color: var(--muted); font-size: 12px; }
+    .muted { color: var(--muted); }
+    .breadcrumb { font-size: 14px; margin-bottom: 12px; }
+    .breadcrumb a { color: var(--muted); }
+    .stat { display:inline-block; padding: 2px 8px; background: #0b1220; border:1px solid var(--border); border-radius: 999px; font-variant-numeric: tabular-nums; }
+    .footer { margin-top: 24px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 640px){
+      .hide-sm { display:none; }
+      th.hide-sm, td.hide-sm { display:none; }
+      .toolbar { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Semiconductor Subsidies Explorer</h1>
+      <nav>
+        <!-- Link back to your main personal site -->
+        <a href="https://ranzhuo17.github.io/" title="Back to ranzhuo17.github.io">↩︎ Main site</a>
+      </nav>
+    </header>
+
+    <div id="app" class="card" aria-live="polite"></div>
+
+    <p class="footer">💡 Tip: You can edit the <code>SUBSIDIES</code> data block inside this file, or move it to <code>data/subsidies.json</code> later and fetch it.</p>
+  </div>
+
+  <script>
+    // ================== DATA ==================
+    // Minimal example data. Replace with your real entries.
+    // id: URL-safe identifier (unique), name: display name
+    // country: string, year: number | string, total_amount: number (USD),
+    // sources: optional array of {label, url},
+    // distributions: array of rows shown on the detail page
+    const SUBSIDIES = [];
+
+    // ================== UTILITIES ==================
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+    const fmtMoney = n => {
+      if (typeof n !== 'number' || Number.isNaN(n)) return '—';
+      if (n >= 1e9) return `$${(n/1e9).toFixed(1)}B`;
+      if (n >= 1e6) return `$${(n/1e6).toFixed(1)}M`;
+      return `$${n.toLocaleString()}`;
+    };
+
+    function getRoute() {
+      const hash = location.hash.replace(/^#\/?/, '');
+      const [route, id] = hash.split('/');
+      return { route: route || 'home', id };
+    }
+
+    function navigate(to) {
+      location.hash = to;
+    }
+
+    // ================== RENDERERS ==================
+    function renderHome() {
+      const app = $('#app');
+      app.innerHTML = '';
+
+      const toolbar = document.createElement('div');
+      toolbar.className = 'toolbar';
+      toolbar.innerHTML = `
+        <input id="q" type="search" placeholder="Search by name, country, year…" aria-label="Search subsidies" />
+        <button class="btn" id="clearBtn" type="button">Clear</button>
+      `;
+
+      const table = document.createElement('table');
+      table.innerHTML = `
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th class="hide-sm">Country</th>
+            <th class="hide-sm">Year</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      `;
+
+      app.append(toolbar, table);
+
+      const rows = $('#rows');
+
+      function draw(filter=''){
+        const q = filter.trim().toLowerCase();
+        const items = SUBSIDIES.filter(s => (
+          !q || `${s.name} ${s.country} ${s.year}`.toLowerCase().includes(q)
+        )).sort((a,b)=> String(a.name).localeCompare(String(b.name)));
+
+        rows.innerHTML = items.map(s => `
+          <tr>
+            <td>
+              <a href="#/subsidy/${s.id}" aria-label="Open ${s.name}">${s.name}</a>
+            </td>
+            <td class="hide-sm">${s.country}</td>
+            <td class="hide-sm">${s.year}</td>
+            <td><span class="stat">${fmtMoney(s.total_amount)}</span></td>
+          </tr>
+        `).join('');
+      }
+
+      const qInput = $('#q');
+      const clearBtn = $('#clearBtn');
+      qInput.addEventListener('input', () => draw(qInput.value));
+      clearBtn.addEventListener('click', () => { qInput.value=''; draw(''); qInput.focus(); });
+
+      draw('');
+    }
+
+    function renderDetail(id) {
+      const s = SUBSIDIES.find(x => x.id === id);
+      const app = $('#app');
+      if (!s) {
+        app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
+        return;
+      }
+
+      const total = s.distributions?.reduce((acc, r) => acc + (Number(r.amount)||0), 0) || 0;
+
+      app.innerHTML = `
+        <div class="breadcrumb"><a href="#/">← Back to all subsidies</a></div>
+        <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.name}</h2>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
+          <span class="pill" title="Country">🌍 ${s.country}</span>
+          <span class="pill" title="Year">📅 ${s.year}</span>
+          <span class="pill" title="Total amount">💰 ${fmtMoney(s.total_amount)}</span>
+          <span class="pill" title="Sum of listed distributions">🧮 Listed: ${fmtMoney(total)}</span>
+        </div>
+        ${Array.isArray(s.sources) && s.sources.length ? `
+          <div style="margin-bottom:12px" class="muted">
+            Sources: ${s.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.label}</a>`).join(' · ')}
+          </div>
+        `: ''}
+        <div class="card" style="padding:0; overflow:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Recipient</th>
+                <th class="hide-sm">Location</th>
+                <th>Amount</th>
+                <th class="hide-sm">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${(s.distributions||[]).map(r => `
+                <tr>
+                  <td>${r.recipient||''}</td>
+                  <td class="hide-sm">${r.location||''}</td>
+                  <td>${fmtMoney(Number(r.amount)||0)}</td>
+                  <td class="hide-sm">${r.notes||''}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    // ================== ROUTER ==================
+    function router(){
+      const { route, id } = getRoute();
+      if (route === 'subsidy' && id) return renderDetail(id);
+      return renderHome();
+    }
+
+    window.addEventListener('hashchange', router);
+    window.addEventListener('DOMContentLoaded', router);
+  </script>
+</body>
+</html>
