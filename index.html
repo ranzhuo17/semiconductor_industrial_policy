@@ -54,7 +54,7 @@
 
     <div id="app" class="card" aria-live="polite"></div>
 
-    <p class="footer">💡 Tip: This page reads from <code>data/subsidies.json</code>. Update that file to change what appears here.</p>
+    <p class="footer">💡 Tip: This page reads from <code>subsidies.json</code>. Update that file to change what appears here.</p>
   </div>
 
   <script>
@@ -67,16 +67,16 @@
     let SUBSIDIES = [];
 async function loadData(){
   try{
-    const res = await fetch('data/subsidies.json', { cache: 'no-store' });
+    const res = await fetch('subsidies.json', { cache: 'no-store' });
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     SUBSIDIES = await res.json();
   }catch(err){
-    console.error('Failed to load data/subsidies.json', err);
+    console.error('Failed to load subsidies.json', err);
     SUBSIDIES = [];
     const app = document.getElementById('app');
     if(app && !app.dataset.errorShown){
       app.dataset.errorShown = '1';
-      app.innerHTML = `<p class="muted">Couldn’t load data. Add <code>data/subsidies.json</code> (an array of subsidy objects) to populate this page.</p>`;
+      app.innerHTML = `<p class="muted">Couldn’t load data. Add <code>subsidies.json</code> (an array of subsidy objects) to populate this page.</p>`;
     }
   }
 }
