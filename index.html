@@ -45,7 +45,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>Semiconductor Subsidies Explorer</h1>
+      <h1>Global Semiconductor Industrial Policy Tracker</h1>
       <nav>
         <!-- Link back to your main personal site -->
         <a href="https://ranzhuo17.github.io/" title="Back to ranzhuo17.github.io">↩︎ Main site</a>
@@ -94,7 +94,7 @@
       const toolbar = document.createElement('div');
       toolbar.className = 'toolbar';
       toolbar.innerHTML = `
-        <input id="q" type="search" placeholder="Search by name, country, year…" aria-label="Search subsidies" />
+        <input id="q" type="search" placeholder="Search by name, , year…" aria-label="Search subsidies" />
         <button class="btn" id="clearBtn" type="button">Clear</button>
       `;
 
@@ -104,8 +104,10 @@
           <tr>
             <th>Name</th>
             <th class="hide-sm">Country</th>
-            <th class="hide-sm">Year</th>
-            <th>Total</th>
+            <th class="hide-sm">Status</th>
+            <th>Numbers</th>
+            <th class="hide-sm">Notes</th>
+            <th class="hide-sm">Sources</th>
           </tr>
         </thead>
         <tbody id="rows"></tbody>
