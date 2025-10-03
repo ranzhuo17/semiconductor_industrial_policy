@@ -188,7 +188,7 @@ async function loadData(){
       const total = s.distributions?.reduce((acc, r) => acc + (Number(r.amount)||0), 0) || 0;
 
       app.innerHTML = `
-        <div class="breadcrumb"><a href="#/">← Back to all subsidies</a></div>
+        <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
         <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.name}</h2>
         <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
           <span class="pill" title="Country">🌍 ${s.country}</span>
