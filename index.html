@@ -22,7 +22,7 @@
     h1 { font-size: clamp(22px, 3vw, 32px); margin: 0; letter-spacing: 0.2px; }
     .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
     .toolbar { display:flex; gap:12px; flex-wrap: wrap; align-items:center; margin-bottom: 12px; }
-    .toolbar input {
+   .toolbar input {
   flex: 1 1 260px;
   padding: 8px 10px;
   border-radius: 10px;
@@ -31,8 +31,11 @@
   border: 1px solid var(--border);
   height: 38px;
   font-size: 15px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
 }
-    .toolbar .btn {
+   .toolbar .btn {
   padding: 8px 12px;
   border-radius: 10px;
   border: 1px solid var(--border);
@@ -41,6 +44,9 @@
   cursor: pointer;
   height: 38px;
   font-size: 15px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
 }
     .toolbar .btn:hover { border-color: #334155; }
     table { width: 100%; border-collapse: collapse; }
@@ -56,10 +62,16 @@
     @media (max-width: 640px){
   .hide-sm { display:none; }
   th.hide-sm, td.hide-sm { display:none; }
-  .toolbar { flex-direction: column; align-items: stretch; gap: 8px; }
-  .toolbar input { height: 34px; font-size: 14px; padding: 6px 10px; border-radius: 8px; }
-  .toolbar .btn { height: 34px; font-size: 14px; padding: 6px 10px; border-radius: 8px; }
-  h1 { font-size: 20px; }
+  .toolbar { flex-direction: column; align-items: stretch; gap: 6px; }
+  .toolbar input,
+  .toolbar .btn {
+    height: 30px;
+    font-size: 16px; /* prevent iOS zoom */
+    padding: 4px 8px;
+    border-radius: 6px;
+    line-height: 20px;
+  }
+  h1 { font-size: 18px; }
 }
   </style>
 </head>
