@@ -227,7 +227,7 @@ async function loadData(){
               <tr>
                 <th>Recipient</th>
                 <th>Location</th>
-                <th>Amount</th>
+                <th>Numbers</th>
                 <th>Notes</th>
               </tr>
             </thead>
@@ -236,7 +236,7 @@ async function loadData(){
                 <tr>
                   <td>${r.recipient||''}</td>
                   <td>${r.location||''}</td>
-                  <td>${fmtMoney(Number(r.amount)||0)}</td>
+                  <td>${r.numbers||''}</td>
                   <td>${r.notes||''}</td>
                 </tr>
               `).join('')}
