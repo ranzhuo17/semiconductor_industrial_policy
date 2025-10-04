@@ -9,7 +9,7 @@
     {"label": "Source Name", "url": "https://example.com"}
   ],
   "distributions": [
-    {"recipient": "Org A", "location": "State/City", "numbers": $1.0M, "notes": "optional"}
+    {"recipient": "Org A", "location": "State/City", "numbers": "$1.0M", "notes": "optional"}
   ]
 },
   {
