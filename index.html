@@ -48,6 +48,11 @@
   -webkit-appearance: none;
   appearance: none;
 }
+    .disclaimer {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 6px 0 16px;
+}
     .toolbar .btn:hover { border-color: #334155; }
     table { width: 100%; border-collapse: collapse; }
     th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -85,10 +90,12 @@
       </nav>
     </header>
 
-    <div id="app" class="card" aria-live="polite"></div>
+    <p class="disclaimer">
+  Data is compiled from publicly available sources and will be updated periodically.
+  It may not be fully comprehensive, and some policies across regions or time periods may not be captured.
+</p>
 
-    <p class="footer"> Data is compiled from publicly available sources and will be updated periodically. It may not be fully comprehensive, and some policies across regions or time periods may not be captured.</p>
-  </div>
+    <div id="app" class="card" aria-live="polite"></div>
 
   <script>
     // ================== DATA ==================
