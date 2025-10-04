@@ -175,7 +175,7 @@ async function loadData(){
       function draw(filter=''){
         const q = filter.trim().toLowerCase();
         const items = SUBSIDIES.filter(s => (
-          !q || `${s.name} ${s.country} ${s.year}`.toLowerCase().includes(q)
+          !q || `${s.name} ${s.country} ${s.effective_period}`.toLowerCase().includes(q)
         )).sort((a,b)=> String(a.name).localeCompare(String(b.name)));
 
         rows.innerHTML = items.map(s => `
@@ -184,7 +184,7 @@ async function loadData(){
               <a href="#/subsidy/${s.id}" aria-label="Open ${s.name}">${s.name}</a>
             </td>
             <td>${s.country}</td>
-            <td>${s.year}</td>
+            <td>${s.effective_period}</td>
             <td>${s.policy_numbers}</td>
             <td>${s.policy_notes}</td>
           </tr>
@@ -212,8 +212,8 @@ async function loadData(){
         <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.name}</h2>
         <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
           <span class="pill" title="Country">🌍 ${s.country}</span>
-          <span class="pill" title="Year">📅 ${s.year}</span>
-          <span class="pill" title="Total amount">💰 ${fmtMoney(s.total_amount)}</span>
+          <span class="pill" title="Effective Period">📅 ${s.effective_period}</span>
+          <span class="pill" title="Numbers">💰 ${s.policy_numbers}</span>
         </div>
         ${Array.isArray(s.sources) && s.sources.length ? `
           <div style="margin-bottom:12px" class="muted">
