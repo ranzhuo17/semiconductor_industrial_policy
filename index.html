@@ -160,8 +160,9 @@ async function loadData(){
           <tr>
             <th>Name</th>
             <th>Country</th>
-            <th>Year</th>
-            <th>Total</th>
+            <th>Effective Period</th>
+            <th>Numbers</th>
+            <th>Notes</th>
           </tr>
         </thead>
         <tbody id="rows"></tbody>
@@ -184,7 +185,8 @@ async function loadData(){
             </td>
             <td>${s.country}</td>
             <td>${s.year}</td>
-            <td><span class="stat">${fmtMoney(s.total_amount)}</span></td>
+            <td>${s.policy_numbers}</td>
+            <td>${s.policy_notes}</td>
           </tr>
         `).join('');
       }
@@ -205,8 +207,6 @@ async function loadData(){
         return;
       }
 
-      const total = s.distributions?.reduce((acc, r) => acc + (Number(r.amount)||0), 0) || 0;
-
       app.innerHTML = `
         <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
         <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.name}</h2>
@@ -214,7 +214,6 @@ async function loadData(){
           <span class="pill" title="Country">🌍 ${s.country}</span>
           <span class="pill" title="Year">📅 ${s.year}</span>
           <span class="pill" title="Total amount">💰 ${fmtMoney(s.total_amount)}</span>
-          <span class="pill" title="Sum of listed distributions">🧮 Listed: ${fmtMoney(total)}</span>
         </div>
         ${Array.isArray(s.sources) && s.sources.length ? `
           <div style="margin-bottom:12px" class="muted">
