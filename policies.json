@@ -3,8 +3,9 @@
   "id": "string-unique-url-id",
   "name": "Display Name",
   "country": "Country",
-  "year": "2023",
-  "total_amount": 123456789,
+  "effective_period": "2023",
+  "policy_numbers": "$12.3M",
+  "policy_notes": "test",
   "sources": [
     {"label": "Source Name", "url": "https://example.com"}
   ],
@@ -16,8 +17,9 @@
     "id": "test-a",
     "name": "Test Subsidy A",
     "country": "—",
-    "year": "—",
-    "total_amount": 0,
+    "effective_period": "—",
+    "policy_numbers": 0,
+    "policy_notes": "test",
     "sources": [],
     "distributions": [
       { "recipient": "Example Co. Alpha", "location": "—", "numbers": 0, "notes": "Test row" },
@@ -28,8 +30,9 @@
     "id": "test-b",
     "name": "Test Subsidy B",
     "country": "—",
-    "year": "—",
-    "total_amount": 0,
+    "effective_period": "—",
+    "policy_numbers": 0,
+    "policy_notes": "test",
     "sources": [],
     "distributions": [
       { "recipient": "Sample Org One", "location": "—", "numbers": 0, "notes": "Test row" }
