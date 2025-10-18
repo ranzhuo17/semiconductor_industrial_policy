@@ -123,6 +123,51 @@ async function loadData(){
 }
 
     // ================== UTILITIES ==================
+
+    // ---- Sorting helpers ----
+let sortState = { key: 'project_name', dir: 'asc' }; // default
+
+const SORTABLE_COLS = [
+  { key: 'project_name',      label: 'Project Name (Click for details)' },
+  { key: 'subproject_name',   label: 'Subproject Name' },
+  { key: 'year_announced',    label: 'Year Announced' },
+  { key: 'effective_period',  label: 'Effective Period' },
+  { key: 'country_region',    label: 'Country/Region' },
+];
+
+function startYearFromPeriod(val) {
+  if (!val) return NaN;
+  // Accept "YYYY", "YYYY-YYYY", "YYYY–YYYY" (en dash), extra text
+  const m = String(val).match(/(\d{4})/);
+  return m ? Number(m[1]) : NaN;
+}
+
+function compareValues(a, b, key) {
+  if (key === 'year_announced') {
+    const na = Number(a?.year_announced);
+    const nb = Number(b?.year_announced);
+    if (!Number.isNaN(na) && !Number.isNaN(nb)) return na - nb;
+    // fallback to text if not numeric
+    return String(a?.year_announced ?? '').localeCompare(String(b?.year_announced ?? ''));
+  }
+  if (key === 'effective_period') {
+    const sa = startYearFromPeriod(a?.effective_period);
+    const sb = startYearFromPeriod(b?.effective_period);
+    if (!Number.isNaN(sa) && !Number.isNaN(sb)) return sa - sb;
+    return String(a?.effective_period ?? '').localeCompare(String(b?.effective_period ?? ''));
+  }
+  // default text compare
+  return String(a?.[key] ?? '').localeCompare(String(b?.[key] ?? ''), undefined, { sensitivity: 'base' });
+}
+
+function toggleSort(key) {
+  if (sortState.key === key) {
+    sortState.dir = (sortState.dir === 'asc') ? 'desc' : 'asc';
+  } else {
+    sortState = { key, dir: 'asc' };
+  }
+}
+
     const $ = (sel, root=document) => root.querySelector(sel);
     const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
     const fmtMoney = n => {
@@ -143,43 +188,82 @@ async function loadData(){
     }
 
     // ================== RENDERERS ==================
-    function renderHome() {
-      const app = $('#app');
-      app.innerHTML = '';
+   function renderHome() {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
 
-      const toolbar = document.createElement('div');
-      toolbar.className = 'toolbar';
-      toolbar.innerHTML = `
-       <input id="q" type="search" placeholder="Search project, subproject, country, year…" aria-label="Search policies" />
-        <button class="btn" id="clearBtn" type="button">Clear</button>
-      `;
+  // toolbar
+  const toolbar = document.createElement('div');
+  toolbar.className = 'toolbar';
+  toolbar.innerHTML = `
+    <input id="q" type="search" placeholder="Search project, subproject, country, year…" aria-label="Search policies" />
+    <button class="btn" id="clearBtn" type="button">Clear</button>
+  `;
 
-      const table = document.createElement('table');
-      table.innerHTML = `
-        <thead>
-          <tr>
-            <th>Project Name (Click for details) </th>
-            <th>Subproject Name</th>
-            <th>Year Announced</th>
-            <th>Effective Period</th>
-            <th>Country/Region</th>
-            <th>Type & Status</th>
-            <th>Numbers</th>
-            <th>Targeted Entities</th>
-          </tr>
-        </thead>
-        <tbody id="rows"></tbody>
-      `;
+  // table shell
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const tr = document.createElement('tr');
 
-      app.append(toolbar, table);
+  // build sortable headers
+  for (const col of SORTABLE_COLS) {
+    const th = document.createElement('th');
+    th.setAttribute('role', 'button');
+    th.tabIndex = 0;
+    th.dataset.key = col.key;
+    th.title = 'Click to sort';
+    th.innerHTML = `
+      <span class="th-label">${col.label}</span>
+      <span class="th-sort-ind" aria-hidden="true"></span>
+    `;
+    // click + keyboard
+    th.addEventListener('click', () => { toggleSort(col.key); draw(qInput.value); });
+    th.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleSort(col.key); draw(qInput.value); }
+    });
+    tr.appendChild(th);
+  }
 
-      const rows = $('#rows');
+  // Details (not sortable)
+  const thDetails = document.createElement('th');
+  thDetails.textContent = 'Details';
+  tr.appendChild(thDetails);
 
-     function draw(filter = '') {
-  const q = filter.trim().toLowerCase();
+  thead.appendChild(tr);
+  table.appendChild(thead);
 
-  const items = SUBSIDIES
-    .filter(s => {
+  const tbody = document.createElement('tbody');
+  tbody.id = 'rows';
+  table.appendChild(tbody);
+
+  app.append(toolbar, table);
+
+  const rows = document.getElementById('rows');
+  const qInput = document.getElementById('q');
+  const clearBtn = document.getElementById('clearBtn');
+
+  function updateHeaderIndicators() {
+    // Clear all indicators and aria-sort
+    table.querySelectorAll('th').forEach(th => {
+      th.removeAttribute('aria-sort');
+      const ind = th.querySelector('.th-sort-ind');
+      if (ind) ind.textContent = '';
+    });
+    // Set current
+    const active = table.querySelector(`th[data-key="${sortState.key}"]`);
+    if (active) {
+      active.setAttribute('aria-sort', sortState.dir === 'asc' ? 'ascending' : 'descending');
+      const ind = active.querySelector('.th-sort-ind');
+      if (ind) ind.textContent = sortState.dir === 'asc' ? ' ▲' : ' ▼';
+    }
+  }
+
+  // draw with search + sort
+  function draw(filter = '') {
+    const q = (filter || '').trim().toLowerCase();
+
+    // filter
+    let items = (Array.isArray(SUBSIDIES) ? SUBSIDIES : []).filter(s => {
       if (!q) return true;
       const haystack = [
         s.project_name,
@@ -189,29 +273,45 @@ async function loadData(){
         s.type_and_status,
         s.targeted_entities,
         s.notes,
-        // also search distribution names, if you want:
         ...(Array.isArray(s.distributions) ? s.distributions.map(d => d.distribution_name) : [])
-      ]
-        .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
+      ].filter(Boolean).join(' ').toLowerCase();
       return haystack.includes(q);
-    })
-    .sort((a, b) => String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
+    });
 
-  rows.innerHTML = items.map(s => `
-    <tr>
-      <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a></td>
-      <td>${s.subproject_name ?? ''}</td>
-      <td>${s.year_announced ?? ''}</td>
-      <td>${s.effective_period ?? ''}</td>
-      <td>${s.country_region ?? ''}</td>
-      <td>${s.type_and_status ?? ''}</td>
-      <td>${s.numbers ?? ''}</td>
-      <td>${s.targeted_entities ?? ''}</td>
-    </tr>
-  `).join('');
+    // stable sort: remember original index to break ties
+    items = items
+      .map((v, i) => ({ v, i }))
+      .sort((A, B) => {
+        const cmp = compareValues(A.v, B.v, sortState.key);
+        if (cmp !== 0) return sortState.dir === 'asc' ? cmp : -cmp;
+        return A.i - B.i;
+      })
+      .map(x => x.v);
+
+    // render
+    rows.innerHTML = items.map(s => `
+      <tr>
+        <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name ?? ''}</a></td>
+        <td>${s.subproject_name ?? ''}</td>
+        <td>${s.year_announced ?? ''}</td>
+        <td>${s.effective_period ?? ''}</td>
+        <td>${s.country_region ?? ''}</td>
+        <td>${s.type_and_status ?? ''}</td>
+        <td>${s.numbers ?? ''}</td>
+        <td>${s.targeted_entities ?? ''}</td>
+        <td class="muted"><a href="#/subsidy/${s.project_id}">Click to see details</a></td>
+      </tr>
+    `).join('');
+
+    updateHeaderIndicators();
+  }
+
+  qInput.addEventListener('input', () => draw(qInput.value));
+  clearBtn.addEventListener('click', () => { qInput.value = ''; draw(''); qInput.focus(); });
+
+  draw('');
 }
+
 
 
       const qInput = $('#q');
