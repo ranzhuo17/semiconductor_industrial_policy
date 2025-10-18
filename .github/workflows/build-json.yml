@@ -1,0 +1,44 @@
+name: Build policies.json from Excel
+
+on:
+  push:
+    paths:
+      - "raw_data.xlsx"
+      - "xls_to_json.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas openpyxl
+
+      - name: Convert Excel → JSON
+        run: |
+          python xls_to_json.py
+
+      - name: Commit & push changes
+        run: |
+          if [[ -n "$(git status --porcelain policies.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add policies.json
+            git commit -m "chore: build policies.json from Excel [skip ci]"
+            git push
+          else
+            echo "No changes to policies.json"
+          fi
