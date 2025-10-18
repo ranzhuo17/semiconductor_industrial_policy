@@ -313,15 +313,6 @@ function toggleSort(key) {
 }
 
 
-
-      const qInput = $('#q');
-      const clearBtn = $('#clearBtn');
-      qInput.addEventListener('input', () => draw(qInput.value));
-      clearBtn.addEventListener('click', () => { qInput.value=''; draw(''); qInput.focus(); });
-
-      draw('');
-    }
-
   function normalizeSources(srcs) {
   if (!srcs) return [];
 
