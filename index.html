@@ -209,8 +209,27 @@ async function loadData(){
       draw('');
     }
 
-    function renderDetail(id) {
-  const s = SUBSIDIES.find(x => String(x.project_id) === String(id)); // <- changed
+    function renderSourcesList(srcs) {
+  if (!srcs) return '';
+  if (typeof srcs === 'string') {
+    srcs = srcs.split(/[;,]\s*/).filter(Boolean);
+  }
+  if (!Array.isArray(srcs)) return '';
+
+  return srcs.map(s => {
+    if (typeof s === 'string') {
+      return /^https?:\/\//i.test(s)
+        ? `<a href="${s}" target="_blank" rel="noopener">${s}</a>`
+        : s;
+    }
+    const text = s.label ?? s.url ?? '';
+    const href = s.url ?? '#';
+    return text ? `<a href="${href}" target="_blank" rel="noopener">${text}</a>` : '';
+  }).filter(Boolean).join(' · ');
+}
+
+   function renderDetail(id) {
+  const s = SUBSIDIES.find(x => String(x.project_id) === String(id));
   const app = $('#app');
   if (!s) {
     app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
@@ -221,17 +240,14 @@ async function loadData(){
     <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
     <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
     <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
-      <span class="pill" title="Country/Region">🌍 ${s.country_region ?? ''}</span>
-      <span class="pill" title="Effective Period">📅 ${s.effective_period ?? ''}</span>
-      <span class="pill" title="Numbers">💰 ${s.numbers ?? ''}</span>
+      <span class="pill">🌍 ${s.country_region ?? ''}</span>
+      <span class="pill">📅 ${s.effective_period ?? ''}</span>
+      <span class="pill">💰 ${s.numbers ?? ''}</span>
     </div>
-    ${
-      Array.isArray(s.sources) && s.sources.length
-        ? `<div style="margin-bottom:12px" class="muted">
-             Sources: ${s.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.url}</a>`).join(' · ')}
-           </div>`
-        : ''
-    }
+    ${s.sources ? `<div class="muted" style="margin-bottom:12px">
+       Sources: ${renderSourcesList(s.sources)}
+     </div>` : ''}
+
     <div class="card" style="padding:0; overflow:auto;">
       <table>
         <thead>
@@ -258,11 +274,7 @@ async function loadData(){
               <td>${r.numbers ?? ''}</td>
               <td>${r.targeted_entities ?? ''}</td>
               <td>${r.notes ?? ''}</td>
-              <td>${
-                Array.isArray(r.sources)
-                  ? r.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.url}</a>`).join(' · ')
-                  : ''
-              }</td>
+              <td>${renderSourcesList(r.sources || s.sources)}</td>
             </tr>
           `).join('')}
         </tbody>
