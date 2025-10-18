@@ -96,7 +96,7 @@
   It may not be fully comprehensive, and some policies across regions or time periods may not be captured.
 </p>
 
-    <div ="app" class="card" aria-live="polite"></div>
+    <div id="app" class="card" aria-live="polite"></div>
 
   <script>
     // ================== DATA ==================
@@ -177,27 +177,29 @@ async function loadData(){
       const rows = $('#rows');
 
       function draw(filter=''){
-        const q = filter.trim().toLowerCase();
-        const items = SUBSIDIES.filter(s => (
-          !q || `${s.project_name} ${s.country_region} ${s.effective_period}`.toLowerCase().includes(q)
-        )).sort((a,b)=> String(a.project_name).localeCompare(String(b.project_name)));
+  const q = filter.trim().toLowerCase();
+  const items = SUBSIDIES
+    .filter(s => (
+      !q || `${s.project_name ?? ''} ${s.country_region ?? ''} ${s.effective_period ?? ''}`.toLowerCase().includes(q)
+    ))
+    .sort((a,b)=> String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
 
-        rows.innerHTML = items.map(s => `
-          <tr>
-            <td>
-              <a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a>
-            </td>
-            <td>${s.subproject_name}</td>
-            <td>${s.year_announced}</td>
-            <td>${s.effective_period}</td>
-            <td>${s.country_region}</td>
-            <td>${s.type_and_status}</td>
-            <td>${s.numbers}</td>
-            <td>${s.targeted_entities}</td>
-            <td>${s.notes}</td>
-          </tr>
-        `).join('');
-      }
+  rows.innerHTML = items.map(s => `
+    <tr>
+      <td>
+        <a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a>
+      </td>
+      <td>${s.subproject_name ?? ''}</td>
+      <td>${s.year_announced ?? ''}</td>
+      <td>${s.effective_period ?? ''}</td>
+      <td>${s.country_region ?? ''}</td>
+      <td>${s.type_and_status ?? ''}</td>
+      <td>${s.numbers ?? ''}</td>
+      <td>${s.targeted_entities ?? ''}</td>
+      <td>${s.notes ?? ''}</td>
+    </tr>
+  `).join('');
+}
 
       const qInput = $('#q');
       const clearBtn = $('#clearBtn');
@@ -208,60 +210,66 @@ async function loadData(){
     }
 
     function renderDetail(id) {
-      const s = SUBSIDIES.find(x => x.project_id ===id);
-      const app = $('#app');
-      if (!s) {
-        app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
-        return;
-      }
+  const s = SUBSIDIES.find(x => String(x.project_id) === String(id)); // <- changed
+  const app = $('#app');
+  if (!s) {
+    app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
+    return;
+  }
 
-      app.innerHTML = `
-        <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
-        <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
-        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
-          <span class="pill" title="Country/Region">🌍 ${s.country_region}</span>
-          <span class="pill" title="Effective Period">📅 ${s.effective_period}</span>
-          <span class="pill" title="Numbers">💰 ${s.numbers}</span>
-        </div>
-        ${Array.isArray(s.sources) && s.sources.length ? `
-          <div style="margin-bottom:12px" class="muted">
-            Sources: ${s.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.url}</a>`).join(' · ')}
-          </div>
-        `: ''}
-        <div class="card" style="padding:0; overflow:auto;">
-          <table>
-            <thead>
-              <tr>
-                <th>Distribution Name</th>
-                <th>Year Announced</th>
-                <th>Effective Period</th>
-                <th>Country/Region</th>
-                <th>Type & Status</th>
-                <th>Numbers</th>
-                <th>Targeted Entities</th>
-                <th>Notes</th>
-                <th>Sources</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${(s.distributions||[]).map(r => `
-                <tr>
-                  <td>${r.distribution_name||''}</td>
-                  <td>${r.year_announced||''}</td>
-                  <td>${r.effective_period||''}</td>
-                  <td>${r.country_region||''}</td>
-                  <td>${r.type_and_status||''}</td>
-                  <td>${r.numbers||''}</td>
-                  <td>${r.targeted_entities||''}</td>
-                  <td>${r.notes||''}</td>
-                  <td>${r.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.url}</a>`).join(' · ')}</td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        </div>
-      `;
+  app.innerHTML = `
+    <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
+    <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
+      <span class="pill" title="Country/Region">🌍 ${s.country_region ?? ''}</span>
+      <span class="pill" title="Effective Period">📅 ${s.effective_period ?? ''}</span>
+      <span class="pill" title="Numbers">💰 ${s.numbers ?? ''}</span>
+    </div>
+    ${
+      Array.isArray(s.sources) && s.sources.length
+        ? `<div style="margin-bottom:12px" class="muted">
+             Sources: ${s.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.url}</a>`).join(' · ')}
+           </div>`
+        : ''
     }
+    <div class="card" style="padding:0; overflow:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Distribution Name</th>
+            <th>Year Announced</th>
+            <th>Effective Period</th>
+            <th>Country/Region</th>
+            <th>Type & Status</th>
+            <th>Numbers</th>
+            <th>Targeted Entities</th>
+            <th>Notes</th>
+            <th>Sources</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${(s.distributions ?? []).map(r => `
+            <tr>
+              <td>${r.distribution_name ?? ''}</td>
+              <td>${r.year_announced ?? ''}</td>
+              <td>${r.effective_period ?? ''}</td>
+              <td>${r.country_region ?? ''}</td>
+              <td>${r.type_and_status ?? ''}</td>
+              <td>${r.numbers ?? ''}</td>
+              <td>${r.targeted_entities ?? ''}</td>
+              <td>${r.notes ?? ''}</td>
+              <td>${
+                Array.isArray(r.sources)
+                  ? r.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.url}</a>`).join(' · ')
+                  : ''
+              }</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
 
     // ================== ROUTER ==================
     function router(){
