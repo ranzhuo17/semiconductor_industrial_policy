@@ -179,8 +179,8 @@ async function loadData(){
       function draw(filter=''){
         const q = filter.trim().toLowerCase();
         const items = SUBSIDIES.filter(s => (
-          !q || `${s.name} ${s.country} ${s.effective_period}`.toLowerCase().includes(q)
-        )).sort((a,b)=> String(a.name).localeCompare(String(b.name)));
+          !q || `${s.project_name} ${s.country_region} ${s.effective_period}`.toLowerCase().includes(q)
+        )).sort((a,b)=> String(a.project_name).localeCompare(String(b.project_name)));
 
         rows.innerHTML = items.map(s => `
           <tr>
@@ -208,7 +208,7 @@ async function loadData(){
     }
 
     function renderDetail(id) {
-      const s = SUBSIDIES.find(x => x.id === id);
+      const s = SUBSIDIES.find(x => x.project_id ===id);
       const app = $('#app');
       if (!s) {
         app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
