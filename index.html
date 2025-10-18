@@ -222,24 +222,79 @@ async function loadData(){
       draw('');
     }
 
-    function renderSourcesList(srcs) {
-  if (!srcs) return '';
-  if (typeof srcs === 'string') {
-    srcs = srcs.split(/[;,]\s*/).filter(Boolean);
-  }
-  if (!Array.isArray(srcs)) return '';
+  function normalizeSources(srcs) {
+  if (!srcs) return [];
 
-  return srcs.map(s => {
-    if (typeof s === 'string') {
-      return /^https?:\/\//i.test(s)
-        ? `<a href="${s}" target="_blank" rel="noopener">${s}</a>`
-        : s;
+  // Already an array? great.
+  if (Array.isArray(srcs)) return srcs;
+
+  // Sometimes data comes as a stringified JSON array
+  if (typeof srcs === 'string') {
+    try {
+      const maybe = JSON.parse(srcs);
+      if (Array.isArray(maybe)) return maybe;
+    } catch (_) {}
+
+    const out = [];
+
+    // 1) Markdown links: [Label](https://example.com,foo) — commas OK
+    const mdRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+    let mdMatch;
+    let consumed = srcs;
+    while ((mdMatch = mdRe.exec(srcs)) !== null) {
+      out.push({ label: mdMatch[1], url: mdMatch[2] });
+      consumed = consumed.replace(mdMatch[0], ' ');
     }
-    const text = s.label ?? s.url ?? '';
-    const href = s.url ?? '#';
-    return text ? `<a href="${href}" target="_blank" rel="noopener">${text}</a>` : '';
-  }).filter(Boolean).join(' · ');
+
+    // 2) Bare URLs (don’t stop at commas; stop at whitespace or closing quotes/brackets)
+    const urlRe = /https?:\/\/[^\s<>"')\]]+/g;
+    let urlMatch;
+    while ((urlMatch = urlRe.exec(consumed)) !== null) {
+      out.push({ url: urlMatch[0] });
+    }
+
+    // 3) If we still have nothing, allow splitting on ; or |
+    if (out.length === 0) {
+      const parts = srcs.split(/\s*[;|]\s*/).filter(Boolean);
+      for (const p of parts) {
+        // Support "Label, https://..." (comma only as label/URL separator)
+        const m = p.match(/^(.*?)\s*,\s*(https?:\/\/.+)$/);
+        if (m) out.push({ label: m[1], url: m[2] });
+        else if (/^https?:\/\//i.test(p)) out.push({ url: p });
+        else out.push({ label: p });
+      }
+    }
+
+    return out;
+  }
+
+  return [];
 }
+
+function renderSourcesList(srcs) {
+  const items = normalizeSources(srcs);
+  if (!items.length) return '';
+
+  return items
+    .map(s => {
+      if (typeof s === 'string') {
+        // If array contains raw strings
+        return /^https?:\/\//i.test(s)
+          ? `<a href="${s}" target="_blank" rel="noopener">${s}</a>`
+          : s;
+      }
+      const text = s.label ?? s.url ?? '';
+      const href = s.url;
+      if (href && /^https?:\/\//i.test(href)) {
+        return `<a href="${href}" target="_blank" rel="noopener">${text || href}</a>`;
+      }
+      // If no valid URL, just return the text
+      return text;
+    })
+    .filter(Boolean)
+    .join(' · ');
+}
+
 
    function renderDetail(id) {
   const s = SUBSIDIES.find(x => String(x.project_id) === String(id));
