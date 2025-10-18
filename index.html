@@ -158,7 +158,7 @@ async function loadData(){
       table.innerHTML = `
         <thead>
           <tr>
-            <th>Project Name</th>
+            <th>Project Name (Click for details) </th>
             <th>Subproject Name</th>
             <th>Year Announced</th>
             <th>Effective Period</th>
@@ -166,7 +166,6 @@ async function loadData(){
             <th>Type & Status</th>
             <th>Numbers</th>
             <th>Targeted Entities</th>
-            <th>Notes</th>
           </tr>
         </thead>
         <tbody id="rows"></tbody>
@@ -210,7 +209,6 @@ async function loadData(){
       <td>${s.type_and_status ?? ''}</td>
       <td>${s.numbers ?? ''}</td>
       <td>${s.targeted_entities ?? ''}</td>
-      <td>${s.notes ?? ''}</td>
     </tr>
   `).join('');
 }
@@ -258,6 +256,7 @@ async function loadData(){
       <span class="pill">🌍 ${s.country_region ?? ''}</span>
       <span class="pill">📅 ${s.effective_period ?? ''}</span>
       <span class="pill">💰 ${s.numbers ?? ''}</span>
+      <span class="pill">📝 <strong>Details:</strong> ${s.notes ?? ''}</span>
     </div>
     ${s.sources ? `<div class="muted" style="margin-bottom:12px">
        Sources: ${renderSourcesList(s.sources)}
