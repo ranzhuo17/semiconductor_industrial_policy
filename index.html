@@ -225,7 +225,7 @@ async function loadData(){
     function renderSourcesList(srcs) {
   if (!srcs) return '';
   if (typeof srcs === 'string') {
-    srcs = srcs.split(/[;,]\s*/);.filter(Boolean);
+    srcs = srcs.split(/[;,]\s*/).filter(Boolean);
   }
   if (!Array.isArray(srcs)) return '';
 
