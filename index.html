@@ -150,7 +150,7 @@ async function loadData(){
       const toolbar = document.createElement('div');
       toolbar.className = 'toolbar';
       toolbar.innerHTML = `
-        <input id="q" type="search" placeholder="Search by name, country, year…" aria-label="Search policies" />
+       <input id="q" type="search" placeholder="Search project, subproject, country, year…" aria-label="Search policies" />
         <button class="btn" id="clearBtn" type="button">Clear</button>
       `;
 
@@ -176,19 +176,33 @@ async function loadData(){
 
       const rows = $('#rows');
 
-      function draw(filter=''){
+     function draw(filter = '') {
   const q = filter.trim().toLowerCase();
+
   const items = SUBSIDIES
-    .filter(s => (
-      !q || `${s.project_name ?? ''} ${s.country_region ?? ''} ${s.effective_period ?? ''}`.toLowerCase().includes(q)
-    ))
-    .sort((a,b)=> String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
+    .filter(s => {
+      if (!q) return true;
+      const haystack = [
+        s.project_name,
+        s.subproject_name,
+        s.country_region,
+        s.effective_period,
+        s.type_and_status,
+        s.targeted_entities,
+        s.notes,
+        // also search distribution names, if you want:
+        ...(Array.isArray(s.distributions) ? s.distributions.map(d => d.distribution_name) : [])
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+      return haystack.includes(q);
+    })
+    .sort((a, b) => String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
 
   rows.innerHTML = items.map(s => `
     <tr>
-      <td>
-        <a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a>
-      </td>
+      <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a></td>
       <td>${s.subproject_name ?? ''}</td>
       <td>${s.year_announced ?? ''}</td>
       <td>${s.effective_period ?? ''}</td>
@@ -200,6 +214,7 @@ async function loadData(){
     </tr>
   `).join('');
 }
+
 
       const qInput = $('#q');
       const clearBtn = $('#clearBtn');
