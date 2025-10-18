@@ -1,0 +1,38 @@
+[
+  {
+    "project_name": "Display Name",
+  "project_id": "string-unique-url-id",
+  "subproject_name":"test subproject name",
+  "subproject_id":"string-unique-url-id",
+  "year_announced":"2023",
+  "effective_period":"2023-2025",
+  "country_region": "Country",
+  "type_and_status":"type and status",
+  "numbers": 123456789,
+  "targeted_entities":"targeted entities",
+  "notes":"notes",
+  "sources": "https://example.com",
+  "distributions": [
+    {"distribution_name": "Org A",
+     "distribution_id":"string-unique-url-id",
+     "year_announced":"2023",
+     "effective_period":"2023-2025",
+     "country_region": "Country",
+     "type_and_status":"type and status",
+     "numbers": 123456789,
+     "targeted_entities":"targeted entities",
+     "notes":"notes",
+     "sources": "https://example.com"},
+     {"distribution_name": "Org B",
+     "distribution_id":"string-unique-url-id",
+     "year_announced":"2023",
+     "effective_period":"2023-2025",
+     "country_region": "Country",
+     "type_and_status":"type and status",
+     "numbers": 123456789,
+     "targeted_entities":"targeted entities",
+     "notes":"notes",
+     "sources": "https://example.com"}
+  ]    
+}
+]
