@@ -28,7 +28,7 @@
   border-radius: 10px;
   background: #0b1220;
   color: var(--fg);
-  border: 1px solid var(--border);
+  border: 1px sol var(--border);
   height: 38px;
   font-size: 15px;
   box-sizing: border-box;
@@ -38,7 +38,7 @@
    .toolbar .btn {
   padding: 8px 12px;
   border-radius: 10px;
-  border: 1px solid var(--border);
+  border: 1px sol var(--border);
   background: #0b1220;
   color: var(--fg);
   cursor: pointer;
@@ -54,19 +54,19 @@
   margin: 6px 0 16px;
 }
     .toolbar .btn:hover { border-color: #334155; }
-    table { width: 100%; border-collapse: collapse; }
-    th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    table { wth: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; border-bottom: 1px sol var(--border); vertical-align: top; }
     th { text-align: left; font-weight: 600; color: var(--muted); }
     tr:hover td { background: rgba(255,255,255,0.02); }
-    .pill { display:inline-flex; align-items:center; gap:6px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); background: #0b1220; color: var(--muted); font-size: 12px; }
+    .pill { display:inline-flex; align-items:center; gap:6px; padding: 4px 10px; border-radius: 999px; border: 1px sol var(--border); background: #0b1220; color: var(--muted); font-size: 12px; }
     .muted { color: var(--muted); }
     .breadcrumb { font-size: 14px; margin-bottom: 12px; }
     .breadcrumb a { color: var(--muted); }
-    .stat { display:inline-block; padding: 2px 8px; background: #0b1220; border:1px solid var(--border); border-radius: 999px; font-variant-numeric: tabular-nums; }
+    .stat { display:inline-block; padding: 2px 8px; background: #0b1220; border:1px sol var(--border); border-radius: 999px; font-variant-numeric: tabular-nums; }
     .footer { margin-top: 24px; color: var(--muted); font-size: 14px; }
-    @media (max-width: 640px){
-  .hide-sm { display:none; }
-  th.hide-sm, td.hide-sm { display:none; }
+    @media (max-wth: 640px){
+  .he-sm { display:none; }
+  th.he-sm, td.he-sm { display:none; }
   .toolbar { flex-direction: column; align-items: stretch; gap: 6px; }
   .toolbar input,
   .toolbar .btn {
@@ -96,12 +96,12 @@
   It may not be fully comprehensive, and some policies across regions or time periods may not be captured.
 </p>
 
-    <div id="app" class="card" aria-live="polite"></div>
+    <div ="app" class="card" aria-live="polite"></div>
 
   <script>
     // ================== DATA ==================
     // Minimal example data. Replace with your real entries.
-    // id: URL-safe identifier (unique), name: display name
+    // : URL-safe entifier (unique), name: display name
     // country: string, year: number | string, total_amount: number (USD),
     // sources: optional array of {label, url},
     // distributions: array of rows shown on the detail page
@@ -158,10 +158,14 @@ async function loadData(){
       table.innerHTML = `
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Country</th>
+            <th>Project Name</th>
+            <th>Subproject Name</th>
+            <th>Year Annouced</th>
             <th>Effective Period</th>
+            <th>Country/Region</th>
+            <th>Type & Status</th>
             <th>Numbers</th>
+            <th>Targeted Entities</th>
             <th>Notes</th>
           </tr>
         </thead>
@@ -181,12 +185,16 @@ async function loadData(){
         rows.innerHTML = items.map(s => `
           <tr>
             <td>
-              <a href="#/subsidy/${s.id}" aria-label="Open ${s.name}">${s.name}</a>
+              <a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a>
             </td>
-            <td>${s.country}</td>
+            <td>${s.subproject_name}</td>
+            <td>${s.year_annouced}</td>
             <td>${s.effective_period}</td>
-            <td>${s.policy_numbers}</td>
-            <td>${s.policy_notes}</td>
+            <td>${s.country_region}</td>
+            <td>${s.type_and_status}</td>
+            <td>${s.numbers}</td>
+            <td>${s.targeted_entities}</td>
+            <td>${s.notes}</td>
           </tr>
         `).join('');
       }
@@ -209,34 +217,44 @@ async function loadData(){
 
       app.innerHTML = `
         <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
-        <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.name}</h2>
+        <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
         <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
-          <span class="pill" title="Country">🌍 ${s.country}</span>
+          <span class="pill" title="Country/Region">🌍 ${s.country_region}</span>
           <span class="pill" title="Effective Period">📅 ${s.effective_period}</span>
-          <span class="pill" title="Numbers">💰 ${s.policy_numbers}</span>
+          <span class="pill" title="Numbers">💰 ${s.numbers}</span>
         </div>
         ${Array.isArray(s.sources) && s.sources.length ? `
           <div style="margin-bottom:12px" class="muted">
-            Sources: ${s.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.label}</a>`).join(' · ')}
+            Sources: ${s.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.url}</a>`).join(' · ')}
           </div>
         `: ''}
         <div class="card" style="padding:0; overflow:auto;">
           <table>
             <thead>
               <tr>
-                <th>Recipient</th>
-                <th>Location</th>
+                <th>Distribution Name</th>
+                <th>Year Announced</th>
+                <th>Effective Period</th>
+                <th>Country/Region</th>
+                <th>Type & Status</th>
                 <th>Numbers</th>
+                <th>Targeted Entities</th>
                 <th>Notes</th>
+                <th>Sources</th>
               </tr>
             </thead>
             <tbody>
               ${(s.distributions||[]).map(r => `
                 <tr>
-                  <td>${r.recipient||''}</td>
-                  <td>${r.location||''}</td>
+                  <td>${r.distribution_name||''}</td>
+                  <td>${r.year_annouced||''}</td>
+                  <td>${r.effective_period||''}</td>
+                  <td>${r.country_region||''}</td>
+                  <td>${r.type_and_status||''}</td>
                   <td>${r.numbers||''}</td>
+                  <td>${r.targeted_entities||''}</td>
                   <td>${r.notes||''}</td>
+                  <td>${r.sources.map(src => `<a href="${src.url}" target="_blank" rel="noopener">${src.url}</a>`).join(' · ')}</td>
                 </tr>
               `).join('')}
             </tbody>
