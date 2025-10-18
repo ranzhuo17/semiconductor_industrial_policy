@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,114 +22,122 @@
     h1 { font-size: clamp(22px, 3vw, 32px); margin: 0; letter-spacing: 0.2px; }
     .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
     .toolbar { display:flex; gap:12px; flex-wrap: wrap; align-items:center; margin-bottom: 12px; }
-   .toolbar input {
-  flex: 1 1 260px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background: #0b1220;
-  color: var(--fg);
-  border: 1px sol var(--border);
-  height: 38px;
-  font-size: 15px;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  appearance: none;
-}
-   .toolbar .btn {
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: 1px sol var(--border);
-  background: #0b1220;
-  color: var(--fg);
-  cursor: pointer;
-  height: 38px;
-  font-size: 15px;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  appearance: none;
-}
-    .disclaimer {
-  color: var(--muted);
-  font-size: 14px;
-  margin: 6px 0 16px;
-}
+
+    .toolbar input {
+      flex: 1 1 260px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: #0b1220;
+      color: var(--fg);
+      border: 1px solid var(--border);
+      height: 38px;
+      font-size: 15px;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .toolbar .btn {
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0b1220;
+      color: var(--fg);
+      cursor: pointer;
+      height: 38px;
+      font-size: 15px;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      appearance: none;
+    }
     .toolbar .btn:hover { border-color: #334155; }
-    table { wth: 100%; border-collapse: collapse; }
-    th, td { padding: 10px 12px; border-bottom: 1px sol var(--border); vertical-align: top; }
+
+    .disclaimer {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 6px 0 16px;
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
     th { text-align: left; font-weight: 600; color: var(--muted); }
     tr:hover td { background: rgba(255,255,255,0.02); }
-    .pill { display:inline-flex; align-items:center; gap:6px; padding: 4px 10px; border-radius: 999px; border: 1px sol var(--border); background: #0b1220; color: var(--muted); font-size: 12px; }
+
+    .pill { display:inline-flex; align-items:center; gap:6px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); background: #0b1220; color: var(--muted); font-size: 12px; }
     .muted { color: var(--muted); }
     .breadcrumb { font-size: 14px; margin-bottom: 12px; }
     .breadcrumb a { color: var(--muted); }
-    .stat { display:inline-block; padding: 2px 8px; background: #0b1220; border:1px sol var(--border); border-radius: 999px; font-variant-numeric: tabular-nums; }
+    .stat { display:inline-block; padding: 2px 8px; background: #0b1220; border:1px solid var(--border); border-radius: 999px; font-variant-numeric: tabular-nums; }
     .footer { margin-top: 24px; color: var(--muted); font-size: 14px; }
-    @media (max-wth: 640px){
-  .he-sm { display:none; }
-  th.he-sm, td.he-sm { display:none; }
-  .toolbar { flex-direction: column; align-items: stretch; gap: 6px; }
-  .toolbar input,
-  .toolbar .btn {
-    height: 30px;
-    font-size: 16px; /* prevent iOS zoom */
-    padding: 4px 8px;
-    border-radius: 6px;
-    line-height: 20px;
-  }
-  h1 { font-size: 18px; }
-}
+
+    /* sorting affordance */
+    .sortable { cursor: pointer; user-select: none; }
+    .sort-ind { font-size: 11px; margin-left: 6px; opacity: .7; }
+
+    @media (max-width: 640px){
+      .he-sm { display:none; }
+      th.he-sm, td.he-sm { display:none; }
+      .toolbar { flex-direction: column; align-items: stretch; gap: 6px; }
+      .toolbar input,
+      .toolbar .btn {
+        height: 30px;
+        font-size: 16px; /* prevent iOS zoom */
+        padding: 4px 8px;
+        border-radius: 6px;
+        line-height: 20px;
+      }
+      h1 { font-size: 18px; }
+    }
   </style>
 </head>
-  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "adce69fde85645ce8c727fbe24b4811f"}'></script><!-- End Cloudflare Web Analytics -->
+
+<!-- Cloudflare Web Analytics -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "adce69fde85645ce8c727fbe24b4811f"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
 <body>
   <div class="container">
     <header>
       <h1>Global Semiconductor Industrial Policy Tracker</h1>
       <nav>
-        <!-- Link back to your main personal site -->
         <a href="https://ranzhuo17.github.io/" title="Back to ranzhuo17.github.io">↩︎ Main site</a>
       </nav>
     </header>
 
     <p class="disclaimer">
-  Data is compiled from publicly available sources and will be updated periodically.
-  It may not be fully comprehensive, and some policies across regions or time periods may not be captured.
-</p>
+      Data is compiled from publicly available sources and will be updated periodically.
+      It may not be fully comprehensive, and some policies across regions or time periods may not be captured.
+    </p>
 
     <div id="app" class="card" aria-live="polite"></div>
+  </div>
 
   <script>
     // ================== DATA ==================
-    // Minimal example data. Replace with your real entries.
-    // : URL-safe entifier (unique), name: display name
-    // country: string, year: number | string, total_amount: number (USD),
-    // sources: optional array of {label, url},
-    // distributions: array of rows shown on the detail page
     let SUBSIDIES = [];
-async function loadData(){
-  try{
-    const res = await fetch('policies.json', { cache: 'no-store' });
-    if(!res.ok) throw new Error(`HTTP ${res.status}`);
-    SUBSIDIES = await res.json();
-  }catch(err){
-    console.error('Failed to load policies.json', err);
-    SUBSIDIES = [];
-    const app = document.getElementById('app');
-    if(app && !app.dataset.errorShown){
-      app.dataset.errorShown = '1';
-      app.innerHTML = `<p class="muted">Couldn’t load data. Add <code>policies.json</code> (an array of policy objects) to populate this page.</p>`;
+    async function loadData(){
+      try{
+        const res = await fetch('policies.json', { cache: 'no-store' });
+        if(!res.ok) throw new Error(\`HTTP \${res.status}\`);
+        SUBSIDIES = await res.json();
+      }catch(err){
+        console.error('Failed to load policies.json', err);
+        SUBSIDIES = [];
+        const app = document.getElementById('app');
+        if(app && !app.dataset.errorShown){
+          app.dataset.errorShown = '1';
+          app.innerHTML = \`<p class="muted">Couldn’t load data. Add <code>policies.json</code> (an array of policy objects) to populate this page.</p>\`;
+        }
+      }
     }
-  }
-}
 
     // ================== UTILITIES ==================
-    const $ = (sel, root=document) => root.querySelector(sel);
+    const $  = (sel, root=document) => root.querySelector(sel);
     const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
     const fmtMoney = n => {
       if (typeof n !== 'number' || Number.isNaN(n)) return '—';
-      if (n >= 1e9) return `$${(n/1e9).toFixed(1)}B`;
-      if (n >= 1e6) return `$${(n/1e6).toFixed(1)}M`;
-      return `$${n.toLocaleString()}`;
+      if (n >= 1e9) return \`$\${(n/1e9).toFixed(1)}B\`;
+      if (n >= 1e6) return \`$\${(n/1e6).toFixed(1)}M\`;
+      return \`$\${n.toLocaleString()}\`;
     };
 
     function getRoute() {
@@ -139,9 +146,7 @@ async function loadData(){
       return { route: route || 'home', id };
     }
 
-    function navigate(to) {
-      location.hash = to;
-    }
+    function navigate(to) { location.hash = to; }
 
     // ================== RENDERERS ==================
     function renderHome() {
@@ -151,7 +156,7 @@ async function loadData(){
       const toolbar = document.createElement('div');
       toolbar.className = 'toolbar';
       toolbar.innerHTML = `
-       <input id="q" type="search" placeholder="Search project, subproject, country, year…" aria-label="Search policies" />
+        <input id="q" type="search" placeholder="Search project, subproject, country, year…" aria-label="Search policies" />
         <button class="btn" id="clearBtn" type="button">Clear</button>
       `;
 
@@ -159,11 +164,21 @@ async function loadData(){
       table.innerHTML = `
         <thead>
           <tr>
-            <th>Project Name (Click for details) </th>
-            <th>Subproject Name</th>
-            <th>Year Announced</th>
-            <th>Effective Period</th>
-            <th>Country/Region</th>
+            <th class="sortable" data-key="project_name" aria-sort="none">
+              Project Name (Click for details) <span class="sort-ind"></span>
+            </th>
+            <th class="sortable" data-key="subproject_name" aria-sort="none">
+              Subproject Name <span class="sort-ind"></span>
+            </th>
+            <th class="sortable" data-key="year_announced" aria-sort="none">
+              Year Announced <span class="sort-ind"></span>
+            </th>
+            <th class="sortable" data-key="effective_period" aria-sort="none">
+              Effective Period <span class="sort-ind"></span>
+            </th>
+            <th class="sortable" data-key="country_region" aria-sort="none">
+              Country/Region <span class="sort-ind"></span>
+            </th>
             <th>Type & Status</th>
             <th>Numbers</th>
             <th>Targeted Entities</th>
@@ -174,184 +189,256 @@ async function loadData(){
 
       app.append(toolbar, table);
 
+      // ---- Sort state & helpers ----
+      let sortState = { key: 'project_name', dir: 'asc' };
+
+      const firstYear = (v) => {
+        if (!v) return NaN;
+        const m = String(v).match(/\b(19|20)\d{2}\b/);
+        return m ? Number(m[0]) : NaN;
+      };
+
+      function getComparableValue(item, key) {
+        switch (key) {
+          case 'year_announced': {
+            const num = Number(item.year_announced);
+            return Number.isFinite(num) ? num : NaN;
+          }
+          case 'effective_period': {
+            return firstYear(item.effective_period);
+          }
+          case 'project_name':
+          case 'subproject_name':
+          case 'country_region': {
+            return (item[key] ?? '').toString().toLowerCase();
+          }
+          default:
+            return (item[key] ?? '').toString().toLowerCase();
+        }
+      }
+
+      function compareItems(a, b) {
+        const av = getComparableValue(a, sortState.key);
+        const bv = getComparableValue(b, sortState.key);
+
+        const aEmpty = (av === '' || Number.isNaN(av));
+        const bEmpty = (bv === '' || Number.isNaN(bv));
+        if (aEmpty && !bEmpty) return 1;
+        if (!aEmpty && bEmpty) return -1;
+
+        let cmp = 0;
+        if (typeof av === 'number' && typeof bv === 'number') {
+          cmp = av - bv;
+        } else {
+          cmp = String(av).localeCompare(String(bv));
+        }
+
+        if (cmp === 0) {
+          return String(a.project_name ?? '').localeCompare(String(b.project_name ?? ''));
+        }
+        return sortState.dir === 'asc' ? cmp : -cmp;
+      }
+
+      function updateHeaderUI() {
+        $$('.sortable', table).forEach(th => {
+          const key = th.dataset.key;
+          const ind = $('.sort-ind', th);
+          if (key === sortState.key) {
+            th.setAttribute('aria-sort', sortState.dir === 'asc' ? 'ascending' : 'descending');
+            if (ind) ind.textContent = sortState.dir === 'asc' ? '▲' : '▼';
+          } else {
+            th.setAttribute('aria-sort', 'none');
+            if (ind) ind.textContent = '';
+          }
+        });
+      }
+
+      function attachSortHandlers() {
+        $$('.sortable', table).forEach(th => {
+          th.addEventListener('click', () => {
+            const key = th.dataset.key;
+            if (sortState.key === key) {
+              sortState.dir = sortState.dir === 'asc' ? 'desc' : 'asc';
+            } else {
+              sortState.key = key;
+              sortState.dir = 'asc';
+            }
+            updateHeaderUI();
+            draw($('#q')?.value ?? '');
+          });
+        });
+      }
+
       const rows = $('#rows');
 
-     function draw(filter = '') {
-  const q = filter.trim().toLowerCase();
+      function draw(filter = '') {
+        const q = filter.trim().toLowerCase();
 
-  const items = SUBSIDIES
-    .filter(s => {
-      if (!q) return true;
-      const haystack = [
-        s.project_name,
-        s.subproject_name,
-        s.country_region,
-        s.effective_period,
-        s.type_and_status,
-        s.targeted_entities,
-        s.notes,
-        // also search distribution names, if you want:
-        ...(Array.isArray(s.distributions) ? s.distributions.map(d => d.distribution_name) : [])
-      ]
-        .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
-      return haystack.includes(q);
-    })
-    .sort((a, b) => String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
+        const items = SUBSIDIES
+          .filter(s => {
+            if (!q) return true;
+            const haystack = [
+              s.project_name,
+              s.subproject_name,
+              s.country_region,
+              s.effective_period,
+              s.type_and_status,
+              s.targeted_entities,
+              s.notes,
+              ...(Array.isArray(s.distributions) ? s.distributions.map(d => d.distribution_name) : [])
+            ]
+              .filter(Boolean)
+              .join(' ')
+              .toLowerCase();
+            return haystack.includes(q);
+          })
+          .sort(compareItems);
 
-  rows.innerHTML = items.map(s => `
-    <tr>
-      <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a></td>
-      <td>${s.subproject_name ?? ''}</td>
-      <td>${s.year_announced ?? ''}</td>
-      <td>${s.effective_period ?? ''}</td>
-      <td>${s.country_region ?? ''}</td>
-      <td>${s.type_and_status ?? ''}</td>
-      <td>${s.numbers ?? ''}</td>
-      <td>${s.targeted_entities ?? ''}</td>
-    </tr>
-  `).join('');
-}
-
+        rows.innerHTML = items.map(s => `
+          <tr>
+            <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name ?? ''}</a></td>
+            <td>${s.subproject_name ?? ''}</td>
+            <td>${s.year_announced ?? ''}</td>
+            <td>${s.effective_period ?? ''}</td>
+            <td>${s.country_region ?? ''}</td>
+            <td>${s.type_and_status ?? ''}</td>
+            <td>${s.numbers ?? ''}</td>
+            <td>${s.targeted_entities ?? ''}</td>
+          </tr>
+        `).join('');
+      }
 
       const qInput = $('#q');
       const clearBtn = $('#clearBtn');
       qInput.addEventListener('input', () => draw(qInput.value));
       clearBtn.addEventListener('click', () => { qInput.value=''; draw(''); qInput.focus(); });
 
+      attachSortHandlers();
+      updateHeaderUI();
       draw('');
     }
 
-  function normalizeSources(srcs) {
-  if (!srcs) return [];
+    function normalizeSources(srcs) {
+      if (!srcs) return [];
+      if (Array.isArray(srcs)) return srcs;
 
-  // Already an array? great.
-  if (Array.isArray(srcs)) return srcs;
+      if (typeof srcs === 'string') {
+        try {
+          const maybe = JSON.parse(srcs);
+          if (Array.isArray(maybe)) return maybe;
+        } catch (_) {}
 
-  // Sometimes data comes as a stringified JSON array
-  if (typeof srcs === 'string') {
-    try {
-      const maybe = JSON.parse(srcs);
-      if (Array.isArray(maybe)) return maybe;
-    } catch (_) {}
+        const out = [];
 
-    const out = [];
+        // Markdown links: [Label](https://example.com,foo)
+        const mdRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+        let mdMatch;
+        let consumed = srcs;
+        while ((mdMatch = mdRe.exec(srcs)) !== null) {
+          out.push({ label: mdMatch[1], url: mdMatch[2] });
+          consumed = consumed.replace(mdMatch[0], ' ');
+        }
 
-    // 1) Markdown links: [Label](https://example.com,foo) — commas OK
-    const mdRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
-    let mdMatch;
-    let consumed = srcs;
-    while ((mdMatch = mdRe.exec(srcs)) !== null) {
-      out.push({ label: mdMatch[1], url: mdMatch[2] });
-      consumed = consumed.replace(mdMatch[0], ' ');
+        // Bare URLs (stop at whitespace/quote/bracket—not commas)
+        const urlRe = /https?:\/\/[^\s<>"')\]]+/g;
+        let urlMatch;
+        while ((urlMatch = urlRe.exec(consumed)) !== null) {
+          out.push({ url: urlMatch[0] });
+        }
+
+        // Fallback split on ; or |
+        if (out.length === 0) {
+          const parts = srcs.split(/\s*[;|]\s*/).filter(Boolean);
+          for (const p of parts) {
+            const m = p.match(/^(.*?)\s*,\s*(https?:\/\/.+)$/);
+            if (m) out.push({ label: m[1], url: m[2] });
+            else if (/^https?:\/\//i.test(p)) out.push({ url: p });
+            else out.push({ label: p });
+          }
+        }
+
+        return out;
+      }
+
+      return [];
     }
 
-    // 2) Bare URLs (don’t stop at commas; stop at whitespace or closing quotes/brackets)
-    const urlRe = /https?:\/\/[^\s<>"')\]]+/g;
-    let urlMatch;
-    while ((urlMatch = urlRe.exec(consumed)) !== null) {
-      out.push({ url: urlMatch[0] });
+    function renderSourcesList(srcs) {
+      const items = normalizeSources(srcs);
+      if (!items.length) return '';
+      return items
+        .map(s => {
+          if (typeof s === 'string') {
+            return /^https?:\/\//i.test(s)
+              ? `<a href="${s}" target="_blank" rel="noopener">${s}</a>`
+              : s;
+          }
+          const text = s.label ?? s.url ?? '';
+          const href = s.url;
+          if (href && /^https?:\/\//i.test(href)) {
+            return `<a href="${href}" target="_blank" rel="noopener">${text || href}</a>`;
+          }
+          return text;
+        })
+        .filter(Boolean)
+        .join(' · ');
     }
 
-    // 3) If we still have nothing, allow splitting on ; or |
-    if (out.length === 0) {
-      const parts = srcs.split(/\s*[;|]\s*/).filter(Boolean);
-      for (const p of parts) {
-        // Support "Label, https://..." (comma only as label/URL separator)
-        const m = p.match(/^(.*?)\s*,\s*(https?:\/\/.+)$/);
-        if (m) out.push({ label: m[1], url: m[2] });
-        else if (/^https?:\/\//i.test(p)) out.push({ url: p });
-        else out.push({ label: p });
+    function renderDetail(id) {
+      const s = SUBSIDIES.find(x => String(x.project_id) === String(id));
+      const app = $('#app');
+      if (!s) {
+        app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
+        return;
       }
+
+      app.innerHTML = `
+        <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
+        <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name ?? ''}</h2>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
+          <span class="pill">🌍 ${s.country_region ?? ''}</span>
+          <span class="pill">📅 ${s.effective_period ?? ''}</span>
+          <span class="pill">💰 ${s.numbers ?? ''}</span>
+          <span class="pill">📝 <strong>Details:</strong> ${s.notes ?? ''}</span>
+        </div>
+        ${s.sources ? `<div class="muted" style="margin-bottom:12px">
+           Sources: ${renderSourcesList(s.sources)}
+         </div>` : ''}
+
+        <div class="card" style="padding:0; overflow:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Distribution Name</th>
+                <th>Year Announced</th>
+                <th>Effective Period</th>
+                <th>Country/Region</th>
+                <th>Type & Status</th>
+                <th>Numbers</th>
+                <th>Targeted Entities</th>
+                <th>Notes</th>
+                <th>Sources</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${(s.distributions ?? []).map(r => `
+                <tr>
+                  <td>${r.distribution_name ?? ''}</td>
+                  <td>${r.year_announced ?? ''}</td>
+                  <td>${r.effective_period ?? ''}</td>
+                  <td>${r.country_region ?? ''}</td>
+                  <td>${r.type_and_status ?? ''}</td>
+                  <td>${r.numbers ?? ''}</td>
+                  <td>${r.targeted_entities ?? ''}</td>
+                  <td>${r.notes ?? ''}</td>
+                  <td>${renderSourcesList(r.sources || s.sources)}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
     }
-
-    return out;
-  }
-
-  return [];
-}
-
-function renderSourcesList(srcs) {
-  const items = normalizeSources(srcs);
-  if (!items.length) return '';
-
-  return items
-    .map(s => {
-      if (typeof s === 'string') {
-        // If array contains raw strings
-        return /^https?:\/\//i.test(s)
-          ? `<a href="${s}" target="_blank" rel="noopener">${s}</a>`
-          : s;
-      }
-      const text = s.label ?? s.url ?? '';
-      const href = s.url;
-      if (href && /^https?:\/\//i.test(href)) {
-        return `<a href="${href}" target="_blank" rel="noopener">${text || href}</a>`;
-      }
-      // If no valid URL, just return the text
-      return text;
-    })
-    .filter(Boolean)
-    .join(' · ');
-}
-
-
-   function renderDetail(id) {
-  const s = SUBSIDIES.find(x => String(x.project_id) === String(id));
-  const app = $('#app');
-  if (!s) {
-    app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
-    return;
-  }
-
-  app.innerHTML = `
-    <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
-    <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
-    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
-      <span class="pill">🌍 ${s.country_region ?? ''}</span>
-      <span class="pill">📅 ${s.effective_period ?? ''}</span>
-      <span class="pill">💰 ${s.numbers ?? ''}</span>
-      <span class="pill">📝 <strong>Details:</strong> ${s.notes ?? ''}</span>
-    </div>
-    ${s.sources ? `<div class="muted" style="margin-bottom:12px">
-       Sources: ${renderSourcesList(s.sources)}
-     </div>` : ''}
-
-    <div class="card" style="padding:0; overflow:auto;">
-      <table>
-        <thead>
-          <tr>
-            <th>Distribution Name</th>
-            <th>Year Announced</th>
-            <th>Effective Period</th>
-            <th>Country/Region</th>
-            <th>Type & Status</th>
-            <th>Numbers</th>
-            <th>Targeted Entities</th>
-            <th>Notes</th>
-            <th>Sources</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${(s.distributions ?? []).map(r => `
-            <tr>
-              <td>${r.distribution_name ?? ''}</td>
-              <td>${r.year_announced ?? ''}</td>
-              <td>${r.effective_period ?? ''}</td>
-              <td>${r.country_region ?? ''}</td>
-              <td>${r.type_and_status ?? ''}</td>
-              <td>${r.numbers ?? ''}</td>
-              <td>${r.targeted_entities ?? ''}</td>
-              <td>${r.notes ?? ''}</td>
-              <td>${renderSourcesList(r.sources || s.sources)}</td>
-            </tr>
-          `).join('')}
-        </tbody>
-      </table>
-    </div>
-  `;
-}
 
     // ================== ROUTER ==================
     function router(){
