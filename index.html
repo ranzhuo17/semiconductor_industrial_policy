@@ -155,22 +155,22 @@ async function loadData(){
       `;
 
       const table = document.createElement('table');
-table.innerHTML = `
-  <thead>
-    <tr>
-      <th>Project Name</th>
-      <th>Subproject Name</th>
-      <th>Year Announced</th>
-      <th>Effective Period</th>
-      <th>Country/Region</th>
-      <th>Type & Status</th>
-      <th>Numbers</th>
-      <th>Targeted Entities</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody id="rows"></tbody>
-`;
+      table.innerHTML = `
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Subproject Name</th>
+            <th>Year Announced</th>
+            <th>Effective Period</th>
+            <th>Country/Region</th>
+            <th>Type & Status</th>
+            <th>Numbers</th>
+            <th>Targeted Entities</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      `;
 
       app.append(toolbar, table);
 
@@ -201,18 +201,19 @@ table.innerHTML = `
     .sort((a, b) => String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
 
   rows.innerHTML = items.map(s => `
-  <tr>
-    <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a></td>
-    <td>${s.subproject_name ?? ''}</td>
-    <td>${s.year_announced ?? ''}</td>
-    <td>${s.effective_period ?? ''}</td>
-    <td>${s.country_region ?? ''}</td>
-    <td>${s.type_and_status ?? ''}</td>
-    <td>${s.numbers ?? ''}</td>
-    <td>${s.targeted_entities ?? ''}</td>
-    <td class="muted"><a href="#/subsidy/${s.project_id}">Click to see details</a></td>
-  </tr>
-`).join('');
+    <tr>
+      <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a></td>
+      <td>${s.subproject_name ?? ''}</td>
+      <td>${s.year_announced ?? ''}</td>
+      <td>${s.effective_period ?? ''}</td>
+      <td>${s.country_region ?? ''}</td>
+      <td>${s.type_and_status ?? ''}</td>
+      <td>${s.numbers ?? ''}</td>
+      <td>${s.targeted_entities ?? ''}</td>
+      <td>${s.notes ?? ''}</td>
+    </tr>
+  `).join('');
+}
 
 
       const qInput = $('#q');
@@ -251,59 +252,51 @@ table.innerHTML = `
   }
 
   app.innerHTML = `
-  <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
-  <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
-  <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
-    <span class="pill">🌍 ${s.country_region ?? ''}</span>
-    <span class="pill">📅 ${s.effective_period ?? ''}</span>
-    <span class="pill">💰 ${s.numbers ?? ''}</span>
-  </div>
-
-  ${s.sources ? `<div class="muted" style="margin-bottom:12px">
-     Sources: ${renderSourcesList(s.sources)}
-   </div>` : ''}
-
-  ${s.notes ? `
-    <div class="card" style="margin-bottom:14px;">
-      <h3 style="margin:0 0 8px; font-size:18px;">Details</h3>
-      <div class="muted" style="white-space:pre-wrap;">${s.notes}</div>
+    <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
+    <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
+      <span class="pill">🌍 ${s.country_region ?? ''}</span>
+      <span class="pill">📅 ${s.effective_period ?? ''}</span>
+      <span class="pill">💰 ${s.numbers ?? ''}</span>
     </div>
-  ` : ''}
+    ${s.sources ? `<div class="muted" style="margin-bottom:12px">
+       Sources: ${renderSourcesList(s.sources)}
+     </div>` : ''}
 
-  <div class="card" style="padding:0; overflow:auto;">
-    <table>
-      <thead>
-        <tr>
-          <th>Distribution Name</th>
-          <th>Year Announced</th>
-          <th>Effective Period</th>
-          <th>Country/Region</th>
-          <th>Type & Status</th>
-          <th>Numbers</th>
-          <th>Targeted Entities</th>
-          <th>Notes</th>
-          <th>Sources</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${(s.distributions ?? []).map(r => `
+    <div class="card" style="padding:0; overflow:auto;">
+      <table>
+        <thead>
           <tr>
-            <td>${r.distribution_name ?? ''}</td>
-            <td>${r.year_announced ?? ''}</td>
-            <td>${r.effective_period ?? ''}</td>
-            <td>${r.country_region ?? ''}</td>
-            <td>${r.type_and_status ?? ''}</td>
-            <td>${r.numbers ?? ''}</td>
-            <td>${r.targeted_entities ?? ''}</td>
-            <td>${r.notes ?? ''}</td>
-            <td>${renderSourcesList(r.sources || s.sources)}</td>
+            <th>Distribution Name</th>
+            <th>Year Announced</th>
+            <th>Effective Period</th>
+            <th>Country/Region</th>
+            <th>Type & Status</th>
+            <th>Numbers</th>
+            <th>Targeted Entities</th>
+            <th>Notes</th>
+            <th>Sources</th>
           </tr>
-        `).join('')}
-      </tbody>
-    </table>
-  </div>
-`;
-   }
+        </thead>
+        <tbody>
+          ${(s.distributions ?? []).map(r => `
+            <tr>
+              <td>${r.distribution_name ?? ''}</td>
+              <td>${r.year_announced ?? ''}</td>
+              <td>${r.effective_period ?? ''}</td>
+              <td>${r.country_region ?? ''}</td>
+              <td>${r.type_and_status ?? ''}</td>
+              <td>${r.numbers ?? ''}</td>
+              <td>${r.targeted_entities ?? ''}</td>
+              <td>${r.notes ?? ''}</td>
+              <td>${renderSourcesList(r.sources || s.sources)}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
 
     // ================== ROUTER ==================
     function router(){
