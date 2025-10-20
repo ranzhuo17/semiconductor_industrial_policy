@@ -60,11 +60,17 @@
     th, td { padding: 10px 12px; border-bottom: 1px sol var(--border); vertical-align: top; }
     th { text-align: left; font-weight: 600; color: var(--muted); }
     tr:hover td { background: rgba(255,255,255,0.02); }
-  th:nth-child(4), td:nth-child(4) {
-    width: 200px;
-    white-space: normal;
-    word-break: break-word;
-  }
+    .home-table th:nth-child(4),
+    .home-table td:nth-child(4) {
+  width: 200px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.detail-table th {
+  white-space: nowrap;
+}
+
     .pill { display:inline-flex; align-items:center; gap:6px; padding: 4px 10px; border-radius: 999px; border: 1px sol var(--border); background: #0b1220; color: var(--muted); font-size: 12px; }
     .muted { color: var(--muted); }
     .breadcrumb { font-size: 14px; margin-bottom: 12px; }
@@ -162,6 +168,7 @@ async function loadData(){
       `;
 
       const table = document.createElement('table');
+      table.className = 'home-table';
       table.innerHTML = `
         <thead>
           <tr>
@@ -325,7 +332,7 @@ function renderSourcesList(srcs) {
      </div>` : ''}
 
     <div class="card" style="padding:0; overflow:auto;">
-      <table>
+      <table class="detail-table">
         <thead>
           <tr>
             <th>Distribution Name</th>
