@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,132 +6,197 @@
   <title>Global Semiconductor Industrial Policy Tracker</title>
   <style>
     :root {
-      --bg: #0f172a; /* slate-900 */
-      --card: #111827; /* gray-900 */
-      --muted: #9ca3af; /* gray-400 */
-      --fg: #e5e7eb; /* gray-200 */
-      --accent: #60a5fa; /* blue-400 */
-      --accent-2: #34d399; /* emerald-400 */
-      --border: #1f2937; /* gray-800 */
+      --bg: #0f172a;        /* slate-900 background */
+      --card: #111827;      /* gray-900 card background */
+      --muted: #9ca3af;     /* gray-400 text */
+      --fg: #e5e7eb;        /* gray-200 foreground text */
+      --accent: #60a5fa;    /* blue-400 links/buttons */
+      --accent-2: #34d399;  /* emerald-400 (unused in current code) */
+      --border: #1f2937;    /* gray-800 borders */
     }
-    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
-    header { display:flex; align-items:center; justify-content:space-between; gap: 12px; margin-bottom: 20px; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
     h1 { font-size: clamp(22px, 3vw, 32px); margin: 0; letter-spacing: 0.2px; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-    .toolbar { display:flex; gap:12px; flex-wrap: wrap; align-items:center; margin-bottom: 12px; }
-   .toolbar input {
-  flex: 1 1 260px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background: #0b1220;
-  color: var(--fg);
-  border: 1px sol var(--border);
-  height: 38px;
-  font-size: 15px;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  appearance: none;
-}
-   .toolbar .btn {
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: 1px sol var(--border);
-  background: #0b1220;
-  color: var(--fg);
-  cursor: pointer;
-  height: 38px;
-  font-size: 15px;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  appearance: none;
-}
-    .disclaimer {
-  color: var(--muted);
-  font-size: 14px;
-  margin: 6px 0 16px;
-}
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);    /* fixed 'solid' typo */
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .toolbar input {
+      flex: 1 1 260px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: #0b1220;
+      color: var(--fg);
+      border: 1px solid var(--border);    /* fixed 'solid' typo */
+      height: 38px;
+      font-size: 15px;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .toolbar .btn {
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);    /* fixed 'solid' typo */
+      background: #0b1220;
+      color: var(--fg);
+      cursor: pointer;
+      height: 38px;
+      font-size: 15px;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      appearance: none;
+    }
     .toolbar .btn:hover { border-color: #334155; }
-    table { wth: 100%; border-collapse: collapse; }
-    th, td { padding: 10px 12px; border-bottom: 1px sol var(--border); vertical-align: top; }
-    th { text-align: left; font-weight: 600; color: var(--muted); }
+    .disclaimer {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 6px 0 16px;
+    }
+    table { width: 100%; border-collapse: collapse; }   /* fixed 'wth' to 'width' */
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);           /* fixed 'solid' typo */
+      vertical-align: top;
+    }
+    th {
+      text-align: left;
+      font-weight: 600;
+      color: var(--muted);
+    }
     tr:hover td { background: rgba(255,255,255,0.02); }
+    /* Ensure Effective Period column wraps and doesn't force table too wide */
     .home-table th:nth-child(4),
     .home-table td:nth-child(4) {
-  width: 200px;
-  white-space: normal;
-  word-break: break-word;
-}
-
-.detail-table th {
-  white-space: nowrap;
-}
-
-    .pill { display:inline-flex; align-items:center; gap:6px; padding: 4px 10px; border-radius: 999px; border: 1px sol var(--border); background: #0b1220; color: var(--muted); font-size: 12px; }
+      width: 200px;
+      white-space: normal;
+      word-break: break-word;
+    }
+    .detail-table th {
+      white-space: nowrap;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);   /* fixed 'solid' typo */
+      background: #0b1220;
+      color: var(--muted);
+      font-size: 12px;
+    }
     .muted { color: var(--muted); }
-    .breadcrumb { font-size: 14px; margin-bottom: 12px; }
+    .breadcrumb {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
     .breadcrumb a { color: var(--muted); }
-    .stat { display:inline-block; padding: 2px 8px; background: #0b1220; border:1px sol var(--border); border-radius: 999px; font-variant-numeric: tabular-nums; }
-    .footer { margin-top: 24px; color: var(--muted); font-size: 14px; }
-    @media (max-wth: 640px){
-  .he-sm { display:none; }
-  th.he-sm, td.he-sm { display:none; }
-  .toolbar { flex-direction: column; align-items: stretch; gap: 6px; }
-  .toolbar input,
-  .toolbar .btn {
-    height: 30px;
-    font-size: 16px; /* prevent iOS zoom */
-    padding: 4px 8px;
-    border-radius: 6px;
-    line-height: 20px;
-  }
-  h1 { font-size: 18px; }
-}
+    .stat {
+      display: inline-block;
+      padding: 2px 8px;
+      background: #0b1220;
+      border: 1px solid var(--border);   /* fixed 'solid' typo */
+      border-radius: 999px;
+      font-variant-numeric: tabular-nums;
+    }
+    .footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    /* Responsive: hide elements with class "he-sm" on narrow screens */
+    @media (max-width: 640px) {
+      .he-sm { display: none; }                   /* hide any element marked he-sm */
+      th.he-sm, td.he-sm { display: none; }       /* specifically hide table cells in that class */
+      .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+      }
+      .toolbar input,
+      .toolbar .btn {
+        height: 30px;
+        font-size: 16px; /* prevent iOS zoom */
+        padding: 4px 8px;
+        border-radius: 6px;
+        line-height: 20px;
+      }
+      h1 { font-size: 18px; }
+    }
   </style>
 </head>
-  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "adce69fde85645ce8c727fbe24b4811f"}'></script><!-- End Cloudflare Web Analytics -->
 <body>
   <div class="container">
     <header>
       <h1>Global Semiconductor Industrial Policy Tracker</h1>
       <nav>
-        <!-- Link back to your main personal site -->
-        <a href="https://ranzhuo17.github.io/" title="Back to ranzhuo17.github.io">↩︎ Main site</a>
+        <!-- Link back to main personal site -->
+        <a href="https://ranzhuo17.github.io/" title="Back to main site">↩︎ Main site</a>
       </nav>
     </header>
 
     <p class="disclaimer">
-  Data is compiled from publicly available sources and will be updated periodically.
-  It may not be fully comprehensive, and some policies across regions or time periods may not be captured.
-</p>
+      Data is compiled from publicly available sources and will be updated periodically.
+      It may not be fully comprehensive, and some policies across regions or time periods may not be captured.
+    </p>
 
+    <!-- Main content container (card) -->
     <div id="app" class="card" aria-live="polite"></div>
+  </div>
 
   <script>
-    // ================== DATA ==================
-    // Minimal example data. Replace with your real entries.
-    // : URL-safe entifier (unique), name: display name
-    // country: string, year: number | string, total_amount: number (USD),
-    // sources: optional array of {label, url},
-    // distributions: array of rows shown on the detail page
+    // ================== DATA LOADING ==================
     let SUBSIDIES = [];
-async function loadData(){
-  try{
-    const res = await fetch('policies.json', { cache: 'no-store' });
-    if(!res.ok) throw new Error(`HTTP ${res.status}`);
-    SUBSIDIES = await res.json();
-  }catch(err){
-    console.error('Failed to load policies.json', err);
-    SUBSIDIES = [];
-    const app = document.getElementById('app');
-    if(app && !app.dataset.errorShown){
-      app.dataset.errorShown = '1';
-      app.innerHTML = `<p class="muted">Couldn’t load data. Add <code>policies.json</code> (an array of policy objects) to populate this page.</p>`;
+    async function loadData() {
+      try {
+        const res = await fetch('policies.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        // Flatten entries with multiple subprojects into separate entries
+        SUBSIDIES = Array.isArray(data) ? data.flatMap(s => {
+          if (s.subproject_name && s.subproject_name.includes('/')) {
+            const parts = s.subproject_name.split('/').map(p => p.trim()).filter(Boolean);
+            if (parts.length > 1) {
+              return parts.map(name => ({ ...s, subproject_name: name }));
+            }
+          }
+          return s;
+        }) : [];
+      } catch(err) {
+        console.error('Failed to load policies.json', err);
+        SUBSIDIES = [];
+        const app = document.getElementById('app');
+        if (app && !app.dataset.errorShown) {
+          app.dataset.errorShown = '1';
+          app.innerHTML = `<p class="muted">Couldn’t load data. Add <code>policies.json</code> (an array of policy objects) to populate this page.</p>`;
+        }
+      }
     }
-  }
-}
 
     // ================== UTILITIES ==================
     const $ = (sel, root=document) => root.querySelector(sel);
@@ -150,7 +213,6 @@ async function loadData(){
       const [route, id] = hash.split('/');
       return { route: route || 'home', id };
     }
-
     function navigate(to) {
       location.hash = to;
     }
@@ -160,26 +222,28 @@ async function loadData(){
       const app = $('#app');
       app.innerHTML = '';
 
+      // Search toolbar
       const toolbar = document.createElement('div');
       toolbar.className = 'toolbar';
       toolbar.innerHTML = `
-       <input id="q" type="search" placeholder="Search project, subproject, country, year…" aria-label="Search policies" />
+        <input id="q" type="search" placeholder="Search project, subproject, country, year…" aria-label="Search policies" />
         <button class="btn" id="clearBtn" type="button">Clear</button>
       `;
 
+      // Main table structure
       const table = document.createElement('table');
       table.className = 'home-table';
       table.innerHTML = `
         <thead>
           <tr>
-            <th>Project Name (Click for details) </th>
+            <th>Project Name (Click for details)</th>
             <th>Subproject Name</th>
             <th>Year Announced</th>
             <th>Effective Period</th>
             <th>Country/Region</th>
             <th>Type & Status</th>
             <th>Numbers</th>
-            <th>Targeted Entities</th>
+            <th class="he-sm">Targeted Entities</th>  <!-- Hide this column on small screens -->
           </tr>
         </thead>
         <tbody id="rows"></tbody>
@@ -189,192 +253,180 @@ async function loadData(){
 
       const rows = $('#rows');
 
-     function draw(filter = '') {
-  const q = filter.trim().toLowerCase();
+      // Populate table rows, including all subprojects as separate items
+      function draw(filter = '') {
+        const q = filter.trim().toLowerCase();
+        const items = SUBSIDIES
+          .filter(s => {
+            if (!q) return true;
+            // Combine various fields to search through
+            const haystack = [
+              s.project_name,
+              s.subproject_name,
+              s.country_region,
+              s.effective_period,
+              s.type_and_status,
+              s.targeted_entities,
+              s.notes,
+              ...(Array.isArray(s.distributions) ? s.distributions.map(d => d.distribution_name) : [])
+            ].filter(Boolean).join(' ').toLowerCase();
+            return haystack.includes(q);
+          })
+          .sort((a, b) => String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
 
-  const items = SUBSIDIES
-    .filter(s => {
-      if (!q) return true;
-      const haystack = [
-        s.project_name,
-        s.subproject_name,
-        s.country_region,
-        s.effective_period,
-        s.type_and_status,
-        s.targeted_entities,
-        s.notes,
-        // also search distribution names, if you want:
-        ...(Array.isArray(s.distributions) ? s.distributions.map(d => d.distribution_name) : [])
-      ]
-        .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
-      return haystack.includes(q);
-    })
-    .sort((a, b) => String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
-
-  rows.innerHTML = items.map(s => `
-    <tr>
-      <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a></td>
-      <td>${s.subproject_name ?? ''}</td>
-      <td>${s.year_announced ?? ''}</td>
-      <td>${s.effective_period ?? ''}</td>
-      <td>${s.country_region ?? ''}</td>
-      <td>${s.type_and_status ?? ''}</td>
-      <td>${s.numbers ?? ''}</td>
-      <td>${s.targeted_entities ?? ''}</td>
-    </tr>
-  `).join('');
-}
-
+        // Generate table rows
+        rows.innerHTML = items.map(s => `
+          <tr>
+            <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a></td>
+            <td>${s.subproject_name ?? ''}</td>
+            <td>${s.year_announced ?? ''}</td>
+            <td>${s.effective_period ?? ''}</td>
+            <td>${s.country_region ?? ''}</td>
+            <td>${s.type_and_status ?? ''}</td>
+            <td>${s.numbers ?? ''}</td>
+            <td class="he-sm">${s.targeted_entities ?? ''}</td>   <!-- Hidden on small screens -->
+          </tr>
+        `).join('');
+      }
 
       const qInput = $('#q');
       const clearBtn = $('#clearBtn');
       qInput.addEventListener('input', () => draw(qInput.value));
-      clearBtn.addEventListener('click', () => { qInput.value=''; draw(''); qInput.focus(); });
+      clearBtn.addEventListener('click', () => {
+        qInput.value = '';
+        draw('');
+        qInput.focus();
+      });
 
       draw('');
     }
 
-  function normalizeSources(srcs) {
-  if (!srcs) return [];
-
-  // Already an array? great.
-  if (Array.isArray(srcs)) return srcs;
-
-  // Sometimes data comes as a stringified JSON array
-  if (typeof srcs === 'string') {
-    try {
-      const maybe = JSON.parse(srcs);
-      if (Array.isArray(maybe)) return maybe;
-    } catch (_) {}
-
-    const out = [];
-
-    // 1) Markdown links: [Label](https://example.com,foo) — commas OK
-    const mdRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
-    let mdMatch;
-    let consumed = srcs;
-    while ((mdMatch = mdRe.exec(srcs)) !== null) {
-      out.push({ label: mdMatch[1], url: mdMatch[2] });
-      consumed = consumed.replace(mdMatch[0], ' ');
+    function normalizeSources(srcs) {
+      if (!srcs) return [];
+      // Already an array?
+      if (Array.isArray(srcs)) return srcs;
+      // If it's a JSON string, parse it
+      if (typeof srcs === 'string') {
+        try {
+          const maybe = JSON.parse(srcs);
+          if (Array.isArray(maybe)) return maybe;
+        } catch (_) {}
+        const out = [];
+        // 1) Markdown-style [Label](URL)
+        const mdRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+        let mdMatch;
+        let consumed = srcs;
+        while ((mdMatch = mdRe.exec(srcs)) !== null) {
+          out.push({ label: mdMatch[1], url: mdMatch[2] });
+          consumed = consumed.replace(mdMatch[0], ' ');
+        }
+        // 2) Bare URLs
+        const urlRe = /https?:\/\/[^\s<>"')\]]+/g;
+        let urlMatch;
+        while ((urlMatch = urlRe.exec(consumed)) !== null) {
+          out.push({ url: urlMatch[0] });
+        }
+        // 3) If still nothing, split on ; or |
+        if (out.length === 0) {
+          const parts = srcs.split(/\s*[;|]\s*/).filter(Boolean);
+          for (const p of parts) {
+            // Support "Label, https://..." format
+            const m = p.match(/^(.*?)\s*,\s*(https?:\/\/.+)$/);
+            if (m) {
+              out.push({ label: m[1], url: m[2] });
+            } else if (/^https?:\/\//i.test(p)) {
+              out.push({ url: p });
+            } else {
+              out.push({ label: p });
+            }
+          }
+        }
+        return out;
+      }
+      // If it's a single object (unlikely), wrap it in an array
+      return [srcs];
     }
 
-    // 2) Bare URLs (don’t stop at commas; stop at whitespace or closing quotes/brackets)
-    const urlRe = /https?:\/\/[^\s<>"')\]]+/g;
-    let urlMatch;
-    while ((urlMatch = urlRe.exec(consumed)) !== null) {
-      out.push({ url: urlMatch[0] });
+    function renderSourcesList(srcs) {
+      const list = normalizeSources(srcs);
+      if (!list.length) return '(none)';
+      return list.map(obj => {
+        const text = obj.label ? `${obj.label}` : `${obj.url}`;
+        if (obj.url) {
+          return `<a href="${obj.url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+        }
+        return text;
+      }).join(' · ');
     }
 
-    // 3) If we still have nothing, allow splitting on ; or |
-    if (out.length === 0) {
-      const parts = srcs.split(/\s*[;|]\s*/).filter(Boolean);
-      for (const p of parts) {
-        // Support "Label, https://..." (comma only as label/URL separator)
-        const m = p.match(/^(.*?)\s*,\s*(https?:\/\/.+)$/);
-        if (m) out.push({ label: m[1], url: m[2] });
-        else if (/^https?:\/\//i.test(p)) out.push({ url: p });
-        else out.push({ label: p });
+    function renderDetail(id) {
+      const s = SUBSIDIES.find(x => String(x.project_id) === String(id));
+      const app = $('#app');
+      if (!s) {
+        app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
+        return;
       }
+      // Build the detail view content
+      app.innerHTML = `
+        <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
+        <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
+          <span class="pill">🌍 ${s.country_region ?? ''}</span>
+          <span class="pill">📅 ${s.effective_period ?? ''}</span>
+          <span class="pill">💰 ${s.numbers ?? ''}</span>
+          <span class="pill">📝 <strong>Details:</strong> ${s.notes ?? ''}</span>
+        </div>
+        ${s.sources ? `<div class="muted" style="margin-bottom:12px">
+           Sources: ${renderSourcesList(s.sources)}
+         </div>` : ''}
+
+        <div class="card" style="padding:0; overflow:auto;">
+          <table class="detail-table">
+            <thead>
+              <tr>
+                <th>Distribution Name</th>
+                <th>Year Announced</th>
+                <th>Effective Period</th>
+                <th>Country/Region</th>
+                <th>Type & Status</th>
+                <th>Numbers</th>
+                <th>Targeted Entities</th>
+                <th>Notes</th>
+                <th>Sources</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${(s.distributions ?? []).map(r => `
+                <tr>
+                  <td>${r.distribution_name ?? ''}</td>
+                  <td>${r.year_announced ?? ''}</td>
+                  <td>${r.effective_period ?? ''}</td>
+                  <td>${r.country_region ?? ''}</td>
+                  <td>${r.type_and_status ?? ''}</td>
+                  <td>${r.numbers ?? ''}</td>
+                  <td>${r.targeted_entities ?? ''}</td>
+                  <td>${r.notes ?? ''}</td>
+                  <td>${renderSourcesList(r.sources || s.sources)}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
     }
-
-    return out;
-  }
-
-  return [];
-}
-
-function renderSourcesList(srcs) {
-  const items = normalizeSources(srcs);
-  if (!items.length) return '';
-
-  return items
-    .map(s => {
-      if (typeof s === 'string') {
-        // If array contains raw strings
-        return /^https?:\/\//i.test(s)
-          ? `<a href="${s}" target="_blank" rel="noopener">${s}</a>`
-          : s;
-      }
-      const text = s.label ?? s.url ?? '';
-      const href = s.url;
-      if (href && /^https?:\/\//i.test(href)) {
-        return `<a href="${href}" target="_blank" rel="noopener">${text || href}</a>`;
-      }
-      // If no valid URL, just return the text
-      return text;
-    })
-    .filter(Boolean)
-    .join(' · ');
-}
-
-
-   function renderDetail(id) {
-  const s = SUBSIDIES.find(x => String(x.project_id) === String(id));
-  const app = $('#app');
-  if (!s) {
-    app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
-    return;
-  }
-
-  app.innerHTML = `
-    <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
-    <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
-    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
-      <span class="pill">🌍 ${s.country_region ?? ''}</span>
-      <span class="pill">📅 ${s.effective_period ?? ''}</span>
-      <span class="pill">💰 ${s.numbers ?? ''}</span>
-      <span class="pill">📝 <strong>Details:</strong> ${s.notes ?? ''}</span>
-    </div>
-    ${s.sources ? `<div class="muted" style="margin-bottom:12px">
-       Sources: ${renderSourcesList(s.sources)}
-     </div>` : ''}
-
-    <div class="card" style="padding:0; overflow:auto;">
-      <table class="detail-table">
-        <thead>
-          <tr>
-            <th>Distribution Name</th>
-            <th>Year Announced</th>
-            <th>Effective Period</th>
-            <th>Country/Region</th>
-            <th>Type & Status</th>
-            <th>Numbers</th>
-            <th>Targeted Entities</th>
-            <th>Notes</th>
-            <th>Sources</th>
-          </tr>
-        </thead>
-        <tbody>
-          ${(s.distributions ?? []).map(r => `
-            <tr>
-              <td>${r.distribution_name ?? ''}</td>
-              <td>${r.year_announced ?? ''}</td>
-              <td>${r.effective_period ?? ''}</td>
-              <td>${r.country_region ?? ''}</td>
-              <td>${r.type_and_status ?? ''}</td>
-              <td>${r.numbers ?? ''}</td>
-              <td>${r.targeted_entities ?? ''}</td>
-              <td>${r.notes ?? ''}</td>
-              <td>${renderSourcesList(r.sources || s.sources)}</td>
-            </tr>
-          `).join('')}
-        </tbody>
-      </table>
-    </div>
-  `;
-}
 
     // ================== ROUTER ==================
-    function router(){
+    function router() {
       const { route, id } = getRoute();
       if (route === 'subsidy' && id) return renderDetail(id);
       return renderHome();
     }
 
     window.addEventListener('hashchange', router);
-    window.addEventListener('DOMContentLoaded', async () => { await loadData(); router(); });
+    window.addEventListener('DOMContentLoaded', async () => {
+      await loadData();
+      router();
+    });
   </script>
 </body>
 </html>
