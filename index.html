@@ -169,264 +169,372 @@
     <div id="app" class="card" aria-live="polite"></div>
   </div>
 
-  <script>
-    // ================== DATA LOADING ==================
-    let SUBSIDIES = [];
-    async function loadData() {
-      try {
-        const res = await fetch('policies.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        // Flatten entries with multiple subprojects into separate entries
-        SUBSIDIES = Array.isArray(data) ? data.flatMap(s => {
-          if (s.subproject_name && s.subproject_name.includes('/')) {
-            const parts = s.subproject_name.split('/').map(p => p.trim()).filter(Boolean);
-            if (parts.length > 1) {
-              return parts.map(name => ({ ...s, subproject_name: name }));
-            }
+ <script>
+  // ================== DATA LOADING ==================
+  let SUBSIDIES = [];
+  async function loadData() {
+    try {
+      const res = await fetch('policies.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      // Keep one entry per row (already produced by your converter). If any row has multiple
+      // subprojects jammed in via slashes (unlikely now), split them into separate entries.
+      SUBSIDIES = Array.isArray(data) ? data.flatMap(s => {
+        if (s.subproject_name && s.subproject_name.includes('/')) {
+          const parts = s.subproject_name.split('/').map(p => p.trim()).filter(Boolean);
+          if (parts.length > 1) {
+            return parts.map(name => ({ ...s, subproject_name: name }));
           }
-          return s;
-        }) : [];
-      } catch(err) {
-        console.error('Failed to load policies.json', err);
-        SUBSIDIES = [];
-        const app = document.getElementById('app');
-        if (app && !app.dataset.errorShown) {
-          app.dataset.errorShown = '1';
-          app.innerHTML = `<p class="muted">Couldn’t load data. Add <code>policies.json</code> (an array of policy objects) to populate this page.</p>`;
         }
+        return s;
+      }) : [];
+    } catch(err) {
+      console.error('Failed to load policies.json', err);
+      SUBSIDIES = [];
+      const app = document.getElementById('app');
+      if (app && !app.dataset.errorShown) {
+        app.dataset.errorShown = '1';
+        app.innerHTML = `<p class="muted">Couldn’t load data. Add <code>policies.json</code> (an array of policy objects) to populate this page.</p>`;
       }
     }
+  }
 
-    // ================== UTILITIES ==================
-    const $ = (sel, root=document) => root.querySelector(sel);
-    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
-    const fmtMoney = n => {
-      if (typeof n !== 'number' || Number.isNaN(n)) return '—';
-      if (n >= 1e9) return `$${(n/1e9).toFixed(1)}B`;
-      if (n >= 1e6) return `$${(n/1e6).toFixed(1)}M`;
-      return `$${n.toLocaleString()}`;
-    };
+  // ================== UTILITIES ==================
+  const $ = (sel, root=document) => root.querySelector(sel);
+  const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
 
-    function getRoute() {
-      const hash = location.hash.replace(/^#\/?/, '');
-      const [route, id] = hash.split('/');
-      return { route: route || 'home', id };
+  function getRoute() {
+    const hash = location.hash.replace(/^#\/?/, '');
+    const parts = hash.split('/').filter(Boolean);
+    // Routes:
+    //   "" or "home"               -> home
+    //   "project/{projectId}"      -> project detail
+    //   "subproject/{pId}/{sId}"   -> subproject detail
+    if (parts.length === 0 || parts[0] === 'home') return { route: 'home' };
+    if (parts[0] === 'project' && parts[1]) return { route: 'project', pid: parts[1] };
+    if (parts[0] === 'subproject' && parts[1] && parts[2]) return { route: 'subproject', pid: parts[1], sid: parts[2] };
+    // Back-compat: old "subsidy/{id}" route points to project page
+    if (parts[0] === 'subsidy' && parts[1]) return { route: 'project', pid: parts[1] };
+    return { route: 'home' };
+  }
+
+  function navigate(to) {
+    location.hash = to.startsWith('#') ? to : '#/' + to.replace(/^\//,'');
+  }
+
+  function normalizeSources(srcs) {
+    if (!srcs) return [];
+    if (Array.isArray(srcs)) return srcs;
+    if (typeof srcs === 'string') {
+      try {
+        const maybe = JSON.parse(srcs);
+        if (Array.isArray(maybe)) return maybe;
+      } catch (_) {}
+      const out = [];
+      const mdRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+      let mdMatch;
+      let consumed = srcs;
+      while ((mdMatch = mdRe.exec(srcs)) !== null) {
+        out.push({ label: mdMatch[1], url: mdMatch[2] });
+        consumed = consumed.replace(mdMatch[0], ' ');
+      }
+      const urlRe = /https?:\/\/[^\s<>"')\]]+/g;
+      let urlMatch;
+      while ((urlMatch = urlRe.exec(consumed)) !== null) {
+        out.push({ url: urlMatch[0] });
+      }
+      if (out.length === 0) {
+        const parts = srcs.split(/\s*[;|]\s*/).filter(Boolean);
+        for (const p of parts) {
+          const m = p.match(/^(.*?)\s*,\s*(https?:\/\/.+)$/);
+          if (m) out.push({ label: m[1], url: m[2] });
+          else if (/^https?:\/\//i.test(p)) out.push({ url: p });
+          else out.push({ label: p });
+        }
+      }
+      return out;
     }
-    function navigate(to) {
-      location.hash = to;
-    }
+    return [srcs];
+  }
 
-    // ================== RENDERERS ==================
-    function renderHome() {
-      const app = $('#app');
-      app.innerHTML = '';
+  function renderSourcesList(srcs) {
+    const list = normalizeSources(srcs);
+    if (!list.length) return '(none)';
+    return list.map(obj => {
+      const text = obj.label ? `${obj.label}` : `${obj.url}`;
+      if (obj.url) {
+        return `<a href="${obj.url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+      }
+      return text;
+    }).join(' · ');
+  }
 
-      // Search toolbar
-      const toolbar = document.createElement('div');
-      toolbar.className = 'toolbar';
-      toolbar.innerHTML = `
-        <input id="q" type="search" placeholder="Search project, subproject, country, year…" aria-label="Search policies" />
-        <button class="btn" id="clearBtn" type="button">Clear</button>
-      `;
+  // ================== RENDERERS ==================
+  function renderHome() {
+    const app = $('#app');
+    app.innerHTML = '';
 
-      // Main table structure
-      const table = document.createElement('table');
-      table.className = 'home-table';
-      table.innerHTML = `
-        <thead>
+    const toolbar = document.createElement('div');
+    toolbar.className = 'toolbar';
+    toolbar.innerHTML = `
+      <input id="q" type="search" placeholder="Search project, subproject, country, year…" aria-label="Search policies" />
+      <button class="btn" id="clearBtn" type="button">Clear</button>
+    `;
+
+    const table = document.createElement('table');
+    table.className = 'home-table';
+    table.innerHTML = `
+      <thead>
+        <tr>
+          <th>Project Name (Click for details)</th>
+          <th>Subproject Name</th>
+          <th>Year Announced</th>
+          <th>Effective Period</th>
+          <th>Country/Region</th>
+          <th>Type & Status</th>
+          <th>Numbers</th>
+          <th class="he-sm">Targeted Entities</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    `;
+
+    app.append(toolbar, table);
+
+    const rows = $('#rows');
+
+    function draw(filter = '') {
+      const q = filter.trim().toLowerCase();
+      const items = SUBSIDIES
+        .filter(s => {
+          if (!q) return true;
+          const haystack = [
+            s.project_name,
+            s.subproject_name,
+            s.country_region,
+            s.effective_period,
+            s.type_and_status,
+            s.targeted_entities,
+            s.notes,
+            ...(Array.isArray(s.distributions) ? s.distributions.map(d => d.distribution_name) : [])
+          ].filter(Boolean).join(' ').toLowerCase();
+          return haystack.includes(q);
+        })
+        .sort((a, b) => String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
+
+      rows.innerHTML = items.map(s => {
+        const hasSub = Boolean((s.subproject_name && s.subproject_name.trim()) || (s.subproject_id && String(s.subproject_id).trim()));
+        const projectLink = hasSub
+          ? `${s.project_name ?? ''}` // NOT a link when subproject exists
+          : `<a href="#/project/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name ?? ''}</a>`;
+        const subprojectLink = hasSub
+          ? `<a href="#/subproject/${s.project_id}/${s.subproject_id}" aria-label="Open ${s.subproject_name}">${s.subproject_name ?? ''}</a>`
+          : ``;
+
+        return `
           <tr>
-            <th>Project Name (Click for details)</th>
-            <th>Subproject Name</th>
-            <th>Year Announced</th>
-            <th>Effective Period</th>
-            <th>Country/Region</th>
-            <th>Type & Status</th>
-            <th>Numbers</th>
-            <th class="he-sm">Targeted Entities</th>  <!-- Hide this column on small screens -->
-          </tr>
-        </thead>
-        <tbody id="rows"></tbody>
-      `;
-
-      app.append(toolbar, table);
-
-      const rows = $('#rows');
-
-      // Populate table rows, including all subprojects as separate items
-      function draw(filter = '') {
-        const q = filter.trim().toLowerCase();
-        const items = SUBSIDIES
-          .filter(s => {
-            if (!q) return true;
-            // Combine various fields to search through
-            const haystack = [
-              s.project_name,
-              s.subproject_name,
-              s.country_region,
-              s.effective_period,
-              s.type_and_status,
-              s.targeted_entities,
-              s.notes,
-              ...(Array.isArray(s.distributions) ? s.distributions.map(d => d.distribution_name) : [])
-            ].filter(Boolean).join(' ').toLowerCase();
-            return haystack.includes(q);
-          })
-          .sort((a, b) => String(a.project_name ?? '').localeCompare(String(b.project_name ?? '')));
-
-        // Generate table rows
-        rows.innerHTML = items.map(s => `
-          <tr>
-            <td><a href="#/subsidy/${s.project_id}" aria-label="Open ${s.project_name}">${s.project_name}</a></td>
-            <td>${s.subproject_name ?? ''}</td>
+            <td>${projectLink}</td>
+            <td>${subprojectLink}</td>
             <td>${s.year_announced ?? ''}</td>
             <td>${s.effective_period ?? ''}</td>
             <td>${s.country_region ?? ''}</td>
             <td>${s.type_and_status ?? ''}</td>
             <td>${s.numbers ?? ''}</td>
-            <td class="he-sm">${s.targeted_entities ?? ''}</td>   <!-- Hidden on small screens -->
+            <td class="he-sm">${s.targeted_entities ?? ''}</td>
           </tr>
-        `).join('');
-      }
+        `;
+      }).join('');
+    }
 
-      const qInput = $('#q');
-      const clearBtn = $('#clearBtn');
-      qInput.addEventListener('input', () => draw(qInput.value));
-      clearBtn.addEventListener('click', () => {
-        qInput.value = '';
-        draw('');
-        qInput.focus();
-      });
-
+    const qInput = $('#q');
+    const clearBtn = $('#clearBtn');
+    qInput.addEventListener('input', () => draw(qInput.value));
+    clearBtn.addEventListener('click', () => {
+      qInput.value = '';
       draw('');
-    }
-
-    function normalizeSources(srcs) {
-      if (!srcs) return [];
-      // Already an array?
-      if (Array.isArray(srcs)) return srcs;
-      // If it's a JSON string, parse it
-      if (typeof srcs === 'string') {
-        try {
-          const maybe = JSON.parse(srcs);
-          if (Array.isArray(maybe)) return maybe;
-        } catch (_) {}
-        const out = [];
-        // 1) Markdown-style [Label](URL)
-        const mdRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
-        let mdMatch;
-        let consumed = srcs;
-        while ((mdMatch = mdRe.exec(srcs)) !== null) {
-          out.push({ label: mdMatch[1], url: mdMatch[2] });
-          consumed = consumed.replace(mdMatch[0], ' ');
-        }
-        // 2) Bare URLs
-        const urlRe = /https?:\/\/[^\s<>"')\]]+/g;
-        let urlMatch;
-        while ((urlMatch = urlRe.exec(consumed)) !== null) {
-          out.push({ url: urlMatch[0] });
-        }
-        // 3) If still nothing, split on ; or |
-        if (out.length === 0) {
-          const parts = srcs.split(/\s*[;|]\s*/).filter(Boolean);
-          for (const p of parts) {
-            // Support "Label, https://..." format
-            const m = p.match(/^(.*?)\s*,\s*(https?:\/\/.+)$/);
-            if (m) {
-              out.push({ label: m[1], url: m[2] });
-            } else if (/^https?:\/\//i.test(p)) {
-              out.push({ url: p });
-            } else {
-              out.push({ label: p });
-            }
-          }
-        }
-        return out;
-      }
-      // If it's a single object (unlikely), wrap it in an array
-      return [srcs];
-    }
-
-    function renderSourcesList(srcs) {
-      const list = normalizeSources(srcs);
-      if (!list.length) return '(none)';
-      return list.map(obj => {
-        const text = obj.label ? `${obj.label}` : `${obj.url}`;
-        if (obj.url) {
-          return `<a href="${obj.url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
-        }
-        return text;
-      }).join(' · ');
-    }
-
-    function renderDetail(id) {
-      const s = SUBSIDIES.find(x => String(x.project_id) === String(id));
-      const app = $('#app');
-      if (!s) {
-        app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Subsidy not found.</p>`;
-        return;
-      }
-      // Build the detail view content
-      app.innerHTML = `
-        <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
-        <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
-        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
-          <span class="pill">🌍 ${s.country_region ?? ''}</span>
-          <span class="pill">📅 ${s.effective_period ?? ''}</span>
-          <span class="pill">💰 ${s.numbers ?? ''}</span>
-          <span class="pill">📝 <strong>Details:</strong> ${s.notes ?? ''}</span>
-        </div>
-        ${s.sources ? `<div class="muted" style="margin-bottom:12px">
-           Sources: ${renderSourcesList(s.sources)}
-         </div>` : ''}
-
-        <div class="card" style="padding:0; overflow:auto;">
-          <table class="detail-table">
-            <thead>
-              <tr>
-                <th>Distribution Name</th>
-                <th>Year Announced</th>
-                <th>Effective Period</th>
-                <th>Country/Region</th>
-                <th>Type & Status</th>
-                <th>Numbers</th>
-                <th>Targeted Entities</th>
-                <th>Notes</th>
-                <th>Sources</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${(s.distributions ?? []).map(r => `
-                <tr>
-                  <td>${r.distribution_name ?? ''}</td>
-                  <td>${r.year_announced ?? ''}</td>
-                  <td>${r.effective_period ?? ''}</td>
-                  <td>${r.country_region ?? ''}</td>
-                  <td>${r.type_and_status ?? ''}</td>
-                  <td>${r.numbers ?? ''}</td>
-                  <td>${r.targeted_entities ?? ''}</td>
-                  <td>${r.notes ?? ''}</td>
-                  <td>${renderSourcesList(r.sources || s.sources)}</td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        </div>
-      `;
-    }
-
-    // ================== ROUTER ==================
-    function router() {
-      const { route, id } = getRoute();
-      if (route === 'subsidy' && id) return renderDetail(id);
-      return renderHome();
-    }
-
-    window.addEventListener('hashchange', router);
-    window.addEventListener('DOMContentLoaded', async () => {
-      await loadData();
-      router();
+      qInput.focus();
     });
-  </script>
+
+    draw('');
+  }
+
+  function renderProject(projectId) {
+    const app = $('#app');
+
+    // Main project row: same project_id, EMPTY subproject_id/name
+    const isEmpty = v => v == null || String(v).trim() === '';
+    const main = SUBSIDIES.find(x =>
+      String(x.project_id) === String(projectId) &&
+      (isEmpty(x.subproject_id) && isEmpty(x.subproject_name))
+    );
+
+    // Fallback: if no explicit "main" row, use any row with that project_id
+    const anchor = main || SUBSIDIES.find(x => String(x.project_id) === String(projectId));
+
+    if (!anchor) {
+      app.innerHTML = `<div class="breadcrumb"><a href="#/">← Back</a></div><p>Project not found.</p>`;
+      return;
+    }
+
+    // Subprojects list
+    const subs = SUBSIDIES
+      .filter(x => String(x.project_id) === String(projectId))
+      .filter(x => !(isEmpty(x.subproject_id) && isEmpty(x.subproject_name)))
+      .map(x => ({ name: x.subproject_name || '(unnamed)', id: x.subproject_id }))
+      // Deduplicate by (name,id)
+      .filter((v, i, arr) => arr.findIndex(w => w.name === v.name && String(w.id) === String(v.id)) === i)
+      .sort((a, b) => String(a.name).localeCompare(String(b.name)));
+
+    const s = anchor; // use 's' for consistency with detail renderer below
+
+    app.innerHTML = `
+      <div class="breadcrumb"><a href="#/">← Back to all policies</a></div>
+      <h2 style="margin: 6px 0 16px; font-size: 22px;">${s.project_name}</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
+        <span class="pill">🌍 ${s.country_region ?? ''}</span>
+        <span class="pill">📅 ${s.effective_period ?? ''}</span>
+        <span class="pill">💰 ${s.numbers ?? ''}</span>
+        <span class="pill">📝 <strong>Details:</strong> ${s.notes ?? ''}</span>
+      </div>
+      ${s.sources ? `<div class="muted" style="margin-bottom:12px">
+         Sources: ${renderSourcesList(s.sources)}
+       </div>` : ''}
+
+      ${subs.length ? `
+        <div class="card" style="margin-bottom:16px;">
+          <h3 style="margin:0 0 10px; font-size:18px;">Subprojects</h3>
+          <ul style="margin:0; padding-left:18px;">
+            ${subs.map(sp => `
+              <li><a href="#/subproject/${projectId}/${sp.id}">${sp.name}</a></li>
+            `).join('')}
+          </ul>
+        </div>
+      ` : ''}
+
+      <div class="card" style="padding:0; overflow:auto;">
+        <table class="detail-table">
+          <thead>
+            <tr>
+              <th>Distribution Name</th>
+              <th>Year Announced</th>
+              <th>Effective Period</th>
+              <th>Country/Region</th>
+              <th>Type & Status</th>
+              <th>Numbers</th>
+              <th>Targeted Entities</th>
+              <th>Notes</th>
+              <th>Sources</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${(s.distributions ?? []).map(r => `
+              <tr>
+                <td>${r.distribution_name ?? ''}</td>
+                <td>${r.year_announced ?? ''}</td>
+                <td>${r.effective_period ?? ''}</td>
+                <td>${r.country_region ?? ''}</td>
+                <td>${r.type_and_status ?? ''}</td>
+                <td>${r.numbers ?? ''}</td>
+                <td>${r.targeted_entities ?? ''}</td>
+                <td>${r.notes ?? ''}</td>
+                <td>${renderSourcesList(r.sources || s.sources)}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  function renderSubproject(projectId, subprojectId) {
+    const app = $('#app');
+    const s = SUBSIDIES.find(x =>
+      String(x.project_id) === String(projectId) &&
+      String(x.subproject_id) === String(subprojectId)
+    );
+
+    // Also locate parent for breadcrumb/name continuity
+    const parent = SUBSIDIES.find(x =>
+      String(x.project_id) === String(projectId) &&
+      (!x.subproject_id || String(x.subproject_id).trim() === '')
+    );
+
+    if (!s) {
+      app.innerHTML = `<div class="breadcrumb">
+          <a href="#/">← Back</a>
+          ${parent ? ` · <a href="#/project/${projectId}">${parent.project_name}</a>` : ''}
+        </div>
+        <p>Subproject not found.</p>`;
+      return;
+    }
+
+    app.innerHTML = `
+      <div class="breadcrumb">
+        <a href="#/">← Back to all policies</a>
+        ${parent ? ` · <a href="#/project/${projectId}">${parent.project_name}</a>` : ''}
+      </div>
+      <h2 style="margin: 6px 0 0; font-size: 22px;">${s.project_name}</h2>
+      <h3 style="margin: 2px 0 12px; font-size: 18px; color: var(--muted);">Subproject: ${s.subproject_name ?? ''}</h3>
+
+      <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
+        <span class="pill">🌍 ${s.country_region ?? ''}</span>
+        <span class="pill">📅 ${s.effective_period ?? ''}</span>
+        <span class="pill">💰 ${s.numbers ?? ''}</span>
+        <span class="pill">📝 <strong>Details:</strong> ${s.notes ?? ''}</span>
+      </div>
+      ${s.sources ? `<div class="muted" style="margin-bottom:12px">
+         Sources: ${renderSourcesList(s.sources)}
+       </div>` : ''}
+
+      <div class="card" style="padding:0; overflow:auto;">
+        <table class="detail-table">
+          <thead>
+            <tr>
+              <th>Distribution Name</th>
+              <th>Year Announced</th>
+              <th>Effective Period</th>
+              <th>Country/Region</th>
+              <th>Type & Status</th>
+              <th>Numbers</th>
+              <th>Targeted Entities</th>
+              <th>Notes</th>
+              <th>Sources</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${(s.distributions ?? []).map(r => `
+              <tr>
+                <td>${r.distribution_name ?? ''}</td>
+                <td>${r.year_announced ?? ''}</td>
+                <td>${r.effective_period ?? ''}</td>
+                <td>${r.country_region ?? ''}</td>
+                <td>${r.type_and_status ?? ''}</td>
+                <td>${r.numbers ?? ''}</td>
+                <td>${r.targeted_entities ?? ''}</td>
+                <td>${r.notes ?? ''}</td>
+                <td>${renderSourcesList(r.sources || s.sources)}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  // ================== ROUTER ==================
+  function router() {
+    const { route, pid, sid } = getRoute();
+    if (route === 'project' && pid) return renderProject(pid);
+    if (route === 'subproject' && pid && sid) return renderSubproject(pid, sid);
+    return renderHome();
+  }
+
+  window.addEventListener('hashchange', router);
+  window.addEventListener('DOMContentLoaded', async () => {
+    await loadData();
+    router();
+  });
+</script>
+
 </body>
 </html>
