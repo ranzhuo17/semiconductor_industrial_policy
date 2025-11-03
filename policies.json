@@ -263,7 +263,44 @@
     "notes": "Qualified businesses can choose special depreciation equal to 30% of the acquisition cost of certified 5G equipment; or can claim a  tax credit 15% of the acquisition cost;  50% property tax reduction for 5G deployments; tax benefits capped at 20% of corporate tax; tax program expired on April 1, 2025",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "TSMC/Sony Kumamoto Fab ",
+        "distribution_id": 1,
+        "year_announced": "2021",
+        "effective_period": "2022-2024",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥476B ($3.2B USD)",
+        "targeted_entities": "Fabrication (Mature Nodes)",
+        "notes": "JASM Japan fab exceeds 100k wafers monthly multiple nodes",
+        "sources": "https://asia.nikkei.com/business/tech/semiconductors/japan-to-subsidize-tsmc-s-kumamoto-plant-by-up-to-3.5bn; https://pr.tsmc.com/english/news/3113#:~:text=The%20opening%20marks%20a%20significant%20milestone%20for,to%20begin%20by%20the%20end%20of%202024."
+      },
+      {
+        "distribution_name": "TSMC/Sony Kumamoto Fab Two ",
+        "distribution_id": 2,
+        "year_announced": "2024",
+        "effective_period": "2025-2027",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥732B ($4.99B USD)",
+        "targeted_entities": "Fabrication (Mature Nodes)",
+        "notes": "Second JASM fab delayed prioritizing U.S. investment traffic issues",
+        "sources": "https://www.trendforce.com/news/2025/07/25/news-tsmc-reportedly-delays-kumamoto-2nd-fab-launch-to-2029-amid-u-s-expansion-push/; https://www.reuters.com/technology/tokyo-pledges-further-49-bln-help-tsmc-expand-japan-production-2024-02-24/"
+      },
+      {
+        "distribution_name": "Micron Hiroshima DRAM Fab ",
+        "distribution_id": 3,
+        "year_announced": "2024",
+        "effective_period": "2025-2027",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥540B ($3.63B USD)",
+        "targeted_entities": "R&D; Fabrication (EUV DRAM)",
+        "notes": "Japan fab start moved to 2027 due market softness",
+        "sources": "https://www.trendforce.com/news/2024/05/28/news-micron-reportedly-set-to-build-new-dram-plant-in-hiroshima-japan-operational-expected-by-end-of-2027/#:~:text=timely%2C%20informed%20decisions.-,%5BNews%5D%20Micron%20Reportedly%20Set%20to%20Build%20New%20DRAM%20Plant%20in,centers%2C%20and%20autonomous%20driving%20technology.; https://evertiq.com/design/55809"
+      }
+    ]
   },
   {
     "project_name": "Economic Security Promotion Act",
@@ -291,7 +328,20 @@
     "notes": "Japan’s New Energy and Industrial Technology Development Organization (NEDO) launched the “R&D Project of the Enhanced Infrastructure for Post-5G Information and Communication Systems” in FY 2020 with a budget of approximately ¥1,472.3 billion; the programme covers development of next-gen communications systems and advanced semiconductors, manufacturing technologies for advanced logic chips and packaging/miniaturisation; a related scheme from FY 2023 by National Institute of Information and Communications Technology (NICT) created the “Innovative ICT Fund Projects for Beyond 5G/6G” to support social implementation, overseas expansion and radio-spectrum technologies.",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "Rapidus ",
+        "distribution_id": 1,
+        "year_announced": "2022",
+        "effective_period": "2022-2027",
+        "country_region": "JP",
+        "type_and_status": "Equity Grant / R&D Subsidy",
+        "numbers": "¥400B ($1.62B USD) - At Least",
+        "targeted_entities": "Advanced Logic; Fabrication",
+        "notes": "Rapidus consortium developing advanced 2nm logic chips domestically",
+        "sources": "https://news.metal.com/newscontent/103260356/Japan-Allocates-172-Trillion-Yen-to-Secure-Semiconductor-Supply-Boosts-Rapidus-Aid"
+      }
+    ]
   },
   {
     "project_name": "Export Controls on Chipmaking Equipment",
@@ -403,7 +453,44 @@
     "notes": "Regulation (EU) 2023/1781 establishing a framework to strengthen Europe’s semiconductor ecosystem; entered into force September 21 2023; aims to double Europe’s global chip market share from ~10 % to 20 % by 2030; mobilizes €43 billion in combined public and private funding; creates three pillars — (1) Chips for Europe Initiative to fund R&D, pilot lines, and design platforms, (2) State-aid framework for “first-of-a-kind” fabs and open EU foundries, and (3) Monitoring and crisis response mechanism for supply-chain resilience; supports advanced manufacturing, packaging, testing, design, and materials research; emphasizes coordination among Member States and alignment with industrial policy tools like IPCEI and Horizon Europe; serves as EU’s counterpart to the U.S. CHIPS Act, designed to ensure European technological sovereignty",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "Intel Magdeburg Fab ",
+        "distribution_id": 1,
+        "year_announced": "2023",
+        "effective_period": "2023-2025",
+        "country_region": "DE",
+        "type_and_status": "Subsidy",
+        "numbers": "€10B",
+        "targeted_entities": "Fabrication",
+        "notes": "Intel Magdeburg mega-fab cancelled July 2025",
+        "sources": "https://ukandeu.ac.uk/the-significance-of-german-subsidies-for-intel/"
+      },
+      {
+        "distribution_name": "TSMC Bosch Dresden Fab ",
+        "distribution_id": 2,
+        "year_announced": "2023",
+        "effective_period": "2023-2027",
+        "country_region": "DE",
+        "type_and_status": "Subisdy",
+        "numbers": "€5B",
+        "targeted_entities": "Fabrication",
+        "notes": "TSMC-led Dresden 300mm fab producing automotive focused chips",
+        "sources": "https://www.bosch-semiconductors.com/stories/starting-signal-for-state-of-the-art-chip-factory-esmc-in-dresden/"
+      },
+      {
+        "distribution_name": "STM Chip Fabrication Facility",
+        "distribution_id": 3,
+        "year_announced": "2022",
+        "effective_period": "2022-2033",
+        "country_region": "IT",
+        "type_and_status": "Subsidy",
+        "numbers": "€2B",
+        "targeted_entities": "Fabrication",
+        "notes": "200mm SiC fab for automotive, industrial, cloud infrastructure",
+        "sources": "https://newsroom.st.com/media-center/press-item.html/c3262.html#:~:text=The%20new%20facility%20is%20targeted%20to%20start,15%2C000%20wafers%20per%20week%20at%20full%20build%2Dout."
+      }
+    ]
   },
   {
     "project_name": "Important Projects of Common European Interest (IPCEI)  on Microelectronics",
@@ -445,7 +532,20 @@
     "notes": "\"France 2030 will ultimately dedicate more than €5 billion in support to the development of the electronics sector and will result in a total of more than €16 billion in investment projects in industry and innovation, and the creation of around 5,700 direct jobs, based on three main areas:\n- Support for the industrialization of electronic technologies in France and an overall increase in production capacity in France of around 90%:\no A \"mega-fab\" project led by STMicroelectronics and GlobalFoundries, which will more than double production capacity in France in low-power technologies to meet the needs of our industries by 2030.\no The development and production in France of low-power electronic technologies (FD-SOI), power technologies (GaN, SiC, etc.), and sensors needed to achieve ecological and digital transitions in France and Europe.\no The establishment of Intel design and service centers in France.\no A budget for future industrial production and disruptive innovation projects.\"",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "STM/Global Foundries Fab",
+        "distribution_id": 1,
+        "year_announced": "2023",
+        "effective_period": "2023-2024",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "€2.9B",
+        "targeted_entities": "Fabrication",
+        "notes": "France-funded FDSOI fab for low-power wireless and CMOS",
+        "sources": "https://www.eenewseurope.com/en/st-glofo-suspend-plan-for-joint-wafer-fab-say-reports/"
+      }
+    ]
   },
   {
     "project_name": "Netherlands - ASML Export Controls",
@@ -767,7 +867,20 @@
     "notes": "national initiative to transform the country’s semiconductor industry into a full-cycle ecosystem from IC design through manufacturing; it includes a strategic partnership with Arm Holdings, under which Malaysia commits to accessing Arm IP and training 10,000 semiconductor talents; the government will invest about RM 1.11 billion (~US$250 million) over 10 years as part of the programme; it targets establishment of 10 local design houses and generation of up to US$20 billion revenue from these entities; aims to shift Malaysia’s semiconductor emphasis from low-value assembly and testing to high-value front-end design, SoC development, advanced packaging and manufacture of AI- and cloud-centric chips",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "Arm Holdings IP Purchase and Office Opening",
+        "distribution_id": 1,
+        "year_announced": "2025",
+        "effective_period": "2025-2035",
+        "country_region": "MY",
+        "type_and_status": "Grant",
+        "numbers": "RM$250M",
+        "targeted_entities": "Design; IP",
+        "notes": "Malaysia gains Arm IP access plus trains 10k engineers",
+        "sources": "https://www.reuters.com/markets/asia/malaysia-minister-says-pay-arm-holdings-250-million-chips-design-blueprints-2025-03-05/"
+      }
+    ]
   },
   {
     "project_name": "New Industrial Master Plan (NIMP) 2030",
