@@ -447,17 +447,33 @@
   }
 
   function renderSubproject(projectId, subprojectId) {
-    const app = $('#app');
+    const app = document.getElementById('app');
+
+    // Find the current subproject row
     const s = SUBSIDIES.find(x =>
       String(x.project_id) === String(projectId) &&
       String(x.subproject_id) === String(subprojectId)
     );
 
-    // Also locate parent for breadcrumb/name continuity
+    const isEmpty = v => v == null || String(v).trim() === '';
+
+    // Find the parent (main) project row if present (empty subproject fields)
     const parent = SUBSIDIES.find(x =>
       String(x.project_id) === String(projectId) &&
-      (!x.subproject_id || String(x.subproject_id).trim() === '')
+      (isEmpty(x.subproject_id) && isEmpty(x.subproject_name))
     );
+
+    // Sibling subprojects: same project, different subproject_id
+    const siblings = SUBSIDIES
+      .filter(x =>
+        String(x.project_id) === String(projectId) &&
+        !isEmpty(x.subproject_id) &&
+        String(x.subproject_id) !== String(subprojectId)
+      )
+      .map(x => ({ name: x.subproject_name || '(unnamed)', id: x.subproject_id }))
+      // de-duplicate by (name,id)
+      .filter((v, i, arr) => arr.findIndex(w => w.name === v.name && String(w.id) === String(v.id)) === i)
+      .sort((a, b) => String(a.name).localeCompare(String(b.name)));
 
     if (!s) {
       app.innerHTML = `<div class="breadcrumb">
@@ -474,7 +490,9 @@
         ${parent ? ` · <a href="#/project/${projectId}">${parent.project_name}</a>` : ''}
       </div>
       <h2 style="margin: 6px 0 0; font-size: 22px;">${s.project_name}</h2>
-      <h3 style="margin: 2px 0 12px; font-size: 18px; color: var(--muted);">Subproject: ${s.subproject_name ?? ''}</h3>
+      <h3 style="margin: 2px 0 12px; font-size: 18px; color: var(--muted);">
+        Subproject: ${s.subproject_name ?? ''}
+      </h3>
 
       <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px;">
         <span class="pill">🌍 ${s.country_region ?? ''}</span>
@@ -485,6 +503,17 @@
       ${s.sources ? `<div class="muted" style="margin-bottom:12px">
          Sources: ${renderSourcesList(s.sources)}
        </div>` : ''}
+
+      ${siblings.length ? `
+        <div class="card" style="margin-bottom:16px;">
+          <h3 style="margin:0 0 10px; font-size:18px;">Other subprojects in this project</h3>
+          <ul style="margin:0; padding-left:18px;">
+            ${siblings.map(sp => `
+              <li><a href="#/subproject/${projectId}/${sp.id}">${sp.name}</a></li>
+            `).join('')}
+          </ul>
+        </div>
+      ` : ''}
 
       <div class="card" style="padding:0; overflow:auto;">
         <table class="detail-table">
