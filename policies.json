@@ -110,10 +110,10 @@
     "year_announced": "2023",
     "effective_period": "2023-2024",
     "country_region": "US",
-    "type_and_status": "Subsidy & Tax Incentive",
-    "numbers": "$1.4B",
+    "type_and_status": "Subsidy",
+    "numbers": "$1.6B",
     "targeted_entities": "Fabrication; R&D",
-    "notes": "$698M for a new semiconductor fund (TSIF); 660m in funding for R&D at universities (UT  Austin & Texas A&M); plan focus is to make Texas a semiconductor manufacturing center",
+    "notes": "$698M for a new semiconductor fund (TSIF); 660m in funding for R&D at universities (UT  Austin & Texas A&M); plan focus is to make Texas a semiconductor manufacturing center; $250M added to TSIF in June 2025",
     "sources": "https://gov.texas.gov/uploads/files/business/Texas_CHIPS_Act_Snapshot.pdf",
     "subproject_name": "",
     "subproject_id": "",
@@ -237,7 +237,20 @@
     "sources": "https://english.ey.gov.tw/Page/61BF20C3E89B856/746ecbac-25ad-47dd-9b93-274388d471b3",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "Subsidies for Chip Design Projects",
+        "distribution_id": 1,
+        "year_announced": "2025",
+        "effective_period": "2025-2033",
+        "country_region": "TW",
+        "type_and_status": "Subsidy",
+        "numbers": "NT$1.3B",
+        "targeted_entities": "Design",
+        "notes": "Subsidy for 28 IC design businesses / startups",
+        "sources": "https://www.taiwannews.com.tw/news/6251837"
+      }
+    ]
   },
   {
     "project_name": "Export Controls on Chip Materials (to S. Korea)",
@@ -284,7 +297,7 @@
     "subproject_id": "",
     "distributions": [
       {
-        "distribution_name": "TSMC/Sony Kumamoto Fab ",
+        "distribution_name": "JASM",
         "distribution_id": 1,
         "year_announced": "2021",
         "effective_period": "2022-2024",
@@ -296,7 +309,7 @@
         "sources": "https://asia.nikkei.com/business/tech/semiconductors/japan-to-subsidize-tsmc-s-kumamoto-plant-by-up-to-3.5bn; https://pr.tsmc.com/english/news/3113#:~:text=The%20opening%20marks%20a%20significant%20milestone%20for,to%20begin%20by%20the%20end%20of%202024."
       },
       {
-        "distribution_name": "TSMC/Sony Kumamoto Fab Two ",
+        "distribution_name": "JASM Fab Two",
         "distribution_id": 2,
         "year_announced": "2024",
         "effective_period": "2025-2027",
@@ -317,7 +330,31 @@
         "numbers": "¥540B ($3.63B USD)",
         "targeted_entities": "R&D; Fabrication (EUV DRAM)",
         "notes": "Japan fab start moved to 2027 due market softness",
-        "sources": "https://www.trendforce.com/news/2024/05/28/news-micron-reportedly-set-to-build-new-dram-plant-in-hiroshima-japan-operational-expected-by-end-of-2027/#:~:text=timely%2C%20informed%20decisions.-,%5BNews%5D%20Micron%20Reportedly%20Set%20to%20Build%20New%20DRAM%20Plant%20in,centers%2C%20and%20autonomous%20driving%20technology.; https://evertiq.com/design/55809"
+        "sources": "https://www.trendforce.com/news/2025/09/19/news-japan-pledged-jpy-536-billion-to-micron-escalating-global-semiconductor-subsidy-race/"
+      },
+      {
+        "distribution_name": "Kioxia & Western Digital – 3D NAND flash expansion",
+        "distribution_id": 4,
+        "year_announced": "2022",
+        "effective_period": "2022–2023",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥92.9 billion",
+        "targeted_entities": "Fabrication",
+        "notes": "Subsidy for 3D NAND flash memory fab expansion (Yokkaichi plant)",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf"
+      },
+      {
+        "distribution_name": "Kioxia & Western Digital – 3D NAND flash (additional)",
+        "distribution_id": 5,
+        "year_announced": "2024",
+        "effective_period": "2024–(ongoing)",
+        "country_region": "Japan",
+        "type_and_status": "Subsidy",
+        "numbers": "¥150 billion",
+        "targeted_entities": "Fabrication",
+        "notes": "Second subsidy for Kioxia/WD to boost 3D NAND flash production (e.g. new fab)",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf"
       }
     ]
   },
@@ -334,7 +371,56 @@
     "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "Rohm & Toshiba – SiC and silicon power semiconductors",
+        "distribution_id": 1,
+        "year_announced": "2023",
+        "effective_period": "2023–2026 (expected)",
+        "country_region": "Japan",
+        "type_and_status": "Subsidy",
+        "numbers": "¥129.4 billion",
+        "targeted_entities": "Fabrication (analog / power)",
+        "notes": "Dual fabs, 10-year ops rule",
+        "sources": "https://www.digitimes.com/news/a20241202PD206/sic-fuji-electric-denso-production-subsidy.html#:~:text=Partnership%20targets%20EV%20market%20expansion; https://www.argusmedia.com/ja/news-and-insights/latest-market-news/2517179-japan-grants-subsidies-to-secure-semiconductor-supplies"
+      },
+      {
+        "distribution_name": "Denso & Fuji Electric – SiC power semiconductor JV",
+        "distribution_id": 2,
+        "year_announced": "2024",
+        "effective_period": "2024–2027 (planned)",
+        "country_region": "Japan",
+        "type_and_status": "Subsidy",
+        "numbers": "¥70.5 billion",
+        "targeted_entities": "Fabrication (analog / power)",
+        "notes": "EV-focused joint chip fab",
+        "sources": "https://www.digitimes.com/news/a20241202PD206/sic-fuji-electric-denso-production-subsidy.html#:~:text=Partnership%20targets%20EV%20market%20expansion"
+      },
+      {
+        "distribution_name": "Toyo Gosei – Photoresist & high-purity solvent production",
+        "distribution_id": 3,
+        "year_announced": "2024",
+        "effective_period": "2024–ongoing",
+        "country_region": "Japan",
+        "type_and_status": "Subsidy",
+        "numbers": "¥7 billion",
+        "targeted_entities": "Materials",
+        "notes": "Boost domestic materials supply",
+        "sources": "https://jp.reuters.com/business/technology/MWCK2SB2CRIRXH2A7KNTVMLTGU-2024-11-29/#:~:text=%E3%81%93%E3%81%AE%E3%81%BB%E3%81%8B%E3%80%81%E6%9D%B1%E6%B4%8B%E5%90%88%E6%88%90%E5%B7%A5%E6%A5%AD%284970,%E3%81%AE%E6%84%9F%E5%85%89%E6%9D%90%E3%83%BB%E3%83%9D%E3%83%AA%E3%83%9E%E2%80%95%E3%80%81%E9%AB%98%E7%B4%94%E5%BA%A6%E6%BA%B6%E5%89%A4%E3%81%AB%EF%BC%97%EF%BC%90%E5%84%84%E5%86%86%E3%80%81%E9%9B%BB%E5%AD%90%E9%83%A8%E5%93%81%E3%81%A7%E3%81%AF%E6%9D%91%E7%94%B0%E8%A3%BD%E4%BD%9C%E6%89%80%2060%E3%81%AE%EF%BC%A2%EF%BC%A1%EF%BC%B7%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AB%EF%BC%95%EF%BC%94%E5%84%84%E5%86%86%E3%81%AA%E3%81%A9%E3%81%8C%E5%85%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82%E6%98%A8%E5%B9%B4%E5%BA%A6%E3%81%AE%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97%E3%81%8B%E3%82%89%E3%81%AE%E6%8B%A0%E5%87%BA%E3%81%A8%E3%81%AA%E3%82%8B%E3%80%82"
+      },
+      {
+        "distribution_name": "Murata Manufacturing – BAW RF filters",
+        "distribution_id": 4,
+        "year_announced": "2024",
+        "effective_period": "2024–ongoing",
+        "country_region": "Japan",
+        "type_and_status": "Subsidy",
+        "numbers": "¥5.4 billion",
+        "targeted_entities": "Microelectronics",
+        "notes": "Expand RF filter capacity",
+        "sources": "https://jp.reuters.com/business/technology/MWCK2SB2CRIRXH2A7KNTVMLTGU-2024-11-29/#:~:text=%E3%81%93%E3%81%AE%E3%81%BB%E3%81%8B%E3%80%81%E6%9D%B1%E6%B4%8B%E5%90%88%E6%88%90%E5%B7%A5%E6%A5%AD%284970,%E3%81%AE%E6%84%9F%E5%85%89%E6%9D%90%E3%83%BB%E3%83%9D%E3%83%AA%E3%83%9E%E2%80%95%E3%80%81%E9%AB%98%E7%B4%94%E5%BA%A6%E6%BA%B6%E5%89%A4%E3%81%AB%EF%BC%97%EF%BC%90%E5%84%84%E5%86%86%E3%80%81%E9%9B%BB%E5%AD%90%E9%83%A8%E5%93%81%E3%81%A7%E3%81%AF%E6%9D%91%E7%94%B0%E8%A3%BD%E4%BD%9C%E6%89%80%2060%E3%81%AE%EF%BC%A2%EF%BC%A1%EF%BC%B7%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AB%EF%BC%95%EF%BC%94%E5%84%84%E5%86%86%E3%81%AA%E3%81%A9%E3%81%8C%E5%85%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82%E6%98%A8%E5%B9%B4%E5%BA%A6%E3%81%AE%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97%E3%81%8B%E3%82%89%E3%81%AE%E6%8B%A0%E5%87%BA%E3%81%A8%E3%81%AA%E3%82%8B%E3%80%82"
+      }
+    ]
   },
   {
     "project_name": "Post 5G R&D Fund",
@@ -351,13 +437,13 @@
     "subproject_id": "",
     "distributions": [
       {
-        "distribution_name": "Rapidus ",
+        "distribution_name": "Rapidus Grant Two ",
         "distribution_id": 1,
         "year_announced": "2022",
         "effective_period": "2022-2027",
         "country_region": "JP",
         "type_and_status": "Equity Grant / R&D Subsidy",
-        "numbers": "¥400B ($1.62B USD) - At Least",
+        "numbers": "¥802B",
         "targeted_entities": "Advanced Logic; Fabrication",
         "notes": "Rapidus consortium developing advanced 2nm logic chips domestically",
         "sources": "https://news.metal.com/newscontent/103260356/Japan-Allocates-172-Trillion-Yen-to-Secure-Semiconductor-Supply-Boosts-Rapidus-Aid"
@@ -522,7 +608,7 @@
     ]
   },
   {
-    "project_name": "Important Projects of Common European Interest (IPCEI)  on Microelectronics",
+    "project_name": "Important Projects of Common European Interest (IPCEI)  on Microelectronics (First IPCEI)",
     "project_id": "26",
     "year_announced": "2018",
     "effective_period": "2019-2023",
@@ -552,7 +638,7 @@
     "distributions": []
   },
   {
-    "project_name": "France - France 2030 Programme",
+    "project_name": "France - France 2030 Programme (Electronique)",
     "project_id": "28",
     "year_announced": "2021",
     "effective_period": "2021-2030",
@@ -1169,6 +1255,42 @@
         "targeted_entities": "R&D",
         "notes": "$300M funding advanced semiconductor substrates and materials innovation",
         "sources": "https://www.nist.gov/chips/research-development-programs/national-advanced-packaging-manufacturing-program"
+      },
+      {
+        "distribution_name": "Arizona State University",
+        "distribution_id": 3,
+        "year_announced": "2024",
+        "effective_period": "2025-2030",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$100M",
+        "targeted_entities": "R&D",
+        "notes": "developing the next generation of microelectronics packaging through fan-out-wafer-level processing",
+        "sources": "https://www.nist.gov/chips/chips-america-awards"
+      },
+      {
+        "distribution_name": "Absolics Inc. – Covington, GA",
+        "distribution_id": 4,
+        "year_announced": "2024",
+        "effective_period": "2024-2029",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$100M",
+        "targeted_entities": "Materials; APT",
+        "notes": "Develops glass-core panel packaging technology",
+        "sources": "https://www.nist.gov/chips/chips-america-awards"
+      },
+      {
+        "distribution_name": "Applied Materials – Santa Clara, CA",
+        "distribution_id": 5,
+        "year_announced": "2024",
+        "effective_period": "2024-2029",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$100M",
+        "targeted_entities": "WFE; APT",
+        "notes": "Builds silicon-core substrate packaging technology",
+        "sources": "https://www.nist.gov/chips/chips-america-awards"
       }
     ]
   },
@@ -1187,6 +1309,18 @@
     "subproject_id": "3",
     "distributions": [
       {
+        "distribution_name": "Albany Nanotech EUV Lithography Center",
+        "distribution_id": 1,
+        "year_announced": "2024",
+        "effective_period": "2025-2026",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$825M",
+        "targeted_entities": "Lithography; APT",
+        "notes": "$825M U.S. EUV lithography research center construction funding",
+        "sources": "https://www.csis.org/analysis/albany-nanotechs-potential-support-national-semiconductor-technology-center"
+      },
+      {
         "distribution_name": "Natcast NSTC Operating Agreement",
         "distribution_id": 2,
         "year_announced": "2024",
@@ -1197,6 +1331,18 @@
         "targeted_entities": "R&D; Talent Development",
         "notes": "Natcast operating United States National Semiconductor Technology Center",
         "sources": "https://www.commerce.gov/news/press-releases/2025/01/department-commerce-finalizes-long-term-partnership-natcast-operate?"
+      },
+      {
+        "distribution_name": "Berkeley Activate Program",
+        "distribution_id": 2,
+        "year_announced": "2024",
+        "effective_period": "2024-2025",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$5M",
+        "targeted_entities": "R&D",
+        "notes": "Program to fund 10 early stage companies with innovative ideas",
+        "sources": "https://www.nist.gov/chips/activate-berkeley"
       }
     ]
   },
@@ -1240,6 +1386,18 @@
         "targeted_entities": "APT; Fabrication",
         "notes": "Digital twin R&D facility improving semiconductor manufacturing productivity",
         "sources": "https://www.manufacturingusa.com/news/biden-harris-administration-awards-semiconductor-research-corporation-manufacturing-consortium?"
+      },
+      {
+        "distribution_name": "Semiconductor Research Corporation Manufacturing Consortium Corporation (SRC)",
+        "distribution_id": 1,
+        "year_announced": "2024",
+        "effective_period": "2024-2029",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$285M",
+        "targeted_entities": "R&D",
+        "notes": "Establishing and operating a manufacturing USA institute",
+        "sources": "https://www.nist.gov/chips/chips-america-awards"
       }
     ]
   },
@@ -1408,7 +1566,7 @@
     "subproject_id": "6",
     "distributions": [
       {
-        "distribution_name": "GlobalFoundries 300mm Fab ",
+        "distribution_name": "GlobalFoundries Malta Fab ",
         "distribution_id": 1,
         "year_announced": "2024",
         "effective_period": "2024-2027",
@@ -1456,7 +1614,7 @@
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1"
       },
       {
-        "distribution_name": "GlobalFoundries Fab Revitalization",
+        "distribution_name": "GlobalFoundries Burlington VT Fab Revitalization",
         "distribution_id": 5,
         "year_announced": "2024",
         "effective_period": "Unknown",
@@ -1523,7 +1681,7 @@
         "country_region": "US",
         "type_and_status": "Subsidy",
         "numbers": "$4.745B",
-        "targeted_entities": "Fabrication (Advanced Logic)",
+        "targeted_entities": "Fabrication",
         "notes": "Taylor 2nm fabs delayed lacking customers and technology readiness",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1"
       },
@@ -1564,27 +1722,27 @@
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1"
       },
       {
-        "distribution_name": "Micron Boise ID Fab",
+        "distribution_name": "Micron Boise ID Fabs",
         "distribution_id": 14,
         "year_announced": "2024",
         "effective_period": "2024-2027",
         "country_region": "US",
         "type_and_status": "Subsidy",
-        "numbers": "$6.14B",
+        "numbers": "$3.05B",
         "targeted_entities": "Fabrication",
         "notes": "Two high-volume memory fabs co-located with R&D hub",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1"
       },
       {
-        "distribution_name": "Micron Clay NY Fab",
+        "distribution_name": "Micron Clay NY Fabs",
         "distribution_id": 15,
         "year_announced": "2024",
         "effective_period": "2025-2028",
         "country_region": "US",
         "type_and_status": "Subsidy",
-        "numbers": "$6.1B",
+        "numbers": "$3.05B",
         "targeted_entities": "Fabrication",
-        "notes": "Intel megafabs delivering 2.4M sq ft cleanrooms capacity",
+        "notes": "first two fabs of planned four fab “megafab” focused on leading-edge DRAM chip productio",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1"
       },
       {
@@ -1706,6 +1864,42 @@
         "targeted_entities": "Fabrication",
         "notes": "Expanded facility doubling U.S. sensor and power chip output",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1"
+      },
+      {
+        "distribution_name": "Amkor Peoria, AZ Fab",
+        "distribution_id": 26,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$407M",
+        "targeted_entities": "APT",
+        "notes": "$7 billion semiconductor packaging and test facility in Peoria, Arizona",
+        "sources": "https://www.nist.gov/chips/chips-america-awards"
+      },
+      {
+        "distribution_name": "HP Lab-to-Fab Corvallis OR Expansion",
+        "distribution_id": 27,
+        "year_announced": "2025",
+        "effective_period": "2025-2030",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$53M",
+        "targeted_entities": "R&D; Fabrication",
+        "notes": "part of the company’s “lab-to-fab” ecosystem in the region that spans from research and development (“R&D”) activities to commercial manufacturing operations.",
+        "sources": "https://www.nist.gov/chips/chips-america-awards"
+      },
+      {
+        "distribution_name": "Hemlock Semiconductor Hemlock MI Plant",
+        "distribution_id": 28,
+        "year_announced": "2024",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$325M",
+        "targeted_entities": "Materials",
+        "notes": "Facility supporting the production of hyper-pure polysilicon",
+        "sources": "https://www.nist.gov/chips/chips-america-awards"
       }
     ]
   },
@@ -1812,6 +2006,244 @@
     "sources": "http://www.semiconductors.materiell.net/chips-rd-programs/#:~:text=CHIPS%20R&D%20Programs%20Funding%20Allocation,NAPMP%20(3)",
     "subproject_name": "DOD Microelectronics Commons",
     "subproject_id": "7",
+    "distributions": []
+  },
+  {
+    "project_name": "Texas CHIPS Act",
+    "project_id": "6",
+    "year_announced": "2023",
+    "effective_period": "2023-2025",
+    "country_region": "US",
+    "type_and_status": "Subsidy",
+    "numbers": "$948M",
+    "targeted_entities": "Fabrication; WFE; Materials; Design",
+    "notes": "state-administered financial mechanism created under the Texas CHIPS Act of 2023 (House Bill 5174) to catalyze semiconductor research, design, and manufacturing across both commercial and academic sectors; managed by the Texas CHIPS Office within the Governor’s Economic Development & Tourism Division, the fund provides matching grants and incentives to Texas-based entities engaged in microelectronics innovation, fabrication, and supply-chain localization; initially appropriated US $698 million in FY 2023, with an additional US $250 million infusion in 2025, bringing total appropriations to roughly US $948 million for the 2023–2027 period; designed to strengthen Texas’s strategic position as the U.S. leader in semiconductor exports and domestic chip production by attracting private investment, incentivizing advanced-node process development, and enabling lab-to-fab scaling across materials, metrology, and packaging; also complements federal CHIPS and Science Act initiatives by offering state-level co-funding to anchor manufacturing projects, sustain a skilled semiconductor workforce, and reinforce secure and resilient supply chains across defense, automotive, and emerging technology applications",
+    "sources": "https://gov.texas.gov/uploads/files/business/Texas_CHIPS_Act_Snapshot.pdf",
+    "subproject_name": "Texas Semiconductor Innovation Fund (TSIF)",
+    "subproject_id": "1",
+    "distributions": [
+      {
+        "distribution_name": "Intelligent Epitaxy Technology, Inc. (IntelliEPI)",
+        "distribution_id": 1,
+        "year_announced": "2024",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$4.12M",
+        "targeted_entities": "Fabrication (compound semiconductor wafers)",
+        "notes": "New 30,000 sq ft wafer facility; triples output; ~$41M investment",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-intelliepi#:~:text=Governor%20Greg%20Abbott%20today%20announced,the%20Texas%20Semiconductor%20Innovation%20Consortium"
+      },
+      {
+        "distribution_name": "Dongjin Semichem Texas, Inc. (DST)",
+        "distribution_id": 2,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$2.40M",
+        "targeted_entities": "APT (photoresist thinners / materials)",
+        "notes": "First U.S. production of ultra-high-purity photoresist thinners; ~$110M investment",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-dongjin-semichem-texas#:~:text=Governor%20Greg%20Abbott%20today%20announced,TSIC"
+      },
+      {
+        "distribution_name": "Silicon Laboratories, Inc. (Silicon Labs)",
+        "distribution_id": 3,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$23.25M",
+        "targeted_entities": "Design / R&D",
+        "notes": "New chip design/testing lab with AI/ML integration; ~$80M investment",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-silicon-labs#:~:text=Governor%20Greg%20Abbott%20today%20announced,80%20million%20in%20capital%20investment"
+      },
+      {
+        "distribution_name": "KoMiCo Technology, Inc.",
+        "distribution_id": 4,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$2.00M",
+        "targeted_entities": "WFE (tool cleaning & coating)",
+        "notes": "Round Rock expansion (+40,000 sq ft) increasing cleanroom + production for sub-10nm tool services",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-komico#:~:text=Governor%20Greg%20Abbott%20today%20announced,36%20million%20in%20capital%20investment"
+      },
+      {
+        "distribution_name": "SpaceX (Starlink Semiconductor Facility)",
+        "distribution_id": 5,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$17.30M",
+        "targeted_entities": "APT (advanced packaging / PLP / PCB)",
+        "notes": "+1M sq ft advanced packaging & electronic kit facility; ~$280M investment; largest PLP/PCB facility in North America",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-spacex#:~:text=Governor%20Greg%20Abbott%20today%20announced,280%20million%20in%20capital%20investment"
+      },
+      {
+        "distribution_name": "DSM Semichem LLC",
+        "distribution_id": 6,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$7.87M",
+        "targeted_entities": "APT (ultra-pure sulfuric acid for fab/APT)",
+        "notes": "Expansion doubling output of high-purity sulfuric acid (ELSA); ~$176M investment",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-dsm#:~:text=Governor%20Greg%20Abbott%20today%20announced,and%20creates%2040%20new%20jobs"
+      },
+      {
+        "distribution_name": "Tokyo Electron U.S. Holdings (TEL U.S.)",
+        "distribution_id": 7,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$3.08M",
+        "targeted_entities": "Talent Development (technician training)",
+        "notes": "New R&D & technical training center using VR/AR; trains ~2,200 technicians per year",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-tokyo-electron-u.s-holdings-inc#:~:text=Governor%20Greg%20Abbott%20today%20announced,30%20million%20in%20capital%20investment"
+      },
+      {
+        "distribution_name": "MGC Pure Chemicals America, Inc. (MPCA)",
+        "distribution_id": 8,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$5.30M",
+        "targeted_entities": "APT (semiconductor-grade chemicals)",
+        "notes": "Expansion +130,000 sq ft to increase high-purity cleaning agents (H₂O₂, NH₄OH)",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-grant-to-mgc-pure-chemicals-america-inc#:~:text=Governor%20Greg%20Abbott%20today%20announced,150%20million%20in%20capital%20investment"
+      },
+      {
+        "distribution_name": "Austin Community College District (ACC)",
+        "distribution_id": 9,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$3.60M",
+        "targeted_entities": "Talent Development",
+        "notes": "Semiconductor manufacturing lab + precision welding lab; Round Rock campus",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-austin-community-college#:~:text=Governor%20Greg%20Abbott%20today%20announced,a%20Texas%20higher%20education%20institution"
+      },
+      {
+        "distribution_name": "Samsung Austin Semiconductor (Taylor Fab)",
+        "distribution_id": 10,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$250.00M",
+        "targeted_entities": "Fabrication (2-nm fab)",
+        "notes": "Support for Samsung’s Taylor 2-nm fab",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-samsung-austin-semiconductor#:~:text=Governor%20Greg%20Abbott%20today%20announced,73%20billion%20in%20capital%20investment"
+      },
+      {
+        "distribution_name": "Yerico Manufacturing, Inc.",
+        "distribution_id": 11,
+        "year_announced": "2025",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$1.30M",
+        "targeted_entities": "WFE (equipment refurbishment & repair)",
+        "notes": "+50,000 sq ft facility expansion; +30 jobs; increases output of refurbished semiconductor tool parts",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-yerico-manufacturing#:~:text=Governor%20Greg%20Abbott%20today%20announced,13%20million%20in%20capital%20investment"
+      }
+    ]
+  },
+  {
+    "project_name": "Texas CHIPS Act",
+    "project_id": "6",
+    "year_announced": "2023",
+    "effective_period": "2023-2025",
+    "country_region": "US",
+    "type_and_status": "Grant",
+    "numbers": "$660M",
+    "targeted_entities": "R&D",
+    "notes": "competitive grant and matching-funding framework dedicated to advancing semiconductor education, research, and fabrication capabilities within Texas higher-education institutions; jointly overseen by the Texas Semiconductor Innovation Consortium (TSIC)—a statewide advisory body comprising representatives from major universities, industry, and non-profit partners—and the Texas CHIPS Office; targets expansion of laboratory infrastructure, pilot-line facilities, and curriculum development for next-generation microelectronics talent; under the 88th Texas Legislature, over US $660 million was appropriated for the establishment of advanced R&D centers at The University of Texas at Austin and Texas A&M University, focusing on front-end process research, materials engineering, and integrated-circuit design; grants from TSIF also extend to other state universities through collaborative projects that promote public–private partnerships and workforce pipelines in semiconductor manufacturing; together, these programs form the academic cornerstone of Texas’s semiconductor strategy—linking education, applied research, and commercialization to maintain global competitiveness and ensure Texas’s continued leadership in the microelectronics value chain",
+    "sources": "https://gov.texas.gov/uploads/files/business/Texas_CHIPS_Act_Snapshot.pdf",
+    "subproject_name": "Funding for R&D at leading Texas Universities",
+    "subproject_id": "2",
+    "distributions": []
+  },
+  {
+    "project_name": "Made in China 2025",
+    "project_id": "7",
+    "year_announced": "2016",
+    "effective_period": "2016–2020",
+    "country_region": "CN",
+    "type_and_status": "National Strategy",
+    "numbers": "-",
+    "targeted_entities": "Fabrication; Design; Packaging; R&D",
+    "notes": "China's 13th FYP marked semiconductors as a “strategic, basic, and pioneering industry,” accelerating national funding, tax incentives, and industrial clustering under Made in China 2025. Strengthened support for memory, logic, equipment, and materials localization.",
+    "sources": "https://en.ndrc.gov.cn/policies/202105/P020210527785800103339.pdf",
+    "subproject_name": "13th Five-Year Plan",
+    "subproject_id": "1",
+    "distributions": []
+  },
+  {
+    "project_name": "Made in China 2025",
+    "project_id": "7",
+    "year_announced": "2020",
+    "effective_period": "2021–2025",
+    "country_region": "CN",
+    "type_and_status": "National Strategy",
+    "numbers": "-",
+    "targeted_entities": "R&D; Design",
+    "notes": "China’s 14th FYP elevated semiconductors as a “core national priority,” expanding funding for EDA and research",
+    "sources": "https://cset.georgetown.edu/publication/china-14th-five-year-plan/",
+    "subproject_name": "14th Five-Year Plan",
+    "subproject_id": "2",
+    "distributions": []
+  },
+  {
+    "project_name": "Artificial Intelligence Strategy",
+    "project_id": "58",
+    "year_announced": "2019",
+    "effective_period": "2020–2025",
+    "country_region": "SK",
+    "type_and_status": "Subsidy / Strategic Plan",
+    "numbers": "₩1.96T",
+    "targeted_entities": "AI Chips; Design; R&D",
+    "notes": "South Korea’s 2019 National AI Strategy sets a vision to become a global top-3 digital competitiveness nation by 2030; targets creation of KRW 455 trillion in added economic value from AI; establishes 3 pillars, 9 strategies, and 100 detailed government tasks; allocates KRW 1.7 trillion in immediate data-network-AI spending (≈50% YoY increase); prioritizes development of “AI semiconductors” and next-generation memory as core industrial policy; mandates expansion of national AI infrastructure across data, cloud, and computing; calls for full AI deployment in public services (safety, disaster-response, elderly care, health, welfare, environment, defense); emphasizes universal AI education for all age groups and workforce retraining; adopts “negative-list” regulatory reform allowing universities to expand AI majors and professors to work concurrently in industry; commits to accelerating data-governance legislation and removing regulatory bottlenecks; frames AI as the engine of Korea’s future growth and competitiveness across manufacturing, semiconductors, mobility, public administration, and social services",
+    "sources": "https://globaltradealert.org/state-act/62404-republic-of-korea-government-publishes-national-strategy-for-artificial-intelligence?",
+    "subproject_name": "",
+    "subproject_id": "",
+    "distributions": []
+  },
+  {
+    "project_name": "Program for Promoting Investment in Japan to Strengthen Supply Chains",
+    "project_id": "59",
+    "year_announced": "2020",
+    "effective_period": "2020-2025",
+    "country_region": "JP",
+    "type_and_status": "Strategic Plan",
+    "numbers": "¥550B",
+    "targeted_entities": "Materials ; Fabrication; WFE",
+    "notes": "Japan’s 2020 “Program for Promoting Investment in Japan to Strengthen Supply Chains” provides subsidies of up to JPY 15 billion (≈USD 135 million) per project; first application window ran 22 May–22 July 2020; supports establishment of domestic production bases for critical goods with high foreign-production concentration; funds three categories: (1) production bases reducing disruption risk for goods highly concentrated abroad; (2) production bases for essential goods vulnerable to temporary demand spikes; (3) jointly implemented production bases by SME groups to mitigate concentrated-supply risks; ex-post disclosures show beneficiaries include semiconductor parts and materials manufacturers, rare-metal processors, EV-related material producers, aircraft-parts firms, and medical-supply manufacturers (masks, gloves, gowns, antiseptics); applicants may receive partial reimbursement for property, facility acquisition, and system-purchase costs; subsidy rates range 50%–75% depending on project type and SME involvement",
+    "sources": "https://globaltradealert.org/intervention/115180",
+    "subproject_name": "",
+    "subproject_id": "",
+    "distributions": []
+  },
+  {
+    "project_name": "Economic Measures for Overcoming COVID-19 and Opening a New Era",
+    "project_id": "60",
+    "year_announced": "2021",
+    "effective_period": "2021–2024",
+    "country_region": "JP",
+    "type_and_status": "Strategic Plan; Grants",
+    "numbers": "-",
+    "targeted_entities": "R&D",
+    "notes": "Japan’s November 2021 “Economic Measures for Overcoming COVID-19 and Opening a New Era” launched a ¥78.9T package with ¥55.7T fiscal spending; aimed to restart socioeconomic activity while COVID remained; framed under a national shift toward a “New Form of Capitalism” emphasizing growth + distribution; four pillars included (1) infection-control spending and support for impacted businesses; (2) demand stimulus and domestic vaccine/therapeutic development plus supply-chain risk management; (3) growth strategy centered on science/technology investment, digital-infrastructure expansion (“Digital Garden City Nation”), and economic security—explicitly strengthening autonomy/competitiveness of strategic industries including semiconductors; (4) national-resilience measures for climate disasters and security risks",
+    "sources": "https://www5.cao.go.jp/keizai1/keizaitaisaku/2021/20211119_economic_measures_all.pdf; https://www5.cao.go.jp/keizai1/keizaitaisaku/2021/20211119_economic_measures_all.pdf",
+    "subproject_name": "",
+    "subproject_id": "",
     "distributions": []
   }
 ]
