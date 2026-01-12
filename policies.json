@@ -321,7 +321,7 @@
         "sources": "https://www.trendforce.com/news/2025/07/25/news-tsmc-reportedly-delays-kumamoto-2nd-fab-launch-to-2029-amid-u-s-expansion-push/; https://www.reuters.com/technology/tokyo-pledges-further-49-bln-help-tsmc-expand-japan-production-2024-02-24/"
       },
       {
-        "distribution_name": "Micron Hiroshima DRAM Fab ",
+        "distribution_name": "Micron Hiroshima DRAM Fab Investment 2",
         "distribution_id": 3,
         "year_announced": "2024",
         "effective_period": "2025-2027",
@@ -339,7 +339,7 @@
         "effective_period": "2022–2023",
         "country_region": "JP",
         "type_and_status": "Subsidy",
-        "numbers": "¥92.9 billion",
+        "numbers": "¥92.9B",
         "targeted_entities": "Fabrication",
         "notes": "Subsidy for 3D NAND flash memory fab expansion (Yokkaichi plant)",
         "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf"
@@ -349,12 +349,36 @@
         "distribution_id": 5,
         "year_announced": "2024",
         "effective_period": "2024–(ongoing)",
-        "country_region": "Japan",
+        "country_region": "JP",
         "type_and_status": "Subsidy",
-        "numbers": "¥150 billion",
+        "numbers": "¥150B",
         "targeted_entities": "Fabrication",
         "notes": "Second subsidy for Kioxia/WD to boost 3D NAND flash production (e.g. new fab)",
         "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf"
+      },
+      {
+        "distribution_name": "Micron Hiroshima DRAM Fab Investment 1",
+        "distribution_id": 6,
+        "year_announced": "2022",
+        "effective_period": "2022-2027",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥46.5B",
+        "targeted_entities": "Fabrication",
+        "notes": "Subsidy for advcanced DRAM Investment",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf#:~:text=%E2%9C%93Advanced%203D%20NAND%20Flash%20Memory,1%CE%B2%29%20Investment"
+      },
+      {
+        "distribution_name": "Micron Hiroshima EUV DRAM Fab Investment ",
+        "distribution_id": 7,
+        "year_announced": "2023",
+        "effective_period": "2023-2030",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥167B",
+        "targeted_entities": "Fabrication",
+        "notes": "Subsidy for advanced DRAM fab including EUV lithography",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf#:~:text=%E2%9C%93Advanced%203D%20NAND%20Flash%20Memory,1%CE%B2%29%20Investment"
       }
     ]
   },
@@ -377,9 +401,9 @@
         "distribution_id": 1,
         "year_announced": "2023",
         "effective_period": "2023–2026 (expected)",
-        "country_region": "Japan",
+        "country_region": "JP",
         "type_and_status": "Subsidy",
-        "numbers": "¥129.4 billion",
+        "numbers": "¥129.4B",
         "targeted_entities": "Fabrication (analog / power)",
         "notes": "Dual fabs, 10-year ops rule",
         "sources": "https://www.digitimes.com/news/a20241202PD206/sic-fuji-electric-denso-production-subsidy.html#:~:text=Partnership%20targets%20EV%20market%20expansion; https://www.argusmedia.com/ja/news-and-insights/latest-market-news/2517179-japan-grants-subsidies-to-secure-semiconductor-supplies"
@@ -389,9 +413,9 @@
         "distribution_id": 2,
         "year_announced": "2024",
         "effective_period": "2024–2027 (planned)",
-        "country_region": "Japan",
+        "country_region": "JP",
         "type_and_status": "Subsidy",
-        "numbers": "¥70.5 billion",
+        "numbers": "¥70.5B",
         "targeted_entities": "Fabrication (analog / power)",
         "notes": "EV-focused joint chip fab",
         "sources": "https://www.digitimes.com/news/a20241202PD206/sic-fuji-electric-denso-production-subsidy.html#:~:text=Partnership%20targets%20EV%20market%20expansion"
@@ -401,9 +425,9 @@
         "distribution_id": 3,
         "year_announced": "2024",
         "effective_period": "2024–ongoing",
-        "country_region": "Japan",
+        "country_region": "JP",
         "type_and_status": "Subsidy",
-        "numbers": "¥7 billion",
+        "numbers": "¥7B",
         "targeted_entities": "Materials",
         "notes": "Boost domestic materials supply",
         "sources": "https://jp.reuters.com/business/technology/MWCK2SB2CRIRXH2A7KNTVMLTGU-2024-11-29/#:~:text=%E3%81%93%E3%81%AE%E3%81%BB%E3%81%8B%E3%80%81%E6%9D%B1%E6%B4%8B%E5%90%88%E6%88%90%E5%B7%A5%E6%A5%AD%284970,%E3%81%AE%E6%84%9F%E5%85%89%E6%9D%90%E3%83%BB%E3%83%9D%E3%83%AA%E3%83%9E%E2%80%95%E3%80%81%E9%AB%98%E7%B4%94%E5%BA%A6%E6%BA%B6%E5%89%A4%E3%81%AB%EF%BC%97%EF%BC%90%E5%84%84%E5%86%86%E3%80%81%E9%9B%BB%E5%AD%90%E9%83%A8%E5%93%81%E3%81%A7%E3%81%AF%E6%9D%91%E7%94%B0%E8%A3%BD%E4%BD%9C%E6%89%80%2060%E3%81%AE%EF%BC%A2%EF%BC%A1%EF%BC%B7%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AB%EF%BC%95%EF%BC%94%E5%84%84%E5%86%86%E3%81%AA%E3%81%A9%E3%81%8C%E5%85%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82%E6%98%A8%E5%B9%B4%E5%BA%A6%E3%81%AE%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97%E3%81%8B%E3%82%89%E3%81%AE%E6%8B%A0%E5%87%BA%E3%81%A8%E3%81%AA%E3%82%8B%E3%80%82"
@@ -413,9 +437,9 @@
         "distribution_id": 4,
         "year_announced": "2024",
         "effective_period": "2024–ongoing",
-        "country_region": "Japan",
+        "country_region": "JP",
         "type_and_status": "Subsidy",
-        "numbers": "¥5.4 billion",
+        "numbers": "¥5.4B",
         "targeted_entities": "Microelectronics",
         "notes": "Expand RF filter capacity",
         "sources": "https://jp.reuters.com/business/technology/MWCK2SB2CRIRXH2A7KNTVMLTGU-2024-11-29/#:~:text=%E3%81%93%E3%81%AE%E3%81%BB%E3%81%8B%E3%80%81%E6%9D%B1%E6%B4%8B%E5%90%88%E6%88%90%E5%B7%A5%E6%A5%AD%284970,%E3%81%AE%E6%84%9F%E5%85%89%E6%9D%90%E3%83%BB%E3%83%9D%E3%83%AA%E3%83%9E%E2%80%95%E3%80%81%E9%AB%98%E7%B4%94%E5%BA%A6%E6%BA%B6%E5%89%A4%E3%81%AB%EF%BC%97%EF%BC%90%E5%84%84%E5%86%86%E3%80%81%E9%9B%BB%E5%AD%90%E9%83%A8%E5%93%81%E3%81%A7%E3%81%AF%E6%9D%91%E7%94%B0%E8%A3%BD%E4%BD%9C%E6%89%80%2060%E3%81%AE%EF%BC%A2%EF%BC%A1%EF%BC%B7%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AB%EF%BC%95%EF%BC%94%E5%84%84%E5%86%86%E3%81%AA%E3%81%A9%E3%81%8C%E5%85%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82%E6%98%A8%E5%B9%B4%E5%BA%A6%E3%81%AE%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97%E3%81%8B%E3%82%89%E3%81%AE%E6%8B%A0%E5%87%BA%E3%81%A8%E3%81%AA%E3%82%8B%E3%80%82"
@@ -478,7 +502,20 @@
     "sources": "https://www.businesskorea.co.kr/news/articleView.html?idxno=48289;https://koreajoongangdaily.joins.com/2019/04/30/economy/Government-launches-plan-to-make-Korea-a-semiconductor-leader-by-2030/3062504.html",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "Rebellion Grant",
+        "distribution_id": 1,
+        "year_announced": "2023",
+        "effective_period": "2023",
+        "country_region": "JP",
+        "type_and_status": "Grant",
+        "numbers": "₩10B",
+        "targeted_entities": "R&D",
+        "notes": "Grant to NVIDIA competitor startup",
+        "sources": "https://www.reuters.com/technology/skorea-aims-join-ai-race-startup-rebellions-launches-new-chip-2023-02-12/#:~:text=%22Amid%20high%20dependence%20on%20foreign,from%20the%20South%20Korean%20government.&text=Reports%20on%20global%20trends%20in,goal%20of%20grasping%20quantum%20physics."
+      }
+    ]
   },
   {
     "project_name": "K-Semiconductor Strategy (\"Chip Belt\" Plan)",
@@ -596,14 +633,98 @@
       {
         "distribution_name": "STM Chip Fabrication Facility",
         "distribution_id": 3,
-        "year_announced": "2022",
-        "effective_period": "2022-2033",
+        "year_announced": "2024",
+        "effective_period": "2024-2032",
         "country_region": "IT",
         "type_and_status": "Subsidy",
         "numbers": "€2B",
         "targeted_entities": "Fabrication",
         "notes": "200mm SiC fab for automotive, industrial, cloud infrastructure",
-        "sources": "https://newsroom.st.com/media-center/press-item.html/c3262.html#:~:text=The%20new%20facility%20is%20targeted%20to%20start,15%2C000%20wafers%20per%20week%20at%20full%20build%2Dout."
+        "sources": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_24_2994/IP_24_2994_EN.pdf"
+      },
+      {
+        "distribution_name": "STMicroelectronics Recovery Subsidy",
+        "distribution_id": 4,
+        "year_announced": "2022",
+        "effective_period": "2022-2026",
+        "country_region": "IT",
+        "type_and_status": "Grant",
+        "numbers": "€292.5M",
+        "targeted_entities": "Fabrication",
+        "notes": "Integrated SiC substrate Fab",
+        "sources": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_22_5970/IP_22_5970_EN.pdf?"
+      },
+      {
+        "distribution_name": "Silicon Box - APT facility",
+        "distribution_id": 5,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "IT",
+        "type_and_status": "Grant",
+        "numbers": "€1.3B",
+        "targeted_entities": "APT",
+        "notes": "Advanced packaging facility in Italy",
+        "sources": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_24_6436/IP_24_6436_EN.pdf"
+      },
+      {
+        "distribution_name": "Infineon Dresden",
+        "distribution_id": 6,
+        "year_announced": "2025",
+        "effective_period": "2025-2026",
+        "country_region": "DE",
+        "type_and_status": "Grant",
+        "numbers": "€1B",
+        "targeted_entities": "Fabrication",
+        "notes": "200 & 300 mm Fab",
+        "sources": "https://www.infineon.com/press-release/2025/infxx202502-058"
+      },
+      {
+        "distribution_name": "ams Osram Wafer Manufacturing",
+        "distribution_id": 7,
+        "year_announced": "2025",
+        "effective_period": "2025-2030",
+        "country_region": "DE",
+        "type_and_status": "Grant",
+        "numbers": "€227M",
+        "targeted_entities": "Fabrication",
+        "notes": "Wafer manufacturing facility in Premstatten",
+        "sources": "https://ec.europa.eu/commission/presscorner/api/files/document/print/et/ip_25_589/IP_25_589_EN.pdf"
+      },
+      {
+        "distribution_name": "Onsemi SiC Facility Expansion",
+        "distribution_id": 8,
+        "year_announced": "2025",
+        "effective_period": "2025-2027",
+        "country_region": "CZ",
+        "type_and_status": "Grant",
+        "numbers": "€450M",
+        "targeted_entities": "Fabrication; Power Semiconductors",
+        "notes": "SiC power devices facility",
+        "sources": "https://ec.europa.eu/commission/presscorner/detail/de/ip_25_2757"
+      },
+      {
+        "distribution_name": "GlobalFoundries Dresden",
+        "distribution_id": 9,
+        "year_announced": "2025",
+        "effective_period": "2025-ongoing",
+        "country_region": "DE",
+        "type_and_status": "Grant",
+        "numbers": "€495M",
+        "targeted_entities": "Fabrication",
+        "notes": "300mm fabrication facility",
+        "sources": "https://europa.eu/newsroom/ecpc-failover/pdf/ip-25-3020_en.pdf"
+      },
+      {
+        "distribution_name": "X-FAB Erfurt",
+        "distribution_id": 10,
+        "year_announced": "2025",
+        "effective_period": "2025-ongoing",
+        "country_region": "DE",
+        "type_and_status": "Grant",
+        "numbers": "€128M",
+        "targeted_entities": "Fabrication",
+        "notes": "Open foundry for enterprises",
+        "sources": "https://europa.eu/newsroom/ecpc-failover/pdf/ip-25-3020_en.pdf"
       }
     ]
   },
@@ -662,6 +783,78 @@
         "targeted_entities": "Fabrication",
         "notes": "France-funded FDSOI fab for low-power wireless and CMOS",
         "sources": "https://www.eenewseurope.com/en/st-glofo-suspend-plan-for-joint-wafer-fab-say-reports/"
+      },
+      {
+        "distribution_name": "France 2030 (PIIEC microélectronique) – 12 consortia",
+        "distribution_id": 1,
+        "year_announced": "2023",
+        "effective_period": "2023–(multi-year)",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "-",
+        "targeted_entities": "Semiconductors; Sensors; Telecom",
+        "notes": "12 consortia across chips, sensors, 5G/6G",
+        "sources": "https://presse.economie.gouv.fr/08062023-cp-france-2030-12-projets-francais-structurants-en-microelectronique-et-connectivite-ont-ete-valides-par-la-commission-europeenne/#:~:text=Port%C3%A9s%20par%20Airbus%2C%20Aledia%2C%20Continental%2C,solutions%20pour%20les%20communications%20critiques"
+      },
+      {
+        "distribution_name": "STMicroelectronics & GlobalFoundries",
+        "distribution_id": 2,
+        "year_announced": "2023",
+        "effective_period": "2023–(multi-year)",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "€2.9B",
+        "targeted_entities": "Fabrication",
+        "notes": "Crolles 300mm fab for FD-SOI chips",
+        "sources": "https://presse.economie.gouv.fr/05062023-bruno-le-maire-annonce-le-debut-de-la-production-de-la-mega-usine-de-semi-conducteurs-portee-par-globalfoundries-et-stmicroelectronics-a-crolles-et-signe-le-contrat-daide-de-letat-au-projet/#:~:text=L%E2%80%99investissement%20total%20de%20ce%20projet%2C,sera%20rembours%C3%A9e%20aux%20autorit%C3%A9s%20publiques"
+      },
+      {
+        "distribution_name": "Soitec (+CEA)",
+        "distribution_id": 3,
+        "year_announced": "2023",
+        "effective_period": "2023–(multi-year)",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "~€120M",
+        "targeted_entities": "Materials",
+        "notes": "SmartSiC SiC substrate fab; power electronics",
+        "sources": "https://www.eetimes.com/soitecs-smartsic-to-hit-the-road-in-2024/#:~:text=Only%20four%20years%20will%20have,press%20conference%20before%20the%20ceremony."
+      },
+      {
+        "distribution_name": " Renatech & CEA-Leti",
+        "distribution_id": 4,
+        "year_announced": "2022",
+        "effective_period": "2022–(multi-year)",
+        "country_region": "FR",
+        "type_and_status": "Grant",
+        "numbers": "€39M",
+        "targeted_entities": "R&D infrastructure",
+        "notes": "Cleanroom tools upgrades; PNFC lab equipment",
+        "sources": "https://www.info.gouv.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2022_07_22_-_dossier_de_presse_-_electronique_2030.pdf#:~:text=39%20millions%20d%E2%80%99euros%20de%20France,47%20millions"
+      },
+      {
+        "distribution_name": " 9 Collaborative R&D projects",
+        "distribution_id": 5,
+        "year_announced": "2022",
+        "effective_period": "2022–(multi-year)",
+        "country_region": "FR",
+        "type_and_status": "Grant",
+        "numbers": "€47M",
+        "targeted_entities": "R&D",
+        "notes": "Components/telecom/power/computing research",
+        "sources": "https://www.info.gouv.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2022_07_22_-_dossier_de_presse_-_electronique_2030.pdf#:~:text=39%20millions%20d%E2%80%99euros%20de%20France,47%20millions"
+      },
+      {
+        "distribution_name": "Training Bodies",
+        "distribution_id": 6,
+        "year_announced": "2022",
+        "effective_period": "2022–(multi-year)",
+        "country_region": "FR",
+        "type_and_status": "Grant",
+        "numbers": "€50M",
+        "targeted_entities": "Talent development",
+        "notes": "Electronics workforce training pipeline",
+        "sources": "https://www.info.gouv.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2022_07_22_-_dossier_de_presse_-_electronique_2030.pdf#:~:text=50%20millions%20d%E2%80%99euros%20pour%20soutenir,de%20formation%20pour%20alimenter%20les"
       }
     ]
   },
@@ -693,7 +886,68 @@
     "sources": "https://www.entreprises.gouv.fr/files/files/Publications/2025/Th%C3%A9mas/20250404-thema-semiconducteur-version%20anglaise.pdf",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": " Auvergne-Rhône-Alpes regional R&D support",
+        "distribution_id": 1,
+        "year_announced": "2018",
+        "effective_period": "2018-2022",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "€35M",
+        "targeted_entities": "R&D",
+        "notes": "Grenoble micro/nanoelectronics ecosystem R&D",
+        "sources": "https://www.minatec.org/en/nano-2022-e35-million-earmarked-for-nanotechnology-rd/#:~:text=In%20late%202018%20the%20Auvergne,and%20compound%20semiconductors%20for%20microelectronics"
+      },
+      {
+        "distribution_name": "X-Fab France",
+        "distribution_id": 3,
+        "year_announced": "2019",
+        "effective_period": "2019-2022",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "€35M",
+        "targeted_entities": "Fabrication",
+        "notes": "Corbeil 200mm analog/mixed-signal platform",
+        "sources": "https://minefi.hosting.augure.com/Augure_Minefi/r/ContenuEnLigne/Download?id=5829DDFB-3F26-44F7-A826-F46C47F333C7&filename=1097%20-%20CP%20Grenoble.pdf#:~:text=Pour%20Rudi%20de%20Winter%2C%20pr%C3%A9sident,indirect%20en%20Ile%20de%20France"
+      },
+      {
+        "distribution_name": "UMS “Smart3” project",
+        "distribution_id": 4,
+        "year_announced": "2019",
+        "effective_period": "2019-2022",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "€25M",
+        "targeted_entities": "R&D; APT",
+        "notes": "RF SiP R&D; GaN + silicon integration",
+        "sources": "https://minefi.hosting.augure.com/Augure_Minefi/r/ContenuEnLigne/Download?id=5829DDFB-3F26-44F7-A826-F46C47F333C7&filename=1097%20-%20CP%20Grenoble.pdf#:~:text=d%E2%80%99une%20ligne%20pilote%20industrielle%20permettant,v%C3%A9hicules%20autonomes%2C%20radars%20multifonction%2C%20constellation"
+      },
+      {
+        "distribution_name": " Murata Integrated Passive Solutions project",
+        "distribution_id": 5,
+        "year_announced": "2019",
+        "effective_period": "2019-2022",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "≈€40M",
+        "targeted_entities": "Components; R&D",
+        "notes": "Miniaturized passives R&D + pilot production",
+        "sources": "https://minefi.hosting.augure.com/Augure_Minefi/r/ContenuEnLigne/Download?id=5829DDFB-3F26-44F7-A826-F46C47F333C7&filename=1097%20-%20CP%20Grenoble.pdf#:~:text=avec%20un%20plan%20d%27investissement%20industriel,80%20nouveaux%20emplois%20industriels%20qualifi%C3%A9s"
+      },
+      {
+        "distribution_name": "CEA-Leti infrastructure/R&D",
+        "distribution_id": 6,
+        "year_announced": "2019",
+        "effective_period": "2019-2022",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "€120M",
+        "targeted_entities": "R&D infrastructure",
+        "notes": "Leti facilities + pilot lines for industry",
+        "sources": "https://minefi.hosting.augure.com/Augure_Minefi/r/ContenuEnLigne/Download?id=5829DDFB-3F26-44F7-A826-F46C47F333C7&filename=1097%20-%20CP%20Grenoble.pdf#:~:text=%22Le%20CEA,chaque%20ann%C3%A9e%20plusieurs%20centaines%20de"
+      }
+    ]
   },
   {
     "project_name": "France - Nano 2017",
@@ -708,7 +962,20 @@
     "sources": "https://www.entreprises.gouv.fr/files/files/Publications/2025/Th%C3%A9mas/20250404-thema-semiconducteur-version%20anglaise.pdf",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "STMicroelectronics R&D program",
+        "distribution_id": 1,
+        "year_announced": "2014",
+        "effective_period": "2014-2019",
+        "country_region": "FR",
+        "type_and_status": "Subsidy",
+        "numbers": "€360.1M",
+        "targeted_entities": "R&D",
+        "notes": "FD-SOI, imaging, embedded NVM R&D",
+        "sources": "https://globaltradealert.org/intervention/88744#:~:text=On%2025%20June%202014%2C%20the,project%2C%20oriented%20at%20de"
+      }
+    ]
   },
   {
     "project_name": "National Semiconductor Strategy",
@@ -723,7 +990,188 @@
     "sources": "https://data.parliament.uk/DepositedPapers/Files/DEP2023-0443/CP_838_National_Semiconductor_Strategy.pdf",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "Quinas ULTRARAM epitaxy scaleup",
+        "distribution_id": 1,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£680K",
+        "targeted_entities": "Memory; Fabrication",
+        "notes": "Award winners: Quinas Technology Ltd; Cardiff University; IQE PLC; Lancaster University",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Quantum Advanced QSens scaleup",
+        "distribution_id": 2,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£1.2M",
+        "targeted_entities": "Manufacturing; imaging",
+        "notes": "Award winners: Quantum Advanced Solutions Ltd; University of Cambridge",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Lightricity UK packaging capability",
+        "distribution_id": 3,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£560K",
+        "targeted_entities": "APT",
+        "notes": "Award winners: Lightricity Ltd; Alter Technology TUV NORD UK Ltd",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Compound Semi Centre InP",
+        "distribution_id": 4,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£410K",
+        "targeted_entities": "Photonics",
+        "notes": "Award winners: Compound Semiconductor Centre Ltd; Ffotoneg Ltd; SPTS Technologies Ltd; Cardiff University",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Flexciton wafer-fab efficiency automation",
+        "distribution_id": 5,
+        "year_announced": "2024",
+        "effective_period": "2024-2025",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£1.0M",
+        "targeted_entities": "WFE; Fabrication",
+        "notes": "Award winners: Flexciton Ltd; Seagate Technology Ireland. UKRI describes this as a “12-month project.”",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Phlux avalanche photodiodes scaleup",
+        "distribution_id": 6,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£830K",
+        "targeted_entities": "Photonics",
+        "notes": "Award winners: Phlux Technology Ltd; Sivers Photonics Ltd; University of Sheffield; Hilight Semiconductor Ltd",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Minviro RESiLABLE impact calculator",
+        "distribution_id": 7,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£256K",
+        "targeted_entities": "Supply Chain",
+        "notes": "Award winners: Minviro Ltd; Swansea University",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Irresistible Materials High-NA photoresists",
+        "distribution_id": 8,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£1.7M",
+        "targeted_entities": "Materials; Lithography",
+        "notes": "Award winners: Irresistible Materials Ltd; Endevour Speciality Chemicals Ltd",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Kubos 3C-SiC substrates onshoring",
+        "distribution_id": 9,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£300K",
+        "targeted_entities": "Photonics",
+        "notes": "Award winners: Kubos Semiconductors Ltd; Advanced Epi Materials And Devices Ltd; Oxford Instruments PLC; Wafer Technology Ltd",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "RAM Innovations Vishay supply-chain",
+        "distribution_id": 10,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£321K",
+        "targeted_entities": "Supply Chain",
+        "notes": "Award winners: RAM Innovations Ltd; KuasaSemi Ltd; Vishay Ltd",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "IceMOS 3C-SiC power devices",
+        "distribution_id": 11,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£585K",
+        "targeted_entities": "Power semiconductors; materials",
+        "notes": "Award winners: IceMOS Technology Ltd; University of Warwick",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Paragraf UK graphene foundry",
+        "distribution_id": 12,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£1.4M",
+        "targeted_entities": "Materials; fabrication",
+        "notes": "Award winners: Paragraf Ltd; UK Electronic Skills Foundation; University of Birmingham; Cupio Services Ltd; University of Glasgow",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Silverray X-ray dosimeters manufacturing",
+        "distribution_id": 13,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£530K",
+        "targeted_entities": "Fabrication",
+        "notes": "Award winners: Silverray Ltd; University of Surrey",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "Vector Photonics GaN photonic-crystals",
+        "distribution_id": 14,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£650K",
+        "targeted_entities": "Photonics; Fabrication",
+        "notes": "Award winners: Vector Photonics Ltd; University of Glasgow",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      },
+      {
+        "distribution_name": "BAE Systems INTERPOSE-UK project",
+        "distribution_id": 15,
+        "year_announced": "2024",
+        "effective_period": "2024-2033",
+        "country_region": "UK",
+        "type_and_status": "Grant",
+        "numbers": "£438K",
+        "targeted_entities": "Advanced Manufacturing",
+        "notes": "Award winners: BAE Systems (Operation",
+        "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
+      }
+    ]
   },
   {
     "project_name": "RIE 2025",
@@ -783,7 +1231,20 @@
     "sources": "https://www.mti.gov.sg/-/media/MTI/ITM/Manufacturing/Electronics/Electronics-ITM-2025.pdf",
     "subproject_name": "Expansion of Electronics Industry Transformation Map",
     "subproject_id": "1",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "Gallium Nitride Technology Center",
+        "distribution_id": 1,
+        "year_announced": "2022",
+        "effective_period": "2022-2027",
+        "country_region": "SG",
+        "type_and_status": "Grant",
+        "numbers": "$85M",
+        "targeted_entities": "Photonics; Substrates",
+        "notes": "Government funded GaN Center",
+        "sources": "https://www.edb.gov.sg/en/business-insights/insights/investments-into-semiconductor-centre-industry-tie-ups-to-power-manufacturing-transformation.html#:~:text=To%20ride%20on%20the%20strength,and%20be%20as%20a%20shared"
+      }
+    ]
   },
   {
     "project_name": "Singapore Industry Scholarships (SgIS)",
@@ -858,7 +1319,116 @@
     "sources": "https://crest.my/wp-content/uploads/FINAL_NSS_141024_2_compressed.pdf?",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "(Rumored) Oppstar IC Design Scale-Up",
+        "distribution_id": 1,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "MY",
+        "type_and_status": "Investment",
+        "numbers": "Undisclosed",
+        "targeted_entities": "Design; R&D",
+        "notes": "Malaysian IC design firm backed by EPF & KWAP as NSS champion",
+        "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      },
+      {
+        "distribution_name": "(Rumored) ViTrox Advanced Inspection Automation",
+        "distribution_id": 2,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "MY",
+        "type_and_status": "Investment",
+        "numbers": "Undisclosed",
+        "targeted_entities": "Equipment; APT; R&D",
+        "notes": "Local APT & inspection tech firm, EPF/KWAP invested via NSS",
+        "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      },
+      {
+        "distribution_name": "(Rumored) Inari OSAT Expansion",
+        "distribution_id": 3,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "MY",
+        "type_and_status": "Investment",
+        "numbers": "Undisclosed",
+        "targeted_entities": "APT; Advanced Packaging",
+        "notes": "Leading Malaysian OSAT firm named as NSS champion",
+        "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      },
+      {
+        "distribution_name": "(Rumored) Carsem High-Value Assembly Investment",
+        "distribution_id": 4,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "MY",
+        "type_and_status": "Investment",
+        "numbers": "Undisclosed",
+        "targeted_entities": "APT; Advanced Packaging",
+        "notes": "Major backend packaging company under Malaysia NSS",
+        "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      },
+      {
+        "distribution_name": "(Rumored) Pentamaster Test & Automation Scale-Up",
+        "distribution_id": 5,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "MY",
+        "type_and_status": "Investment",
+        "numbers": "Undisclosed",
+        "targeted_entities": "Equipment; APT",
+        "notes": "Semiconductor automation and test systems company",
+        "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      },
+      {
+        "distribution_name": "(Rumored) Kelington Semiconductor Infra Services Boost",
+        "distribution_id": 6,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "MY",
+        "type_and_status": "Investment",
+        "numbers": "Undisclosed",
+        "targeted_entities": "WFE; Fab Support; Cleanroom Infra",
+        "notes": "Fab infra and specialty services integrator",
+        "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      },
+      {
+        "distribution_name": "(Rumored) SkyeChip AI Chip Design Acceleration",
+        "distribution_id": 7,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "MY",
+        "type_and_status": "Investment",
+        "numbers": "Undisclosed",
+        "targeted_entities": "Design; R&D",
+        "notes": "AI and HPC chip design firm highlighted under NSS",
+        "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      },
+      {
+        "distribution_name": "(Rumored) Infinecs Power IC Design Program",
+        "distribution_id": 8,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "MY",
+        "type_and_status": "Investment",
+        "numbers": "Undisclosed",
+        "targeted_entities": "Design; R&D",
+        "notes": "Power management IC firm under NSS champions",
+        "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      },
+      {
+        "distribution_name": "(Rumored) Experior Systems IC Design Growth",
+        "distribution_id": 9,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "MY",
+        "type_and_status": "Investment",
+        "numbers": "Undisclosed",
+        "targeted_entities": "Design; R&D",
+        "notes": "Malaysian IC/system design company under NSS",
+        "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      }
+    ]
   },
   {
     "project_name": "National Semiconductor Strategy (Malaysia)",
@@ -1045,7 +1615,7 @@
     "effective_period": "2024-2030",
     "country_region": "MY",
     "type_and_status": "Equity Investments / Loans",
-    "numbers": "RM$131.5M",
+    "numbers": "RM$600M",
     "targeted_entities": "Small-to-mid sized Malaysian Manufacturing Businesses",
     "notes": "within the NIMP 2030 framework, the Strategic Co-Investment Fund (CoSIF) is capitalised at RM 600 million (~US $131.5 million) to co-finance high-value manufacturing and industrial upgrading projects in sectors including semiconductors, advanced electronics, and green manufacturing; operates on a 1:5 public-private leverage model, targeting private investment mobilisation of RM 3 billion+; supports R&D, automation, workforce training, and ESG transition within strategic industries; complements the NIMP Industrial Development Fund (NIDF) and the National Semiconductor Strategy (NSS) by providing co-investment capital rather than tax-based incentives.",
     "sources": "https://www.sc.com.my/resources/media/media-release/rm131-million-fund-launched-to-support-smes-and-mid-tier-companies-in-strategic-nimp-sectors#:~:text=and%20related%20Speeches-,RM131%2DMillion%20Fund%20Launched%20to%20Support%20SMEs%20and%20Mid%2DTier,(MTCs)%20in%20strategic%20sectors.",
@@ -1414,7 +1984,140 @@
     "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx",
     "subproject_name": "",
     "subproject_id": "",
-    "distributions": []
+    "distributions": [
+      {
+        "distribution_name": "Microchip Gresham Fab Expansion",
+        "distribution_id": 1,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$11M",
+        "targeted_entities": "Fabrication; R&D",
+        "notes": "Modernization & expansion to triple chip output",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "Intel Hillsboro R&D Fab Expansion",
+        "distribution_id": 2,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$115M",
+        "targeted_entities": "R&D; Fabrication",
+        "notes": "Expansion of D1X R&D fab; part of $1.86B federal CHIPS award",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "HP Microfluidics R&D Center",
+        "distribution_id": 3,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$9.5M",
+        "targeted_entities": "R&D; Advanced Packaging",
+        "notes": "Facility upgrades for MEMS/microfluidics R&D",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "Analog Devices Beaverton Site Expansion",
+        "distribution_id": 4,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$12M",
+        "targeted_entities": "R&D; Equipment",
+        "notes": "Equipment & facility expansion; largest ADI site",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "Siltronic Metrology Modernization",
+        "distribution_id": 5,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$1.5M",
+        "targeted_entities": "Materials; WFE",
+        "notes": "Equipment to modernize metrology for wafer production",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "Lam Research Advanced R&D Center",
+        "distribution_id": 6,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$22M",
+        "targeted_entities": "R&D; Equipment",
+        "notes": "New R&D center construction at Tualatin campus",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "Stratacache MicroLED Foundry",
+        "distribution_id": 7,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$19M",
+        "targeted_entities": "Advanced Packaging; Fabrication",
+        "notes": "Reuse of legacy fab for MicroLED production",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "ATI Specialty Materials Expansion",
+        "distribution_id": 8,
+        "year_announced": "2024",
+        "effective_period": "2024–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$1.6M",
+        "targeted_entities": "Materials",
+        "notes": "Expanding materials production for semiconductors",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "AGC Electronic Hillsboro Upgrade",
+        "distribution_id": 9,
+        "year_announced": "2025",
+        "effective_period": "2025–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$500K",
+        "targeted_entities": "Materials; Equipment",
+        "notes": "Facility modernization for glass/electronics subsidiary",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "Valliscor Semiconductor Chemicals Plant",
+        "distribution_id": 10,
+        "year_announced": "2025",
+        "effective_period": "2025–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$345K",
+        "targeted_entities": "Materials",
+        "notes": "New plant in Albany to support specialty chemical production",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      },
+      {
+        "distribution_name": "TOKA Lithography Materials Expansion",
+        "distribution_id": 11,
+        "year_announced": "2025",
+        "effective_period": "2025–onwards",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$2.9M",
+        "targeted_entities": "Materials; WFE",
+        "notes": "Expansion of TOKA facility in Hillsboro for photolithography",
+        "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
+      }
+    ]
   },
   {
     "project_name": "Guangdong Semiconductor and Integrated Circuit Industry Equity Investment Fund",
@@ -2242,6 +2945,79 @@
     "targeted_entities": "R&D",
     "notes": "Japan’s November 2021 “Economic Measures for Overcoming COVID-19 and Opening a New Era” launched a ¥78.9T package with ¥55.7T fiscal spending; aimed to restart socioeconomic activity while COVID remained; framed under a national shift toward a “New Form of Capitalism” emphasizing growth + distribution; four pillars included (1) infection-control spending and support for impacted businesses; (2) demand stimulus and domestic vaccine/therapeutic development plus supply-chain risk management; (3) growth strategy centered on science/technology investment, digital-infrastructure expansion (“Digital Garden City Nation”), and economic security—explicitly strengthening autonomy/competitiveness of strategic industries including semiconductors; (4) national-resilience measures for climate disasters and security risks",
     "sources": "https://www5.cao.go.jp/keizai1/keizaitaisaku/2021/20211119_economic_measures_all.pdf; https://www5.cao.go.jp/keizai1/keizaitaisaku/2021/20211119_economic_measures_all.pdf",
+    "subproject_name": "",
+    "subproject_id": "",
+    "distributions": []
+  },
+  {
+    "project_name": "Economic Security Promotion Act",
+    "project_id": "16",
+    "year_announced": "2022",
+    "effective_period": "2022-Indefinitely",
+    "country_region": "JP",
+    "type_and_status": "Grants",
+    "numbers": "¥250B",
+    "targeted_entities": "R&D; Quantum Computing",
+    "notes": "Funds focused on promoting the development of critical technologies important for economic security such as AI and quantum technology",
+    "sources": "https://www.meti.go.jp/english/report/data/wp2023/pdf/2-1-2.pdf#:~:text=technologies%20are%20promoted%20through%20public,html",
+    "subproject_name": "Key and Advanced Technology R&D Fund (K Program)",
+    "subproject_id": "1",
+    "distributions": []
+  },
+  {
+    "project_name": "National Growth Fund",
+    "project_id": "61",
+    "year_announced": "2025",
+    "effective_period": "2026–2030",
+    "country_region": "SK",
+    "type_and_status": "Fund (equity/loans); annual plan",
+    "numbers": "₩150T (5-year fund); ₩4.2T (semiconductors in 2026 plan)",
+    "targeted_entities": "Fabrication; Design; Materials; WFE; APT; Infrastructure",
+    "notes": "2026 management plan allocates ₩4.2T to semiconductors; infrastructure investment loans include power/water facilities supporting high-tech clusters",
+    "sources": "https://www.mk.co.kr/en/economy/11493849",
+    "subproject_name": "",
+    "subproject_id": "",
+    "distributions": [
+      {
+        "distribution_name": "SK Hynix Yongin Cluster",
+        "distribution_id": 1,
+        "year_announced": "2025",
+        "effective_period": "2025-ongoing",
+        "country_region": "JP",
+        "type_and_status": "Loan",
+        "numbers": "₩4.3T",
+        "targeted_entities": "Fabrication",
+        "notes": "Semiconductor fabrication cluster in Yongin",
+        "sources": "https://koreatechdesk.com/korea-national-growth-fund-sk-hynix-semiconductor-cluster-yongin#:~:text=tranches"
+      }
+    ]
+  },
+  {
+    "project_name": "Section 301 Tariffs on Chinese Semiconductors",
+    "project_id": "2",
+    "year_announced": "2025",
+    "effective_period": "2027-Indefinitely",
+    "country_region": "US",
+    "type_and_status": "Tariff",
+    "numbers": "-",
+    "targeted_entities": "Polysilicon, Wafers, & Semiconductor Materials; WFE; Other Critical Materials",
+    "notes": "USTR determined China’s acts, policies, and practices related to targeting semiconductor industry dominance are actionable under Section 301; tariff action established with an initial additional duty rate of 0%, effective upon publication; 0% rate remains in effect until June 23, 2027, after which USTR may impose a higher tariff rate with ≥30 days’ notice prior to implementation",
+    "sources": "https://public-inspection.federalregister.gov/2025-23912.pdf",
+    "subproject_name": "Temporary Suspension and Extension of Section 301 Tariffs",
+    "subproject_id": "1",
+    "distributions": []
+  },
+  {
+    "project_name": "Chipmaker Domestic Capacity Mandate",
+    "project_id": "62",
+    "year_announced": "2025",
+    "effective_period": "2025-Indefinitely",
+    "country_region": "CN",
+    "type_and_status": "Plan / Requirements",
+    "numbers": "-",
+    "targeted_entities": "WFE",
+    "notes": "Authorities require chipmakers to use ≥50% domestically manufactured equipment for new semiconductor manufacturing capacity (expansions/new fabs); flexibility/exemptions where local tools are unavailable; stated direction toward 100% domestic reliance over time",
+    "sources": "https://www.reuters.com/world/china/china-mandates-50-domestic-equipment-rule-chipmakers-sources-say-2025-12-30/",
     "subproject_name": "",
     "subproject_id": "",
     "distributions": []
