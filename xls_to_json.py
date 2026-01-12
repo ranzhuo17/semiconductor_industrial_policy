@@ -118,9 +118,9 @@ def build_distributions(index_row: Dict[str, Any], dist: pd.DataFrame):
     # Strict match first
     strict = (
         (dist["project_id"].fillna("") == (index_row.get("project_id","") or "")) &
-        (dist["subproject_id"].fillna("") == (index_row.get("subproject_id","") or "")) &
-        (dist["subproject_name"].fillna("") == (index_row.get("subproject_name","") or "")) &
-        (dist["project_name"].fillna("") == (index_row.get("project_name","") or ""))
+        (dist["subproject_id"].fillna("") == (index_row.get("subproject_id","") or "")) #&
+        #(dist["subproject_name"].fillna("") == (index_row.get("subproject_name","") or "")) &
+        #(dist["project_name"].fillna("") == (index_row.get("project_name","") or ""))
     )
     subset = dist.loc[strict].copy()
 
