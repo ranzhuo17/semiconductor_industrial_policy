@@ -155,8 +155,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "2.7B",
-        "targeted_entities": "Fabrication (logic, 28/40nm)",
+        "numbers": "¥2.7B",
+        "targeted_entities": "Fabrication",
         "notes": "11.54% stake; second-largest shareholder; expand advanced process capacity",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -167,8 +167,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "4.839B",
-        "targeted_entities": "Fabrication (LED & compound semiconductor)",
+        "numbers": "¥4.839B",
+        "targeted_entities": "Fabrication; Compound; Optical",
         "notes": "Stakeholder investment; expand LED/compound production",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -179,8 +179,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "1.6B",
-        "targeted_entities": "Fabrication (compound semiconductor & optical comms)",
+        "numbers": "¥1.6B",
+        "targeted_entities": "Fabrication; Optical; Compound",
         "notes": "Follow-up investment; optical comms & compound semiconductors",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -191,8 +191,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "600M",
-        "targeted_entities": "Fabrication (power semiconductors)",
+        "numbers": "¥600M",
+        "targeted_entities": "Fabrication; Compound",
         "notes": "Build 8-inch wafer line for power devices",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -203,8 +203,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "18.9B",
-        "targeted_entities": "Fabrication (3D NAND)",
+        "numbers": "¥18.9B",
+        "targeted_entities": "Fabrication",
         "notes": "JV with Tsinghua Unigroup for China's first 3D NAND fab",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -215,8 +215,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "4.3B",
-        "targeted_entities": "Fabrication (28/40nm, NOR Flash)",
+        "numbers": "¥4.3B",
+        "targeted_entities": "Fabrication",
         "notes": "Expand mature process & NOR Flash lines",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -227,8 +227,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "11.6B",
-        "targeted_entities": "Fabrication (28–14nm)",
+        "numbers": "¥11.6B",
+        "targeted_entities": "Fabrication",
         "notes": "Phase II fab investment",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -239,8 +239,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "1.4B",
-        "targeted_entities": "Fabrication (MEMS)",
+        "numbers": "¥1.4B",
+        "targeted_entities": "Fabrication",
         "notes": "8-inch MEMS foundry for inertial navigation chips",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -251,8 +251,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "600M",
-        "targeted_entities": "Fabrication (MEMS)",
+        "numbers": "¥600M",
+        "targeted_entities": "Fabrication",
         "notes": "Acquired 30% stake in Sweden’s Silex to secure MEMS foundry capacity",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -263,8 +263,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "6B",
-        "targeted_entities": "Fabrication (28/40nm)",
+        "numbers": "¥6B",
+        "targeted_entities": "Fabrication",
         "notes": "Second capital injection",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -275,8 +275,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "6B",
-        "targeted_entities": "Fabrication (14nm)",
+        "numbers": "¥6B",
+        "targeted_entities": "Fabrication",
         "notes": "14nm advanced process fab",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -287,8 +287,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "2.6B",
-        "targeted_entities": "Fabrication (specialty)",
+        "numbers": "¥2.6B",
+        "targeted_entities": "Fabrication",
         "notes": "Acquired 18.94% stake in specialty foundry",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -299,8 +299,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "3.394B",
-        "targeted_entities": "Fabrication (specialty, 12-inch)",
+        "numbers": "¥3.394B",
+        "targeted_entities": "Fabrication",
         "notes": "Cash injection for 12-inch specialty fab project",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -311,8 +311,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "500M",
-        "targeted_entities": "Fabrication (analog / specialty)",
+        "numbers": "¥500M",
+        "targeted_entities": "Fabrication; Compound",
         "notes": "32.97% stake in SMIC JV",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -323,7 +323,7 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "1.071B",
+        "numbers": "¥1.071B",
         "targeted_entities": "Fabrication",
         "notes": "Subscribed to HK issuance for fab expansion",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
@@ -335,8 +335,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "1B",
-        "targeted_entities": "Fabrication (analog / power)",
+        "numbers": "¥1B",
+        "targeted_entities": "Fabrication; Compound",
         "notes": "19.76% stake in Microelectronics Business",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -347,8 +347,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "13.55842B",
-        "targeted_entities": "Fabrication (3D NAND)",
+        "numbers": "¥13.5B",
+        "targeted_entities": "Fabrication",
         "notes": "Expand 3D NAND fab; 12.88% equity stake",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -359,8 +359,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "10B",
-        "targeted_entities": "Design (mobile communications ICs)",
+        "numbers": "¥10B",
+        "targeted_entities": "Design",
         "notes": "Support M&A for Spreadtrum, RDA; build domestic mobile IC ecosystem",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -371,8 +371,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "500M",
-        "targeted_entities": "Design (printer chips)",
+        "numbers": "¥500M",
+        "targeted_entities": "Design",
         "notes": "Stake relating to Lexmark deal; expansion of printer chip business",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -383,8 +383,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "400M",
-        "targeted_entities": "Design (broadcasting & surveillance ICs)",
+        "numbers": "¥400M",
+        "targeted_entities": "Design",
         "notes": "Support domestic audio/video broadcasting and surveillance chip development",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -395,8 +395,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "1.5B",
-        "targeted_entities": "Design (satellite & inertial navigation ICs)",
+        "numbers": "¥1.5B",
+        "targeted_entities": "Design",
         "notes": "Support R&D of BeiDou GNSS and inertial navigation chips",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -407,8 +407,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "2.4B",
-        "targeted_entities": "Design (communication ICs)",
+        "numbers": "¥2.4B",
+        "targeted_entities": "Design",
         "notes": "Support next-gen communication chip R&D",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -419,8 +419,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "3.3B",
-        "targeted_entities": "Design (analog / mixed-signal)",
+        "numbers": "¥3.3B",
+        "targeted_entities": "Design",
         "notes": "Cross-border acquisition of analog/mixed-signal design IP",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -431,8 +431,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "190M",
-        "targeted_entities": "Design (Ethernet switch chips)",
+        "numbers": "¥190M",
+        "targeted_entities": "Design; Optical",
         "notes": "Startup investment in domestic switch-chip designer",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -443,8 +443,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "1.45B",
-        "targeted_entities": "Design (NOR/NAND Flash, MCUs)",
+        "numbers": "¥1.45B",
+        "targeted_entities": "Design; Advanced",
         "notes": "Expand NOR/NAND and microcontroller chip design",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -455,8 +455,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "2.83B",
-        "targeted_entities": "Design (HMI, fingerprint sensors)",
+        "numbers": "¥2.83B",
+        "targeted_entities": "Design",
         "notes": "Human-machine interface & biometric chip expansion",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -467,8 +467,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "1.17B",
-        "targeted_entities": "Design (GPU & radar signal processing)",
+        "numbers": "¥1.17B",
+        "targeted_entities": "Design; Advanced",
         "notes": "Domestic GPU and military radar processing IC development",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -480,7 +480,7 @@
         "country_region": "CN",
         "type_and_status": "Equity Investment",
         "numbers": "Not disclosed",
-        "targeted_entities": "Design (IoT & AI chips)",
+        "targeted_entities": "Design; Advanced",
         "notes": "Support for IoT, AI processor design",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -491,8 +491,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "150M",
-        "targeted_entities": "Design (power management ICs)",
+        "numbers": "¥150M",
+        "targeted_entities": "Design; Compound",
         "notes": "Support PMIC chip design expansion",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -503,8 +503,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Acquisition / Equity",
-        "numbers": "2.031B",
-        "targeted_entities": "APT (OSAT)",
+        "numbers": "¥2.031B",
+        "targeted_entities": "APT",
         "notes": "Acquisition of STATS ChipPAC; elevating JCET to global top-tier OSAT",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -515,8 +515,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "500M",
-        "targeted_entities": "APT (OSAT expansion)",
+        "numbers": "¥500M",
+        "targeted_entities": "APT",
         "notes": "Capital injection to expand domestic OSAT operations",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -527,8 +527,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "1.083B",
-        "targeted_entities": "APT (bumping / advanced packaging)",
+        "numbers": "¥1.083B",
+        "targeted_entities": "APT",
         "notes": "JV among SMIC, JCET, and Qualcomm; bumping/advanced packaging capacity",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -539,8 +539,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Acquisition / Equity",
-        "numbers": "1.8B",
-        "targeted_entities": "APT (OSAT; AMD Suzhou + Penang assets)",
+        "numbers": "¥1.8B",
+        "targeted_entities": "APT",
         "notes": "Acquisition of AMD OSAT assets, expanding global footprint",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -551,8 +551,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "680M",
-        "targeted_entities": "APT (WLCSP)",
+        "numbers": "¥680M",
+        "targeted_entities": "APT",
         "notes": "Stake for expansion of wafer-level packaging operations",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -563,8 +563,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "969M",
-        "targeted_entities": "APT (OSAT)",
+        "numbers": "¥969M",
+        "targeted_entities": "APT",
         "notes": "Increased stake to 15.7%",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -575,8 +575,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "640M",
-        "targeted_entities": "APT (OSAT)",
+        "numbers": "¥640M",
+        "targeted_entities": "APT",
         "notes": "Additional stake, raising holding to 21.72%",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -587,8 +587,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "2.9B",
-        "targeted_entities": "APT (OSAT)",
+        "numbers": "¥2.9B",
+        "targeted_entities": "APT",
         "notes": "Increased stake to 19% following STATS integration",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -599,8 +599,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Acquisition / Equity",
-        "numbers": "949M",
-        "targeted_entities": "APT (memory / testing)",
+        "numbers": "¥949M",
+        "targeted_entities": "APT",
         "notes": "Stake acquisition in semiconductor memory/testing business",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -611,8 +611,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "500M",
-        "targeted_entities": "Materials (polysilicon)",
+        "numbers": "¥500M",
+        "targeted_entities": "Materials",
         "notes": "JV with GCL Group for electronic-grade polysilicon production",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -623,8 +623,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "309M",
-        "targeted_entities": "Materials (12-inch silicon wafers)",
+        "numbers": "¥309M",
+        "targeted_entities": "Materials",
         "notes": "12-inch wafer fab construction",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -635,8 +635,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "5M",
-        "targeted_entities": "Materials (CMP slurry)",
+        "numbers": "¥5M",
+        "targeted_entities": "Materials",
         "notes": "R&D and production of CMP slurry",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -647,8 +647,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "22M",
-        "targeted_entities": "Materials (TIM adhesives)",
+        "numbers": "¥22M",
+        "targeted_entities": "Materials",
         "notes": "High-performance thermal interface materials",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -659,8 +659,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "550M",
-        "targeted_entities": "Materials (electronic gases & CVD/ALD precursors)",
+        "numbers": "¥550M",
+        "targeted_entities": "Materials",
         "notes": "Electronic gases and advanced deposition precursors",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -671,8 +671,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "30M",
-        "targeted_entities": "Materials (SiC for third-gen semiconductors)",
+        "numbers": "¥30M",
+        "targeted_entities": "Materials",
         "notes": "High-purity SiC material development",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -683,8 +683,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "480M",
-        "targeted_entities": "WFE (etch, TSV)",
+        "numbers": "¥480M",
+        "targeted_entities": "WFE",
         "notes": "Etching equipment & TSV process tool R&D support",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -695,8 +695,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "40M",
-        "targeted_entities": "WFE (IC test equipment)",
+        "numbers": "¥40M",
+        "targeted_entities": "WFE",
         "notes": "Stake in domestic IC testing equipment company",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -707,8 +707,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "165M",
-        "targeted_entities": "WFE (PECVD / ALD deposition)",
+        "numbers": "¥165M",
+        "targeted_entities": "WFE",
         "notes": "Support for domestic CVD/ALD deposition tool development",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       },
@@ -719,8 +719,8 @@
         "effective_period": "",
         "country_region": "CN",
         "type_and_status": "Equity Investment",
-        "numbers": "600M",
-        "targeted_entities": "WFE (etch + deposition equipment)",
+        "numbers": "¥600M",
+        "targeted_entities": "WFE",
         "notes": "Support for merger creating major domestic equipment champion",
         "sources": "https://pdf.dfcfw.com/pdf/H3_AP201905051326608713_1.pdf?1557083214000.pdf#:~:text=%E6%9D%90%E6%96%99%202018,PECVD%2CALD"
       }
@@ -796,7 +796,7 @@
         "country_region": "CN",
         "type_and_status": "Equity Investment",
         "numbers": "¥8.5B",
-        "targeted_entities": "Fabrucatuin",
+        "targeted_entities": "Fabrication",
         "notes": "Expands 28nm manufacturing capacity in Beijing",
         "sources": "https://www1.hkexnews.hk/listedco/listconews/sehk/2020/1204/2020120401701.pdf"
       },
@@ -808,7 +808,7 @@
         "country_region": "CN",
         "type_and_status": "Equity Investment",
         "numbers": "¥5.7B",
-        "targeted_entities": "Fabrucatuin",
+        "targeted_entities": "Fabrication",
         "notes": "Supports new Lingang 12-inch foundry project",
         "sources": "https://www1.hkexnews.hk/listedco/listconews/sehk/2021/1112/2021111200355.pdf"
       },
@@ -916,7 +916,7 @@
         "country_region": "CN",
         "type_and_status": "Equity Investment",
         "numbers": "¥350M",
-        "targeted_entities": "Fabrication (analog / power)",
+        "targeted_entities": "Fabrication; Compound",
         "notes": "Advances GaN and SiC device production",
         "sources": "https://www.yicaiglobal.com/news/china-silan-soars-as-big-fund-phase-ii-plans-to-invest-usd95-million-in-its-chip-project"
       },
@@ -928,7 +928,7 @@
         "country_region": "CN",
         "type_and_status": "Equity Investment",
         "numbers": "¥1.65B",
-        "targeted_entities": "Fabrication (analog / power)",
+        "targeted_entities": "Fabrication; Compound",
         "notes": "Builds 12-inch automotive power foundry capacity",
         "sources": "https://www.trendforce.com/news/2021/07/13/an-overview-of-ic-design-and-equipment-suppliers-funded-by-chinas-big-fund-phase-two/"
       },
@@ -1076,7 +1076,7 @@
         "country_region": "CN",
         "type_and_status": "Equity Investment",
         "numbers": "¥450M",
-        "targeted_entities": "WfE (3D integration bonding systems)",
+        "targeted_entities": "WFE",
         "notes": "Invests in 3D integration equipment developer",
         "sources": "https://www.trendforce.com/news/2025/10/31/... 12"
       },
@@ -1088,7 +1088,7 @@
         "country_region": "CN",
         "type_and_status": "Equity Investment",
         "numbers": "¥100M",
-        "targeted_entities": "Materials (Photomask quartz substrates)",
+        "targeted_entities": "Materials",
         "notes": "Equity stake in photomask quartz material firm",
         "sources": "https://www.trendforce.com/news/2025/11/05/... 11"
       }
@@ -1198,18 +1198,18 @@
     "distributions": []
   },
   {
-    "project_name": "5G Promotion Act",
+    "project_name": "Strategy for Semiconductors and the Digital Industry",
     "project_id": "15",
-    "year_announced": "2020",
-    "effective_period": "2020-2030",
+    "year_announced": "2021",
+    "effective_period": "2021-2030",
     "country_region": "JP",
     "type_and_status": "Tax Incentive & Subsidy",
-    "numbers": "¥1.7T ($11.4B USD)",
+    "numbers": "¥2.7T ($17.1B USD)",
     "targeted_entities": "Advanced Logic; Memory; Advanced Packaging; WFE; Fabrication",
     "notes": "Qualified businesses can choose special depreciation equal to 30% of the acquisition cost of certified 5G equipment; or can claim a  tax credit 15% of the acquisition cost;  50% property tax reduction for 5G deployments; tax benefits capped at 20% of corporate tax; tax program expired on April 1, 2025",
-    "sources": "http://jetro.go.jp/en/invest/investment_environment/ijre/report2022/ch3/sec2.html",
-    "subproject_name": "",
-    "subproject_id": "",
+    "sources": "https://www.jetro.go.jp/ext_images/invest/ijre/report2022/; https://web-assets.bcg.com/25/6e/7a123efd40199020ed1b4114be84/emerging-resilience-in-the-semiconductor-supply-chain-r.pdf",
+    "subproject_name": "5G Promotion Act",
+    "subproject_id": "1",
     "distributions": [
       {
         "distribution_name": "JASM",
@@ -1319,7 +1319,7 @@
         "country_region": "JP",
         "type_and_status": "Subsidy",
         "numbers": "¥129.4B",
-        "targeted_entities": "Fabrication (analog / power)",
+        "targeted_entities": "Fabrication; Compound",
         "notes": "Dual fabs, 10-year ops rule",
         "sources": "https://www.digitimes.com/news/a20241202PD206/sic-fuji-electric-denso-production-subsidy.html#:~:text=Partnership%20targets%20EV%20market%20expansion; https://www.argusmedia.com/ja/news-and-insights/latest-market-news/2517179-japan-grants-subsidies-to-secure-semiconductor-supplies"
       },
@@ -1331,7 +1331,7 @@
         "country_region": "JP",
         "type_and_status": "Subsidy",
         "numbers": "¥70.5B",
-        "targeted_entities": "Fabrication (analog / power)",
+        "targeted_entities": "Fabrication; Compound",
         "notes": "EV-focused joint chip fab",
         "sources": "https://www.digitimes.com/news/a20241202PD206/sic-fuji-electric-denso-production-subsidy.html#:~:text=Partnership%20targets%20EV%20market%20expansion"
       },
@@ -1362,18 +1362,18 @@
     ]
   },
   {
-    "project_name": "Post 5G R&D Fund",
-    "project_id": "17",
-    "year_announced": "2020",
-    "effective_period": "2020-2030",
+    "project_name": "Strategy for Semiconductors and the Digital Industry",
+    "project_id": "15",
+    "year_announced": "2021",
+    "effective_period": "2021-2030",
     "country_region": "JP",
     "type_and_status": "Subsidy",
     "numbers": "¥1.24T ($8.35B USD)",
     "targeted_entities": "R&D; Design; Rapidus; Workforce Development",
     "notes": "Japan’s New Energy and Industrial Technology Development Organization (NEDO) launched the “R&D Project of the Enhanced Infrastructure for Post-5G Information and Communication Systems” in FY 2020 with a budget of approximately ¥1,472.3 billion; the programme covers development of next-gen communications systems and advanced semiconductors, manufacturing technologies for advanced logic chips and packaging/miniaturisation; a related scheme from FY 2023 by National Institute of Information and Communications Technology (NICT) created the “Innovative ICT Fund Projects for Beyond 5G/6G” to support social implementation, overseas expansion and radio-spectrum technologies.",
     "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf; https://www.meti.go.jp/policy/mono_info_service/joho/post5g/pdf/20250207003.pdf?\\",
-    "subproject_name": "",
-    "subproject_id": "",
+    "subproject_name": "Post 5G R&D Fund",
+    "subproject_id": "2",
     "distributions": [
       {
         "distribution_name": "Rapidus Grant Two ",
@@ -1383,7 +1383,7 @@
         "country_region": "JP",
         "type_and_status": "Equity Grant / R&D Subsidy",
         "numbers": "¥802B",
-        "targeted_entities": "Advanced Logic; Fabrication",
+        "targeted_entities": "Logic; Fabrication",
         "notes": "Rapidus consortium developing advanced 2nm logic chips domestically",
         "sources": "https://news.metal.com/newscontent/103260356/Japan-Allocates-172-Trillion-Yen-to-Secure-Semiconductor-Supply-Boosts-Rapidus-Aid"
       },
@@ -1407,7 +1407,7 @@
         "country_region": "JP",
         "type_and_status": "Subsidy",
         "numbers": "¥4B",
-        "targeted_entities": "R&D; Analog Semiconductors",
+        "targeted_entities": "R&D; Analog",
         "notes": "Subsidy for energy-efficient AI connectivity chiplets",
         "sources": "https://www.edgecortix.com/en/press-releases/edgecortix-receives-4-billion-yen-subsidy-from-japans-nedo#:~:text=Tokyo%2C%20Japan%20,communications%20with%20unprecedented%20energy%20efficiency"
       }
@@ -1637,7 +1637,7 @@
         "country_region": "CZ",
         "type_and_status": "Grant",
         "numbers": "€450M",
-        "targeted_entities": "Fabrication; Power Semiconductors",
+        "targeted_entities": "Fabrication; Compound",
         "notes": "SiC power devices facility",
         "sources": "https://ec.europa.eu/commission/presscorner/detail/de/ip_25_2757"
       },
@@ -1981,7 +1981,7 @@
         "country_region": "NL",
         "type_and_status": "Subsidy",
         "numbers": "Undisclosed",
-        "targeted_entities": "Lithography; WFE; R&D",
+        "targeted_entities": "WFE; R&D",
         "notes": "High-NA EUV scanner R&D for sub-2nm",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       },
@@ -2005,7 +2005,7 @@
         "country_region": "DE",
         "type_and_status": "Subsidy",
         "numbers": "Undisclosed",
-        "targeted_entities": "Telecom; R&D",
+        "targeted_entities": "R&D",
         "notes": "6G Massive-MIMO antenna microelectronics R&D",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       },
@@ -2017,7 +2017,7 @@
         "country_region": "DE",
         "type_and_status": "Subsidy",
         "numbers": "part of €360M project",
-        "targeted_entities": "Telecom; SoC; R&D",
+        "targeted_entities": "R&D",
         "notes": "HW/SW/SoC co-design for 5G-A/6G",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       },
@@ -2041,7 +2041,7 @@
         "country_region": "DE",
         "type_and_status": "Subsidy",
         "numbers": "Undisclosed",
-        "targeted_entities": "Power; Sensors; R&D",
+        "targeted_entities": "Compound; R&D",
         "notes": "SiC, radar, automotive IC R&D",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       },
@@ -2101,7 +2101,7 @@
         "country_region": "AT",
         "type_and_status": "Subsidy",
         "numbers": "share of €175M AT",
-        "targeted_entities": "Sensors; R&D",
+        "targeted_entities": "R&D",
         "notes": "UWB radar, sensor fusion for ADAS/IoT",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       },
@@ -2113,7 +2113,7 @@
         "country_region": "AT",
         "type_and_status": "Subsidy",
         "numbers": "~€50M",
-        "targeted_entities": "Test; Tools; R&D",
+        "targeted_entities": "R&D",
         "notes": "Chip test tools for EV sensors/power",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       },
@@ -2137,7 +2137,7 @@
         "country_region": "IT",
         "type_and_status": "Subsidy",
         "numbers": "Undisclosed",
-        "targeted_entities": "Power; MCUs; R&D",
+        "targeted_entities": "Compound; R&D",
         "notes": "Auto MCUs + SiC/GaN power R&D",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       },
@@ -2161,7 +2161,7 @@
         "country_region": "DE",
         "type_and_status": "Subsidy",
         "numbers": "Undisclosed",
-        "targeted_entities": "Power; Sensors; R&D",
+        "targeted_entities": "Compound; R&D",
         "notes": "Power modules/sensors for EV/autonomy",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       },
@@ -2209,7 +2209,7 @@
         "country_region": "FI",
         "type_and_status": "Subsidy",
         "numbers": "Undisclosed",
-        "targeted_entities": "Telecom; Quantum; R&D",
+        "targeted_entities": "R&D",
         "notes": "Likely 6G + quantum R&D project",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       },
@@ -2245,7 +2245,7 @@
         "country_region": "DE/FR",
         "type_and_status": "Subsidy",
         "numbers": "Undisclosed",
-        "targeted_entities": "WFE; Lithography",
+        "targeted_entities": "WFE",
         "notes": "Laser light-source tech supporting EUV roadmap",
         "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
       }
@@ -2285,7 +2285,7 @@
         "country_region": "FR",
         "type_and_status": "Subsidy",
         "numbers": "-",
-        "targeted_entities": "Semiconductors; Sensors; Telecom",
+        "targeted_entities": "Sensors",
         "notes": "12 consortia across chips, sensors, 5G/6G",
         "sources": "https://presse.economie.gouv.fr/08062023-cp-france-2030-12-projets-francais-structurants-en-microelectronique-et-connectivite-ont-ete-valides-par-la-commission-europeenne/#:~:text=Port%C3%A9s%20par%20Airbus%2C%20Aledia%2C%20Continental%2C,solutions%20pour%20les%20communications%20critiques"
       },
@@ -2321,7 +2321,7 @@
         "country_region": "FR",
         "type_and_status": "Grant",
         "numbers": "€39M",
-        "targeted_entities": "R&D infrastructure",
+        "targeted_entities": "R&D",
         "notes": "Cleanroom tools upgrades; PNFC lab equipment",
         "sources": "https://www.info.gouv.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2022_07_22_-_dossier_de_presse_-_electronique_2030.pdf#:~:text=39%20millions%20d%E2%80%99euros%20de%20France,47%20millions"
       },
@@ -2345,7 +2345,7 @@
         "country_region": "FR",
         "type_and_status": "Grant",
         "numbers": "€50M",
-        "targeted_entities": "Talent development",
+        "targeted_entities": "Talent Development",
         "notes": "Electronics workforce training pipeline",
         "sources": "https://www.info.gouv.fr/upload/media/organization/0001/01/sites_default_files_contenu_piece-jointe_2022_07_22_-_dossier_de_presse_-_electronique_2030.pdf#:~:text=50%20millions%20d%E2%80%99euros%20pour%20soutenir,de%20formation%20pour%20alimenter%20les"
       }
@@ -2436,7 +2436,7 @@
         "country_region": "FR",
         "type_and_status": "Subsidy",
         "numbers": "€120M",
-        "targeted_entities": "R&D infrastructure",
+        "targeted_entities": "R&D",
         "notes": "Leti facilities + pilot lines for industry",
         "sources": "https://minefi.hosting.augure.com/Augure_Minefi/r/ContenuEnLigne/Download?id=5829DDFB-3F26-44F7-A826-F46C47F333C7&filename=1097%20-%20CP%20Grenoble.pdf#:~:text=%22Le%20CEA,chaque%20ann%C3%A9e%20plusieurs%20centaines%20de"
       }
@@ -2504,7 +2504,7 @@
         "country_region": "UK",
         "type_and_status": "Grant",
         "numbers": "£1.2M",
-        "targeted_entities": "Manufacturing; imaging",
+        "targeted_entities": "Imaging",
         "notes": "Award winners: Quantum Advanced Solutions Ltd; University of Cambridge",
         "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
       },
@@ -2528,7 +2528,7 @@
         "country_region": "UK",
         "type_and_status": "Grant",
         "numbers": "£410K",
-        "targeted_entities": "Photonics",
+        "targeted_entities": "Optical",
         "notes": "Award winners: Compound Semiconductor Centre Ltd; Ffotoneg Ltd; SPTS Technologies Ltd; Cardiff University",
         "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
       },
@@ -2552,7 +2552,7 @@
         "country_region": "UK",
         "type_and_status": "Grant",
         "numbers": "£830K",
-        "targeted_entities": "Photonics",
+        "targeted_entities": "Optical",
         "notes": "Award winners: Phlux Technology Ltd; Sivers Photonics Ltd; University of Sheffield; Hilight Semiconductor Ltd",
         "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
       },
@@ -2576,7 +2576,7 @@
         "country_region": "UK",
         "type_and_status": "Grant",
         "numbers": "£1.7M",
-        "targeted_entities": "Materials; Lithography",
+        "targeted_entities": "Materials; WFE",
         "notes": "Award winners: Irresistible Materials Ltd; Endevour Speciality Chemicals Ltd",
         "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
       },
@@ -2588,7 +2588,7 @@
         "country_region": "UK",
         "type_and_status": "Grant",
         "numbers": "£300K",
-        "targeted_entities": "Photonics",
+        "targeted_entities": "Optical",
         "notes": "Award winners: Kubos Semiconductors Ltd; Advanced Epi Materials And Devices Ltd; Oxford Instruments PLC; Wafer Technology Ltd",
         "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
       },
@@ -2612,7 +2612,7 @@
         "country_region": "UK",
         "type_and_status": "Grant",
         "numbers": "£585K",
-        "targeted_entities": "Power semiconductors; materials",
+        "targeted_entities": "Compound; Materials",
         "notes": "Award winners: IceMOS Technology Ltd; University of Warwick",
         "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
       },
@@ -2624,7 +2624,7 @@
         "country_region": "UK",
         "type_and_status": "Grant",
         "numbers": "£1.4M",
-        "targeted_entities": "Materials; fabrication",
+        "targeted_entities": "Materials; Fabrication",
         "notes": "Award winners: Paragraf Ltd; UK Electronic Skills Foundation; University of Birmingham; Cupio Services Ltd; University of Glasgow",
         "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
       },
@@ -2648,7 +2648,7 @@
         "country_region": "UK",
         "type_and_status": "Grant",
         "numbers": "£650K",
-        "targeted_entities": "Photonics; Fabrication",
+        "targeted_entities": "Optical; Fabrication",
         "notes": "Award winners: Vector Photonics Ltd; University of Glasgow",
         "sources": "https://www.ukri.org/news/11-5m-to-improve-semiconductor-manufacturing-and-supply-chains/"
       },
@@ -2733,7 +2733,7 @@
         "country_region": "SG",
         "type_and_status": "Grant",
         "numbers": "$85M",
-        "targeted_entities": "Photonics; Substrates",
+        "targeted_entities": "Optical",
         "notes": "Government funded GaN Center",
         "sources": "https://www.edb.gov.sg/en/business-insights/insights/investments-into-semiconductor-centre-industry-tie-ups-to-power-manufacturing-transformation.html#:~:text=To%20ride%20on%20the%20strength,and%20be%20as%20a%20shared"
       }
@@ -2833,7 +2833,7 @@
         "country_region": "MY",
         "type_and_status": "Investment",
         "numbers": "Undisclosed",
-        "targeted_entities": "Equipment; APT; R&D",
+        "targeted_entities": "WFE; APT; R&D",
         "notes": "Local APT & inspection tech firm, EPF/KWAP invested via NSS",
         "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
       },
@@ -2845,7 +2845,7 @@
         "country_region": "MY",
         "type_and_status": "Investment",
         "numbers": "Undisclosed",
-        "targeted_entities": "APT; Advanced Packaging",
+        "targeted_entities": "APT",
         "notes": "Leading Malaysian OSAT firm named as NSS champion",
         "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
       },
@@ -2857,7 +2857,7 @@
         "country_region": "MY",
         "type_and_status": "Investment",
         "numbers": "Undisclosed",
-        "targeted_entities": "APT; Advanced Packaging",
+        "targeted_entities": "APT",
         "notes": "Major backend packaging company under Malaysia NSS",
         "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
       },
@@ -2869,7 +2869,7 @@
         "country_region": "MY",
         "type_and_status": "Investment",
         "numbers": "Undisclosed",
-        "targeted_entities": "Equipment; APT",
+        "targeted_entities": "WFE; APT",
         "notes": "Semiconductor automation and test systems company",
         "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
       },
@@ -2881,7 +2881,7 @@
         "country_region": "MY",
         "type_and_status": "Investment",
         "numbers": "Undisclosed",
-        "targeted_entities": "WFE; Fab Support; Cleanroom Infra",
+        "targeted_entities": "WFE;Fab Support",
         "notes": "Fab infra and specialty services integrator",
         "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
       },
@@ -3379,7 +3379,7 @@
         "country_region": "US",
         "type_and_status": "Subsidy",
         "numbers": "$825M",
-        "targeted_entities": "Lithography; APT",
+        "targeted_entities": "WFE; APT",
         "notes": "$825M U.S. EUV lithography research center construction funding",
         "sources": "https://www.csis.org/analysis/albany-nanotechs-potential-support-national-semiconductor-technology-center"
       },
@@ -3510,7 +3510,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$9.5M",
-        "targeted_entities": "R&D; Advanced Packaging",
+        "targeted_entities": "R&D; APT",
         "notes": "Facility upgrades for MEMS/microfluidics R&D",
         "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
       },
@@ -3522,7 +3522,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$12M",
-        "targeted_entities": "R&D; Equipment",
+        "targeted_entities": "R&D; WFE",
         "notes": "Equipment & facility expansion; largest ADI site",
         "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
       },
@@ -3546,7 +3546,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$22M",
-        "targeted_entities": "R&D; Equipment",
+        "targeted_entities": "R&D; WFE",
         "notes": "New R&D center construction at Tualatin campus",
         "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
       },
@@ -3558,7 +3558,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$19M",
-        "targeted_entities": "Advanced Packaging; Fabrication",
+        "targeted_entities": "APT; Fabrication",
         "notes": "Reuse of legacy fab for MicroLED production",
         "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
       },
@@ -3582,7 +3582,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$500K",
-        "targeted_entities": "Materials; Equipment",
+        "targeted_entities": "Materials; WFE",
         "notes": "Facility modernization for glass/electronics subsidiary",
         "sources": "https://www.oregon.gov/biz/programs/or_chips_fund/pages/default.aspx#g_87eec6f9_bc10_483b_a964_783bb154410c"
       },
@@ -3985,7 +3985,7 @@
         "country_region": "US",
         "type_and_status": "Subsidy",
         "numbers": "$1.5B",
-        "targeted_entities": "Fabricatin",
+        "targeted_entities": "Fabrication",
         "notes": "Leading-edge Intel logic fab supporting 14A and successors",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1"
       },
@@ -4250,7 +4250,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$23.25M",
-        "targeted_entities": "Design / R&D",
+        "targeted_entities": "Design; R&D",
         "notes": "New chip design/testing lab with AI/ML integration; ~$80M investment",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-silicon-labs#:~:text=Governor%20Greg%20Abbott%20today%20announced,80%20million%20in%20capital%20investment"
       },
@@ -4262,7 +4262,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$2.00M",
-        "targeted_entities": "WFE (tool cleaning & coating)",
+        "targeted_entities": "WFE",
         "notes": "Round Rock expansion (+40,000 sq ft) increasing cleanroom + production for sub-10nm tool services",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-komico#:~:text=Governor%20Greg%20Abbott%20today%20announced,36%20million%20in%20capital%20investment"
       },
@@ -4274,7 +4274,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$17.30M",
-        "targeted_entities": "APT (advanced packaging / PLP / PCB)",
+        "targeted_entities": "APT",
         "notes": "+1M sq ft advanced packaging & electronic kit facility; ~$280M investment; largest PLP/PCB facility in North America",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-spacex#:~:text=Governor%20Greg%20Abbott%20today%20announced,280%20million%20in%20capital%20investment"
       },
@@ -4286,7 +4286,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$7.87M",
-        "targeted_entities": "APT (ultra-pure sulfuric acid for fab/APT)",
+        "targeted_entities": "APT",
         "notes": "Expansion doubling output of high-purity sulfuric acid (ELSA); ~$176M investment",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-dsm#:~:text=Governor%20Greg%20Abbott%20today%20announced,and%20creates%2040%20new%20jobs"
       },
@@ -4298,7 +4298,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$3.08M",
-        "targeted_entities": "Talent Development (technician training)",
+        "targeted_entities": "Talent Development",
         "notes": "New R&D & technical training center using VR/AR; trains ~2,200 technicians per year",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-tokyo-electron-u.s-holdings-inc#:~:text=Governor%20Greg%20Abbott%20today%20announced,30%20million%20in%20capital%20investment"
       },
@@ -4310,7 +4310,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$5.30M",
-        "targeted_entities": "APT (semiconductor-grade chemicals)",
+        "targeted_entities": "APT",
         "notes": "Expansion +130,000 sq ft to increase high-purity cleaning agents (H₂O₂, NH₄OH)",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-grant-to-mgc-pure-chemicals-america-inc#:~:text=Governor%20Greg%20Abbott%20today%20announced,150%20million%20in%20capital%20investment"
       },
@@ -4334,7 +4334,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$250.00M",
-        "targeted_entities": "Fabrication (2-nm fab)",
+        "targeted_entities": "Fabrication",
         "notes": "Support for Samsung’s Taylor 2-nm fab",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-samsung-austin-semiconductor#:~:text=Governor%20Greg%20Abbott%20today%20announced,73%20billion%20in%20capital%20investment"
       },
@@ -4346,7 +4346,7 @@
         "country_region": "US",
         "type_and_status": "Grant",
         "numbers": "$1.30M",
-        "targeted_entities": "WFE (equipment refurbishment & repair)",
+        "targeted_entities": "WFE",
         "notes": "+50,000 sq ft facility expansion; +30 jobs; increases output of refurbished semiconductor tool parts",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-yerico-manufacturing#:~:text=Governor%20Greg%20Abbott%20today%20announced,13%20million%20in%20capital%20investment"
       }
