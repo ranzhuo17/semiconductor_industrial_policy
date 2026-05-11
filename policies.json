@@ -1106,6 +1106,30 @@
         "targeted_entities": "Materials",
         "notes": "Equity stake in photomask quartz material firm",
         "sources": "https://www.trendforce.com/news/2025/11/05/... 11"
+      },
+      {
+        "distribution_name": "Huaxin Dingxin (Beijing) Equity Investment Fund (华芯鼎新)",
+        "distribution_id": 3,
+        "year_announced": "2024",
+        "effective_period": "2024-2039",
+        "country_region": "CN",
+        "type_and_status": "Investment Fund",
+        "numbers": "¥93B (~$13.1B)",
+        "targeted_entities": "Fabrication; WFE; Materials; Design",
+        "notes": "Big Fund III sub-fund registered Dec 31 2024; Big Fund III injected ¥93B + SINO-IC Capital ¥93M as GP; fund-of-fund covering full IC value chain",
+        "sources": "https://www.dealstreetasia.com/stories/chinas-47b-third-semiconductor-big-fund-kickstarts-investments-425517; https://www.tomshardware.com/tech-industry/china-starts-big-fund-iii-spending-usd47-billion-for-ecosystem-and-fab-tools"
+      },
+      {
+        "distribution_name": "Guotou Jixin (Beijing) Equity Investment Fund (国投集新)",
+        "distribution_id": 4,
+        "year_announced": "2024",
+        "effective_period": "2024-2039",
+        "country_region": "CN",
+        "type_and_status": "Investment Fund",
+        "numbers": "¥71B (~$9.7B)",
+        "targeted_entities": "WFE; Materials",
+        "notes": "Big Fund III sub-fund registered Dec 31 2024; Big Fund III injected ¥71B + SDIC Venture Capital ¥71M as GP; focused on equipment and materials deployments",
+        "sources": "https://www.dealstreetasia.com/stories/chinas-47b-third-semiconductor-big-fund-kickstarts-investments-425517"
       }
     ]
   },
@@ -1388,6 +1412,186 @@
         "targeted_entities": "Fabrication",
         "notes": "Expand RF filter capacity",
         "sources": "https://jp.reuters.com/business/technology/MWCK2SB2CRIRXH2A7KNTVMLTGU-2024-11-29/#:~:text=%E3%81%93%E3%81%AE%E3%81%BB%E3%81%8B%E3%80%81%E6%9D%B1%E6%B4%8B%E5%90%88%E6%88%90%E5%B7%A5%E6%A5%AD%284970,%E3%81%AE%E6%84%9F%E5%85%89%E6%9D%90%E3%83%BB%E3%83%9D%E3%83%AA%E3%83%9E%E2%80%95%E3%80%81%E9%AB%98%E7%B4%94%E5%BA%A6%E6%BA%B6%E5%89%A4%E3%81%AB%EF%BC%97%EF%BC%90%E5%84%84%E5%86%86%E3%80%81%E9%9B%BB%E5%AD%90%E9%83%A8%E5%93%81%E3%81%A7%E3%81%AF%E6%9D%91%E7%94%B0%E8%A3%BD%E4%BD%9C%E6%89%80%2060%E3%81%AE%EF%BC%A2%EF%BC%A1%EF%BC%B7%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AB%EF%BC%95%EF%BC%94%E5%84%84%E5%86%86%E3%81%AA%E3%81%A9%E3%81%8C%E5%85%A5%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82%E6%98%A8%E5%B9%B4%E5%BA%A6%E3%81%AE%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97%E3%81%8B%E3%82%89%E3%81%AE%E6%8B%A0%E5%87%BA%E3%81%A8%E3%81%AA%E3%82%8B%E3%80%82"
+      },
+      {
+        "distribution_name": "Renesas Electronics – Microcontroller Supply Security",
+        "distribution_id": 5,
+        "year_announced": "2023",
+        "effective_period": "2023–2033",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥15.9B (~$101M)",
+        "targeted_entities": "Fabrication",
+        "notes": "Domestic microcontroller production capacity strengthening",
+        "sources": "https://www.meti.go.jp/policy/economy/economic_security/semicon/nintei_anpohandoutai_keikaku_01.pdf"
+      },
+      {
+        "distribution_name": "Ibiden – FC-BGA Package Substrates (Ono Plant)",
+        "distribution_id": 6,
+        "year_announced": "2023",
+        "effective_period": "2023-2028",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥40.5B (~$300M)",
+        "targeted_entities": "APT",
+        "notes": "METI ESPA supply-assurance plan authorization Apr 28 2023; max subsidy ≤1/3 of project cost for FC-BGA substrate mass production at Ono Plant, Gifu Prefecture",
+        "sources": "https://www.ibiden.com/company/2023/04/approval-of-supply-securing-plan-for-ono-plant.html; https://www.meti.go.jp/english/policy/0704_001.pdf"
+      },
+      {
+        "distribution_name": "SUMCO – 300mm Silicon Wafer Expansion (Saga)",
+        "distribution_id": 7,
+        "year_announced": "2023",
+        "effective_period": "2023-2029",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥75B (~$555M)",
+        "targeted_entities": "Materials",
+        "notes": "METI ESPA authorization Jul 14 2023; ¥75B subsidy (1/3 of ¥225B project) for 300mm wafer fabs in Imari and Yoshinogari, Saga; construction delayed Apr 2026 due to market shift",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf; https://www.trendforce.com/news/2026/04/06/news-sumco-delays-construction-of-two-silicon-wafer-fabs-amid-market-shift/"
+      },
+      {
+        "distribution_name": "Canon + Canon Semiconductor Equipment – Lithography/Exposure Tools",
+        "distribution_id": 8,
+        "year_announced": "2023",
+        "effective_period": "2023-2027",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥11.1B (~$82M)",
+        "targeted_entities": "WFE",
+        "notes": "METI ESPA authorization Jun 16 2023; max subsidy for lithography/exposure tool production at Utsunomiya (Tochigi) and Ami (Ibaraki) facilities",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf"
+      },
+      {
+        "distribution_name": "Resonac – SiC Wafers / CMP Slurries",
+        "distribution_id": 9,
+        "year_announced": "2023",
+        "effective_period": "2023-2028",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥11.4B (~$76.3M)",
+        "targeted_entities": "Materials",
+        "notes": "METI ESPA authorization Jun 16 2023 for Resonac Holdings (former Showa Denko Materials) SiC wafer and CMP slurry capacity",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf"
+      },
+      {
+        "distribution_name": "Sumitomo Electric Industries – SiC Wafers",
+        "distribution_id": 10,
+        "year_announced": "2023",
+        "effective_period": "2023-2028",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥11B (~$74.1M)",
+        "targeted_entities": "Materials",
+        "notes": "METI ESPA authorization Jun 16 2023 for SiC wafer production",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf"
+      },
+      {
+        "distribution_name": "Shinko Electric Industries – Package Substrates",
+        "distribution_id": 11,
+        "year_announced": "2023",
+        "effective_period": "2023-2028",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥19.8B (~$132M)",
+        "targeted_entities": "APT",
+        "notes": "METI ESPA authorization Jun 16 2023 for IC package substrate capacity expansion",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf"
+      },
+      {
+        "distribution_name": "Gas Consortium (Sumitomo Corp, Koatsu Gas, Kioxia, Sony et al.) – Industrial Gases",
+        "distribution_id": 12,
+        "year_announced": "2023",
+        "effective_period": "2023-2028",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "~¥30B (~$199M)",
+        "targeted_entities": "Materials",
+        "notes": "METI ESPA authorizations Jun 16 / Jul 28 / Dec 6 2023 covering yellow phosphorus, helium, neon gas supply including Iwatani, JFE Steel + Tokyo Gas Chemical, Taiyo Nippon Sanso, Air Liquide Japan, Rasa Industries",
+        "sources": "https://www.meti.go.jp/english/policy/0704_001.pdf"
+      },
+      {
+        "distribution_name": "Kanadevia (Hitachi Zosen) – CMP Lapping Plates",
+        "distribution_id": 13,
+        "year_announced": "2024",
+        "effective_period": "2024-2027",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥0.9B (~$6M)",
+        "targeted_entities": "WFE",
+        "notes": "METI ESPA authorization Nov 29 2024; ¥0.9B of ¥2.7B project for CMP/wafer processing consumables at Takahama (Fukui); start April 2027",
+        "sources": "https://monoist.itmedia.co.jp/mn/articles/2412/02/news070.html"
+      },
+      {
+        "distribution_name": "Takiron CI + Takiron Tech – Resin Plates",
+        "distribution_id": 14,
+        "year_announced": "2024",
+        "effective_period": "2024-2027",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥1.4B (~$9M)",
+        "targeted_entities": "Materials",
+        "notes": "METI ESPA authorization Nov 29 2024; ¥1.4B of ¥4.4B project for semiconductor-processing resin plates; start January 2027",
+        "sources": "https://monoist.itmedia.co.jp/mn/articles/2412/02/news070.html"
+      },
+      {
+        "distribution_name": "Mitsubishi Chemical – Synthetic Quartz Powder",
+        "distribution_id": 15,
+        "year_announced": "2024",
+        "effective_period": "2024-2028",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥3.7B (~$24M)",
+        "targeted_entities": "Materials",
+        "notes": "METI ESPA authorization Nov 29 2024 for synthetic quartz powder production at Kitakyushu plant",
+        "sources": "https://monoist.itmedia.co.jp/mn/articles/2412/02/news070.html"
+      },
+      {
+        "distribution_name": "Chemours-Mitsui Fluoroproducts – Fluoropolymers",
+        "distribution_id": 16,
+        "year_announced": "2024",
+        "effective_period": "2024-2028",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥8.0B (~$53M)",
+        "targeted_entities": "Materials",
+        "notes": "METI ESPA authorization Nov 29 2024; ¥8.0B of ¥27.5B project for fluoropolymers used in semiconductor equipment; capacity +60%; start December 2028",
+        "sources": "https://monoist.itmedia.co.jp/mn/articles/2412/02/news070.html"
+      },
+      {
+        "distribution_name": "Skyworks Filter Solutions Japan – BAW Filters",
+        "distribution_id": 17,
+        "year_announced": "2024",
+        "effective_period": "2024-2027",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥4.4B (~$29M)",
+        "targeted_entities": "Design",
+        "notes": "METI ESPA authorization Nov 29 2024; ¥4.4B of ¥13.4B project for BAW filter production; start April 2027; 28,800 units/year",
+        "sources": "https://monoist.itmedia.co.jp/mn/articles/2412/02/news070.html"
+      },
+      {
+        "distribution_name": "JX Metal (JX Advanced Metals) – Copper Sputtering Targets",
+        "distribution_id": 18,
+        "year_announced": "2025",
+        "effective_period": "2025-2029",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥2.2B (~$15M)",
+        "targeted_entities": "Materials",
+        "notes": "METI ESPA authorization Jul 18 2025 (authorization 2025半導体第1号-1); ¥2.2B of ¥6.6B project for copper sputtering targets at Hitachinaka plant",
+        "sources": "https://www.meti.go.jp/policy/economy/economic_security/semicon/nintei_anpohandoutai_keikaku_25.pdf"
+      },
+      {
+        "distribution_name": "Sony Semiconductor Manufacturing – Koshi (Kumamoto) CMOS Image Sensor Plant",
+        "distribution_id": 19,
+        "year_announced": "2026",
+        "effective_period": "2026-2029",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "¥60B (~$400M)",
+        "targeted_entities": "Fabrication",
+        "notes": "METI ESPA authorization Apr 17 2026; max ¥60B (1/3) of ¥180B project; 300mm fab producing ~10k wafers/month of CMOS image sensors for smartphones/automotive; supply start May 2029",
+        "sources": "https://finance.biggo.com/news/U9nPmZ0B5edQG9E4l94B"
       }
     ]
   },
@@ -1440,6 +1644,30 @@
         "targeted_entities": "R&D; Compound",
         "notes": "Subsidy for energy-efficient AI connectivity chiplets",
         "sources": "https://www.edgecortix.com/en/press-releases/edgecortix-receives-4-billion-yen-subsidy-from-japans-nedo#:~:text=Tokyo%2C%20Japan%20,communications%20with%20unprecedented%20energy%20efficiency"
+      },
+      {
+        "distribution_name": "Samsung Electronics – Yokohama Advanced Package Lab",
+        "distribution_id": 4,
+        "year_announced": "2023",
+        "effective_period": "2024–2028",
+        "country_region": "JP",
+        "type_and_status": "Grant",
+        "numbers": "¥20B (~$127M)",
+        "targeted_entities": "APT; R&D",
+        "notes": "5-year Post-5G Fund grant for next-gen chiplet and packaging R&D",
+        "sources": "https://eetimes.itmedia.co.jp/ee/articles/2312/21/news174.html; https://www.nikkei.com/article/DGXZQOUA212B80R21C23A2000000/"
+      },
+      {
+        "distribution_name": "Rapidus – Additional Grant FY2026-27",
+        "distribution_id": 5,
+        "year_announced": "2025",
+        "effective_period": "2026–2027",
+        "country_region": "JP",
+        "type_and_status": "Grant",
+        "numbers": "¥1T (~$6.3B)",
+        "targeted_entities": "Fabrication; Logic; R&D",
+        "notes": "METI Nov 2025 announcement of additional ¥1T for FY2026-27; separate from Grant One and Grant Two tranches",
+        "sources": "https://www.nikkei.com/article/DGXZQOUA218OG0R21C25A1000000/"
       }
     ]
   },
@@ -1642,7 +1870,7 @@
         "effective_period": "2025-2026",
         "country_region": "DE",
         "type_and_status": "Grant",
-        "numbers": "€1B",
+        "numbers": "€920M",
         "targeted_entities": "Fabrication",
         "notes": "200 & 300 mm Fab",
         "sources": "https://www.infineon.com/press-release/2025/infxx202502-058"
@@ -1990,8 +2218,8 @@
     ]
   },
   {
-    "project_name": "Second IPCEI on Microelectronics",
-    "project_id": "27",
+    "project_name": "European Chips Act",
+    "project_id": "25",
     "year_announced": "2023",
     "effective_period": "2023-2032",
     "country_region": "EU",
@@ -1999,287 +2227,10 @@
     "numbers": "€8.1B",
     "targeted_entities": "Logic; APT; WFE; Fabrication",
     "notes": "Second IPCEI approved June 8, 2023 expanding scope beyond microelectronics into 5G/6G, connectivity, and edge AI hardware; includes 14 Member States and 56 companies; provides €8.1 billion in public funding and an expected €13.7 billion in private investment; covers full semiconductor value chain including analog/mixed-signal ICs, logic, SiC power devices, sensors, equipment, materials, and packaging; supports R&D, pilot production, and first industrial deployment under state-aid exemption rules; complements the European Chips Act as the core industrial implementation arm for semiconductor and communication technology resilience",
-    "sources": "https://competition-policy.ec.europa.eu/state-aid/ipcei/approved-ipceis/microelectronics-value-chain_en",
-    "subproject_name": "",
-    "subproject_id": "",
-    "distributions": [
-      {
-        "distribution_name": "Dutch national aid (EZK) – ASML",
-        "distribution_id": 1,
-        "year_announced": "2023",
-        "effective_period": "2023–2032",
-        "country_region": "NL",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "WFE; R&D",
-        "notes": "High-NA EUV scanner R&D for sub-2nm",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "French nat’l aid – Airbus",
-        "distribution_id": 2,
-        "year_announced": "2023",
-        "effective_period": "2023–2032",
-        "country_region": "FR",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Design; R&D",
-        "notes": "Secure comms/radar/space chips R&D",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "German Fed. aid (BMWK) – Ericsson Antenna Tech",
-        "distribution_id": 3,
-        "year_announced": "2023",
-        "effective_period": "2023–2028",
-        "country_region": "DE",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "R&D",
-        "notes": "6G Massive-MIMO antenna microelectronics R&D",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "German Fed. aid (BMWK) – Nokia Bell Labs Germany",
-        "distribution_id": 4,
-        "year_announced": "2023",
-        "effective_period": "2024–2028",
-        "country_region": "DE",
-        "type_and_status": "Subsidy",
-        "numbers": "part of €360M project",
-        "targeted_entities": "R&D",
-        "notes": "HW/SW/SoC co-design for 5G-A/6G",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "German Fed. aid (BMWK) – Wacker Chemie",
-        "distribution_id": 5,
-        "year_announced": "2023",
-        "effective_period": "2023–2030?",
-        "country_region": "DE",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Materials",
-        "notes": "Wafer-grade polysilicon line; €300M investment",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "German Fed. aid (BMWK) – Bosch",
-        "distribution_id": 6,
-        "year_announced": "2023",
-        "effective_period": "2023–2032",
-        "country_region": "DE",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Compound; R&D",
-        "notes": "SiC, radar, automotive IC R&D",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "French nat’l aid – Renault Group",
-        "distribution_id": 7,
-        "year_announced": "2023",
-        "effective_period": "2023–2030+",
-        "country_region": "FR",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Design; R&D",
-        "notes": "In-house auto chips for EV/ADAS",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "French nat’l aid – Orange",
-        "distribution_id": 8,
-        "year_announced": "2023",
-        "effective_period": "2023–2030+",
-        "country_region": "FR",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "R&D",
-        "notes": "Open RAN/6G integration; operator use-cases",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "German/Bavarian aid – ESMC Dresden JV",
-        "distribution_id": 9,
-        "year_announced": "2023",
-        "effective_period": "2024–… (FID)",
-        "country_region": "DE",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Fabrication",
-        "notes": "TSMC-Bosch-Infineon-NXP Dresden 300mm fab",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Austrian nat’l aid (BMK/BMAW) – NXP Austria (Think)",
-        "distribution_id": 10,
-        "year_announced": "2023",
-        "effective_period": "2023–2030",
-        "country_region": "AT",
-        "type_and_status": "Subsidy",
-        "numbers": "share of €175M AT",
-        "targeted_entities": "Design; R&D",
-        "notes": "Secure RISC-V, PQC; safe EV BMS",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Austrian nat’l aid (BMK/BMAW) – NXP Austria (Sense)",
-        "distribution_id": 11,
-        "year_announced": "2023",
-        "effective_period": "2023–2030",
-        "country_region": "AT",
-        "type_and_status": "Subsidy",
-        "numbers": "share of €175M AT",
-        "targeted_entities": "R&D",
-        "notes": "UWB radar, sensor fusion for ADAS/IoT",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Austrian nat’l aid (BMK/BMAW) – AVL List",
-        "distribution_id": 12,
-        "year_announced": "2023",
-        "effective_period": "2023–2027",
-        "country_region": "AT",
-        "type_and_status": "Subsidy",
-        "numbers": "~€50M",
-        "targeted_entities": "R&D",
-        "notes": "Chip test tools for EV sensors/power",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Slovak nat’l aid – Tachyum",
-        "distribution_id": 13,
-        "year_announced": "2023",
-        "effective_period": "2023–2032",
-        "country_region": "SK",
-        "type_and_status": "Subsidy",
-        "numbers": "€26.4M",
-        "targeted_entities": "Design; R&D",
-        "notes": "Prodigy 2 universal processor; 3nm target",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Italian nat’l aid – STMicroelectronics Italy",
-        "distribution_id": 14,
-        "year_announced": "2023",
-        "effective_period": "2023–2032",
-        "country_region": "IT",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Compound; R&D",
-        "notes": "Auto MCUs + SiC/GaN power R&D",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "French nat’l aid – Soitec",
-        "distribution_id": 15,
-        "year_announced": "2023",
-        "effective_period": "2023–2030+",
-        "country_region": "FR",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Materials",
-        "notes": "New SOI/piezo substrates for 5G/6G",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "German Fed. aid (BMWK) – Continental Automotive",
-        "distribution_id": 16,
-        "year_announced": "2023",
-        "effective_period": "2023–2030+",
-        "country_region": "DE",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Compound; R&D",
-        "notes": "Power modules/sensors for EV/autonomy",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Czech nat’l aid – Mycroft Mind",
-        "distribution_id": 17,
-        "year_announced": "2023",
-        "effective_period": "2023–2030+",
-        "country_region": "CZ",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "R&D",
-        "notes": "AI-enhanced sensor systems; Czech SME",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Czech nat’l aid – TES (TBD)",
-        "distribution_id": 18,
-        "year_announced": "2023",
-        "effective_period": "2023–2030+",
-        "country_region": "CZ",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "",
-        "notes": "Second CZ participant; details not public",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Irish nat’l aid (IDA) – Analog Devices Ireland",
-        "distribution_id": 19,
-        "year_announced": "2023",
-        "effective_period": "2023–2028",
-        "country_region": "IE",
-        "type_and_status": "Subsidy",
-        "numbers": "est. ~€100M",
-        "targeted_entities": "Fabrication",
-        "notes": "Limerick automation modules for analog/mixed-signal",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Finnish nat’l aid – VTT / Nokia (beneficiary TBD)",
-        "distribution_id": 20,
-        "year_announced": "2023",
-        "effective_period": "2023–2032",
-        "country_region": "FI",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "R&D",
-        "notes": "Likely 6G + quantum R&D project",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Romanian nat’l aid – NXP Romania",
-        "distribution_id": 21,
-        "year_announced": "2023",
-        "effective_period": "2023–2030+",
-        "country_region": "RO",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Design; R&D",
-        "notes": "Bucharest design expansion; secure IIoT/edge",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "Greek nat’l aid – Think Silicon (likely)",
-        "distribution_id": 22,
-        "year_announced": "2023",
-        "effective_period": "2023–2030+",
-        "country_region": "GR",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "Design",
-        "notes": "Likely low-power GPU IP R&D Patras",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      },
-      {
-        "distribution_name": "French/German nat’l aid – TRUMPF & partners (likely)",
-        "distribution_id": 23,
-        "year_announced": "2023",
-        "effective_period": "2023–2032",
-        "country_region": "DE/FR",
-        "type_and_status": "Subsidy",
-        "numbers": "Undisclosed",
-        "targeted_entities": "WFE",
-        "notes": "Laser light-source tech supporting EUV roadmap",
-        "sources": "https://ec.europa.eu/competition/state_aid/cases1/202417/SA_101129_A0FF058F-0100-C611-9E6D-800FDA995039_1165_1.pdf#:~:text=1.%20AT%26S%20,50%20%E2%80%93%2060"
-      }
-    ]
+    "sources": "https://competition-policy.ec.europa.eu/state-aid/ipcei/approved-ipceis/microelectronics-value-chain_en; https://www.eca.europa.eu/ECAPublications/SR-2025-12/SR-2025-12_EN.pdf?",
+    "subproject_name": "Second IPCEI on Microelectronics",
+    "subproject_id": "1",
+    "distributions": []
   },
   {
     "project_name": "France - France 2030 Programme (Electronique)",
@@ -2950,6 +2901,54 @@
         "targeted_entities": "Design; R&D",
         "notes": "Malaysian IC/system design company under NSS",
         "sources": "https://theedgemalaysia.com/node/763905; https://www.klsescreener.com/v2/news/view/1345151/Cover_Story_National_Semiconductor_Strategy_to_guide_industry_up_value_chain#"
+      },
+      {
+        "distribution_name": "Khazanah/KWAP Semiconductor Co-Investment Fund",
+        "distribution_id": 10,
+        "year_announced": "2025",
+        "effective_period": "2025-2030",
+        "country_region": "MY",
+        "type_and_status": "Subsidy",
+        "numbers": "RM550M (~$117M)",
+        "targeted_entities": "Design; Fabrication",
+        "notes": "Budget 2026 (Oct 2025) allocation; direct equity co-investment into local chipmakers and JVs with MNCs through Khazanah + KWAP",
+        "sources": "https://thesun.my/news/malaysia-news/budget-2026-rm200mil-co-investment-fund-rm550mil-semiconductor-boost-highlight-budget-2026-fc15067174/"
+      },
+      {
+        "distribution_name": "Bank Pembangunan Malaysia Berhad (BPMB) – Semiconductor R&D Loan Facility",
+        "distribution_id": 11,
+        "year_announced": "2025",
+        "effective_period": "2026-2030",
+        "country_region": "MY",
+        "type_and_status": "Subsidy",
+        "numbers": "RM500M (~$106M)",
+        "targeted_entities": "Design; R&D",
+        "notes": "Budget 2026 loan facility for semiconductor R&D and design activities by local E&E firms",
+        "sources": "https://www.msia.org.my/news_updates_details/PPGDAVSOO8"
+      },
+      {
+        "distribution_name": "MOSTI Science Endowment – Advanced Packaging Matching Fund",
+        "distribution_id": 12,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "MY",
+        "type_and_status": "Subsidy",
+        "numbers": "RM90M (~$19M)",
+        "targeted_entities": "APT",
+        "notes": "MOSTI Science Endowment matching fund launched July 2025; advanced semiconductor packaging modernization for OSAT firms",
+        "sources": "https://theedgemalaysia.com/node/763095"
+      },
+      {
+        "distribution_name": "X-FAB Sarawak Expansion (Sama Jaya FIZ)",
+        "distribution_id": 13,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "MY",
+        "type_and_status": "Subsidy",
+        "numbers": "RM3B (~$637M)",
+        "targeted_entities": "Fabrication",
+        "notes": "Announced September 2025; X-FAB 200mm fab expansion from 30k→40k wafers/month (target 50k) at Sama Jaya FIZ, Kuching; analog/mixed-signal; Sarawak state incentive package",
+        "sources": "https://www.nst.com.my/business/corporate/2025/09/1274102/germanys-x-fab-invests-rm3bil-expand-sarawak-chip-plant"
       }
     ]
   },
@@ -3436,6 +3435,18 @@
         "targeted_entities": "R&D",
         "notes": "Program to fund 10 early stage companies with innovative ideas",
         "sources": "https://www.nist.gov/chips/activate-berkeley"
+      },
+      {
+        "distribution_name": "xLight EUV Free-Electron Laser Prototype",
+        "distribution_id": 40,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Proposed Equity Incentive",
+        "numbers": "$150M",
+        "targeted_entities": "WFE; R&D",
+        "notes": "Proposed CHIPS R&D LOI for xLight to construct build out and demonstrate a free-electron laser prototype as an alternative EUV lithography light source at the Albany Nanotech Complex; Commerce expected to receive $150M of equity in xLight",
+        "sources": "https://www.nist.gov/news-events/news/2025/12/department-commerce-and-nist-announce-chips-research-and-development-letter"
       }
     ]
   },
@@ -4162,6 +4173,102 @@
         "targeted_entities": "Materials",
         "notes": "Rare earth metal development",
         "sources": "https://www.nist.gov/news-events/news/2026/01/department-commerces-chips-program-announces-letter-intent-usa-rare-earth?"
+      },
+      {
+        "distribution_name": "Crucible Metals Critical Minerals Facility",
+        "distribution_id": 32,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$210M",
+        "targeted_entities": "Materials",
+        "notes": "Domestic critical minerals refining and smelting capabilities supporting semiconductor supply chains",
+        "sources": "https://www.nist.gov/news-events/news/2025/12/department-commerce-awards-chips-incentives-subsidiary-korea-zinc-crucible"
+      },
+      {
+        "distribution_name": "MACOM Lowell MA and Durham NC Expansion",
+        "distribution_id": 33,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Proposed Subsidy",
+        "numbers": "$70M",
+        "targeted_entities": "Fabrication; Compound",
+        "notes": "Proposed CHIPS PMT supporting expansion and modernization of MACOM facilities in Lowell MA and Durham NC; Category 1A trusted foundries producing GaN and GaAs compound semiconductors for defense radar telecom and commercial RF applications",
+        "sources": "https://www.commerce.gov/news/press-releases/2025/01/us-department-commerce-announces-preliminary-terms-macom-help"
+      },
+      {
+        "distribution_name": "Analog Devices Massachusetts Oregon Washington Expansion",
+        "distribution_id": 34,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Proposed Subsidy",
+        "numbers": "$105M",
+        "targeted_entities": "R&D; Fabrication; APT",
+        "notes": "Proposed CHIPS PMT supporting ADI R&D and RF microwave systems manufacturing in Chelmsford MA plus mature-node semiconductor fabrication facilities in Beaverton OR and Camas WA",
+        "sources": "https://www.commerce.gov/news/press-releases/2025/01/department-commerce-announces-preliminary-terms-analog-devices-coherent"
+      },
+      {
+        "distribution_name": "Coherent Easton PA SiC Expansion",
+        "distribution_id": 35,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Proposed Subsidy",
+        "numbers": "$79M",
+        "targeted_entities": "Materials; Compound",
+        "notes": "Proposed CHIPS PMT supporting Coherent's Easton PA facility expansion for 150mm and 200mm silicon carbide substrates, SiC epitaxial wafers, back-end processing and reliability testing",
+        "sources": "https://www.commerce.gov/news/press-releases/2025/01/department-commerce-announces-preliminary-terms-analog-devices-coherent"
+      },
+      {
+        "distribution_name": "IntelliEPI Allen TX Epitaxy Wafer Expansion",
+        "distribution_id": 36,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Proposed Subsidy",
+        "numbers": "$10.3M",
+        "targeted_entities": "Materials; Compound",
+        "notes": "Proposed CHIPS PMT supporting expansion and modernization of IntelliEPI's Allen TX facility to increase epitaxial wafer production for compound semiconductor applications",
+        "sources": "https://www.commerce.gov/news/press-releases/2025/01/department-commerce-announces-preliminary-terms-analog-devices-coherent"
+      },
+      {
+        "distribution_name": "Sumika Baytown TX High-Purity Chemicals Facility",
+        "distribution_id": 37,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Proposed Subsidy",
+        "numbers": "$52.1M",
+        "targeted_entities": "Materials",
+        "notes": "Proposed CHIPS PMT supporting Sumika greenfield factory in Baytown TX to manufacture ultra-high-purity chemicals used in semiconductor production",
+        "sources": "https://www.commerce.gov/news/press-releases/2025/01/department-commerce-announces-preliminary-terms-analog-devices-coherent"
+      },
+      {
+        "distribution_name": "Micron Expanded U.S. Memory Manufacturing Investment",
+        "distribution_id": 38,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$275M",
+        "targeted_entities": "Fabrication; APT; R&D",
+        "notes": "Incremental CHIPS Act direct funding accompanying Micron's expanded $200B U.S. manufacturing and R&D investment across Idaho New York and Virginia including advanced memory manufacturing and HBM-related packaging capacity",
+        "sources": "https://www.nist.gov/news-events/news/2025/06/president-trump-secures-200b-investment-micron-technology-memory-chip"
+      },
+      {
+        "distribution_name": "Vulcan Elements NdFeB Magnet Equipment",
+        "distribution_id": 39,
+        "year_announced": "2025",
+        "effective_period": "2025-2028",
+        "country_region": "US",
+        "type_and_status": "Proposed Equity Incentive",
+        "numbers": "$50M",
+        "targeted_entities": "Materials; WFE",
+        "notes": "Proposed CHIPS LOI for equipment supporting domestic rare earth separation metallization and NdFeB magnet manufacturing; Commerce expected to receive $50M of equity in Vulcan Elements",
+        "sources": "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
       }
     ]
   },
@@ -4415,6 +4522,42 @@
         "targeted_entities": "WFE",
         "notes": "+50,000 sq ft facility expansion; +30 jobs; increases output of refurbished semiconductor tool parts",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-yerico-manufacturing#:~:text=Governor%20Greg%20Abbott%20today%20announced,13%20million%20in%20capital%20investment"
+      },
+      {
+        "distribution_name": "Coherent Sherman Expansion",
+        "distribution_id": 12,
+        "year_announced": "2026",
+        "effective_period": "2026-2028",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$14.1M",
+        "targeted_entities": "Photonics",
+        "notes": "Indium phosphide wafer and photonics manufacturing expansion in Sherman, Texas",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-coherent-corp"
+      },
+      {
+        "distribution_name": "Arm Austin Semiconductor Lab",
+        "distribution_id": 13,
+        "year_announced": "2026",
+        "effective_period": "2026-2027",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$4.16M",
+        "targeted_entities": "Design",
+        "notes": "Semiconductor failure analysis and advanced chip design lab expansion in Austin",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-arm-inc"
+      },
+      {
+        "distribution_name": "Texas A&M Cyclotron Institute Expansion",
+        "distribution_id": 14,
+        "year_announced": "2026",
+        "effective_period": "2026-2029",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$13M",
+        "targeted_entities": "R&D",
+        "notes": "Semiconductor testing and research infrastructure expansion at Texas A&M University",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-texas-am-university"
       }
     ]
   },
@@ -4607,6 +4750,21 @@
     "sources": "https://www.reuters.com/technology/south-korea-unveils-23-billion-support-package-chips-amid-us-tariff-uncertainty-2025-04-14/",
     "subproject_name": "Expansion of Program",
     "subproject_id": "1",
+    "distributions": []
+  },
+  {
+    "project_name": "K-Cloud Technology Development Project",
+    "project_id": "64",
+    "year_announced": "2022",
+    "effective_period": "2022-2030",
+    "country_region": "SK",
+    "type_and_status": "Grant",
+    "numbers": "₩342B",
+    "targeted_entities": "Design; R&D",
+    "notes": "MSIT-led program to commercialize domestic AI semiconductors (NPUs) on Korean cloud infrastructure; Phase 1 (2022-2025) + Phase 2 (2025-2030, ₩400B)",
+    "sources": "https://www.korea.net/Government/Briefing-Room/Press-Releases/view?articleId=8026;https://outlook.stpi.niar.org.tw/index/news/4b11410096d362580196e5fec2d535c1?",
+    "subproject_name": "",
+    "subproject_id": "",
     "distributions": []
   }
 ]
