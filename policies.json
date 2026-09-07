@@ -1592,6 +1592,18 @@
         "targeted_entities": "Fabrication",
         "notes": "METI ESPA authorization Apr 17 2026; max ¥60B (1/3) of ¥180B project; 300mm fab producing ~10k wafers/month of CMOS image sensors for smartphones/automotive; supply start May 2029",
         "sources": "https://finance.biggo.com/news/U9nPmZ0B5edQG9E4l94B"
+      },
+      {
+        "distribution_name": "Tower Semiconductor Japan (Uozu & Myoko optical-semi fabs)",
+        "distribution_id": 20,
+        "year_announced": "2026",
+        "effective_period": "2026-2029",
+        "country_region": "JP",
+        "type_and_status": "Subsidy",
+        "numbers": "~¥160B",
+        "targeted_entities": "Fabrication; APT",
+        "notes": "300mm silicon photonics and SiGe fab expansion",
+        "sources": "https://towersemi.com/2026/07/14/07142026/"
       }
     ]
   },
@@ -1668,6 +1680,18 @@
         "targeted_entities": "Fabrication; Logic; R&D",
         "notes": "METI Nov 2025 announcement of additional ¥1T for FY2026-27; separate from Grant One and Grant Two tranches",
         "sources": "https://www.nikkei.com/article/DGXZQOUA218OG0R21C25A1000000/"
+      },
+      {
+        "distribution_name": "Rapidus IPA Equity Injection #2",
+        "distribution_id": 6,
+        "year_announced": "2026",
+        "effective_period": "2026-2027",
+        "country_region": "JP",
+        "type_and_status": "Equity Investment",
+        "numbers": "¥150B",
+        "targeted_entities": "Fabrication",
+        "notes": "Government equity investment supporting Rapidus 2nm logic commercialization",
+        "sources": "https://www.meti.go.jp/english/speeches/press_conferences/2026/0605001.html"
       }
     ]
   },
@@ -1922,6 +1946,66 @@
         "targeted_entities": "Fabrication",
         "notes": "Open foundry for enterprises",
         "sources": "https://europa.eu/newsroom/ecpc-failover/pdf/ip-25-3020_en.pdf"
+      },
+      {
+        "distribution_name": "Element 3-5 GmbH SiC Epi-Wafer Facility",
+        "distribution_id": 11,
+        "year_announced": "2026",
+        "effective_period": "2026-ongoing",
+        "country_region": "DE",
+        "type_and_status": "Subsidy",
+        "numbers": "€353M",
+        "targeted_entities": "Materials",
+        "notes": "First-of-a-kind SiC epitaxial wafer production facility",
+        "sources": "https://europeansting.com/2026/07/14/commission-approves-e659-million-german-state-aid-for-four-new-semiconductor-facilities/"
+      },
+      {
+        "distribution_name": "Vishay Siliconix Itzehoe GmbH Power MOSFET Fab",
+        "distribution_id": 12,
+        "year_announced": "2026",
+        "effective_period": "2026-ongoing",
+        "country_region": "DE",
+        "type_and_status": "Subsidy",
+        "numbers": "€214M",
+        "targeted_entities": "Fabrication",
+        "notes": "Silicon power MOSFET production facility",
+        "sources": "https://europeansting.com/2026/07/14/commission-approves-e659-million-german-state-aid-for-four-new-semiconductor-facilities/"
+      },
+      {
+        "distribution_name": "KLA-Tencor MIE GmbH Metrology Facility",
+        "distribution_id": 13,
+        "year_announced": "2026",
+        "effective_period": "2026-ongoing",
+        "country_region": "DE",
+        "type_and_status": "Subsidy",
+        "numbers": "€74.4M",
+        "targeted_entities": "WFE",
+        "notes": "Optical overlay and film metrology equipment production facility",
+        "sources": "https://europeansting.com/2026/07/14/commission-approves-e659-million-german-state-aid-for-four-new-semiconductor-facilities/"
+      },
+      {
+        "distribution_name": "KETEK GmbH Silicon Detector Facility",
+        "distribution_id": 14,
+        "year_announced": "2026",
+        "effective_period": "2026-ongoing",
+        "country_region": "DE",
+        "type_and_status": "Subsidy",
+        "numbers": "€17.9M",
+        "targeted_entities": "Fabrication",
+        "notes": "Silicon drift detector semiconductor production facility",
+        "sources": "https://europeansting.com/2026/07/14/commission-approves-e659-million-german-state-aid-for-four-new-semiconductor-facilities/"
+      },
+      {
+        "distribution_name": "QuantumDiamonds Semiconductor Testing Equipment Facility",
+        "distribution_id": 15,
+        "year_announced": "2026",
+        "effective_period": "2026-ongoing",
+        "country_region": "DE",
+        "type_and_status": "Subsidy",
+        "numbers": "€76M",
+        "targeted_entities": "WFE",
+        "notes": "Quantum-sensor semiconductor testing and inspection equipment facility",
+        "sources": "https://digital-strategy.ec.europa.eu/en/policies/european-chips-act"
       }
     ]
   },
@@ -3447,6 +3531,102 @@
         "targeted_entities": "WFE; R&D",
         "notes": "Proposed CHIPS R&D LOI for xLight to construct build out and demonstrate a free-electron laser prototype as an alternative EUV lithography light source at the Albany Nanotech Complex; Commerce expected to receive $150M of equity in xLight",
         "sources": "https://www.nist.gov/news-events/news/2025/12/department-commerce-and-nist-announce-chips-research-and-development-letter"
+      },
+      {
+        "distribution_name": "I-Pulse SiC Development",
+        "distribution_id": 43,
+        "year_announced": "2026",
+        "effective_period": "Unknown",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$250M",
+        "targeted_entities": "R&D; Fabrication; Compound",
+        "notes": "Novel SiC power semiconductor technology development",
+        "sources": "https://www.nist.gov/news-events/news/2026/06/department-commerce-announces-definitive-agreement-i-pulse-250-million"
+      },
+      {
+        "distribution_name": "Multibeam Corp. (CHIPS R&D)",
+        "distribution_id": 44,
+        "year_announced": "2026",
+        "effective_period": "Unknown",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$140M",
+        "targeted_entities": "APT; R&D",
+        "notes": "Advanced chip stacking and interconnect packaging technology development",
+        "sources": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+      },
+      {
+        "distribution_name": "GlobalFoundries (CHIPS R&D)",
+        "distribution_id": 45,
+        "year_announced": "2026",
+        "effective_period": "Unknown",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$300M",
+        "targeted_entities": "APT; R&D",
+        "notes": "Co-packaged optics development supporting domestic AI infrastructure",
+        "sources": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+      },
+      {
+        "distribution_name": "Kepler Computing (CHIPS R&D)",
+        "distribution_id": 46,
+        "year_announced": "2026",
+        "effective_period": "Unknown",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$245M",
+        "targeted_entities": "R&D; Design",
+        "notes": "High-performance AI memory technology development",
+        "sources": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+      },
+      {
+        "distribution_name": "Extropic (CHIPS R&D)",
+        "distribution_id": 47,
+        "year_announced": "2026",
+        "effective_period": "Unknown",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$75M",
+        "targeted_entities": "Design; R&D",
+        "notes": "Probabilistic computing semiconductor technology development",
+        "sources": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+      },
+      {
+        "distribution_name": "Thintronics (CHIPS R&D)",
+        "distribution_id": 48,
+        "year_announced": "2026",
+        "effective_period": "Unknown",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$50M",
+        "targeted_entities": "Materials; R&D",
+        "notes": "Ultra-low-loss dielectric materials for advanced semiconductor interconnects",
+        "sources": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+      },
+      {
+        "distribution_name": "OBSIDIA (CHIPS R&D)",
+        "distribution_id": 49,
+        "year_announced": "2026",
+        "effective_period": "Unknown",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$34M",
+        "targeted_entities": "R&D",
+        "notes": "Counterfeit and malicious semiconductor component identification technology",
+        "sources": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
+      },
+      {
+        "distribution_name": "Aeluma (CHIPS R&D)",
+        "distribution_id": 50,
+        "year_announced": "2026",
+        "effective_period": "Unknown",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "$30M",
+        "targeted_entities": "Materials; R&D",
+        "notes": "Large-diameter photonics substrates for photodetectors and lasers",
+        "sources": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-letters-intent-7-companies-874-million"
       }
     ]
   },
@@ -4269,6 +4449,30 @@
         "targeted_entities": "Materials; WFE",
         "notes": "Proposed CHIPS LOI for equipment supporting domestic rare earth separation metallization and NdFeB magnet manufacturing; Commerce expected to receive $50M of equity in Vulcan Elements",
         "sources": "https://www.nist.gov/news-events/news/2025/11/department-commerce-announces-chips-incentives-letter-intent-vulcan"
+      },
+      {
+        "distribution_name": "Coherent Corp. InP Expansion (Sherman, TX)",
+        "distribution_id": 41,
+        "year_announced": "2026",
+        "effective_period": "2026-2028",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "up to $50M",
+        "targeted_entities": "Fabrication; Compound",
+        "notes": "150mm InP fab expansion supporting domestic photonics semiconductor capacity",
+        "sources": "https://www.nist.gov/chips"
+      },
+      {
+        "distribution_name": "Robert Bosch Semiconductor LLC (Roseville, CA SiC)",
+        "distribution_id": 42,
+        "year_announced": "2026",
+        "effective_period": "2024-2026",
+        "country_region": "US",
+        "type_and_status": "Subsidy",
+        "numbers": "up to $225M",
+        "targeted_entities": "Fabrication; Compound",
+        "notes": "Roseville SiC fab conversion expanding domestic power semiconductor production",
+        "sources": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-direct-funding-agreement-bosch-225-million"
       }
     ]
   },
@@ -4558,6 +4762,18 @@
         "targeted_entities": "R&D",
         "notes": "Semiconductor testing and research infrastructure expansion at Texas A&M University",
         "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-texas-am-university"
+      },
+      {
+        "distribution_name": "Texas Instruments (Richardson, TX fab)",
+        "distribution_id": 15,
+        "year_announced": "2026",
+        "effective_period": "",
+        "country_region": "US",
+        "type_and_status": "Grant",
+        "numbers": "$33.6M",
+        "targeted_entities": "Fabrication",
+        "notes": "Richardson 300mm wafer fab capacity and technology expansion",
+        "sources": "https://gov.texas.gov/news/post/governor-abbott-announces-texas-semiconductor-innovation-fund-grant-to-texas-instruments"
       }
     ]
   },
@@ -4694,16 +4910,52 @@
     "subproject_id": "",
     "distributions": [
       {
-        "distribution_name": "SK Hynix Yongin Cluster",
-        "distribution_id": 1,
-        "year_announced": "2025",
-        "effective_period": "2025-ongoing",
+        "distribution_name": "FuriosaAI",
+        "distribution_id": 2,
+        "year_announced": "2026",
+        "effective_period": "2026-ongoing",
+        "country_region": "SK",
+        "type_and_status": "Equity Investment",
+        "numbers": "₩370B",
+        "targeted_entities": "Design",
+        "notes": "Government equity investment supporting domestic AI chip development",
+        "sources": "https://www.fsc.go.kr/no010101/87003"
+      },
+      {
+        "distribution_name": "Techwing",
+        "distribution_id": 3,
+        "year_announced": "2026",
+        "effective_period": "2026-ongoing",
         "country_region": "SK",
         "type_and_status": "Loan",
-        "numbers": "₩4.3T",
-        "targeted_entities": "Fabrication",
-        "notes": "Semiconductor fabrication cluster in Yongin",
-        "sources": "https://koreatechdesk.com/korea-national-growth-fund-sk-hynix-semiconductor-cluster-yongin#:~:text=tranches"
+        "numbers": "₩50B",
+        "targeted_entities": "WFE; APT",
+        "notes": "HBM test handler production capacity expansion",
+        "sources": "https://www.fsc.go.kr/no010101/87442"
+      },
+      {
+        "distribution_name": "Doosan Tesna",
+        "distribution_id": 4,
+        "year_announced": "2026",
+        "effective_period": "2026-ongoing",
+        "country_region": "SK",
+        "type_and_status": "Loan",
+        "numbers": "₩560B",
+        "targeted_entities": "APT",
+        "notes": "System semiconductor testing and back-end capacity expansion",
+        "sources": "https://www.fsc.go.kr/no010101/87609"
+      },
+      {
+        "distribution_name": "TKG Solmics",
+        "distribution_id": 5,
+        "year_announced": "2026",
+        "effective_period": "2026-ongoing",
+        "country_region": "SK",
+        "type_and_status": "Loan",
+        "numbers": "₩100B",
+        "targeted_entities": "Materials; WFE",
+        "notes": "Semiconductor equipment silicon component production capacity expansion",
+        "sources": "https://www.fsc.go.kr/no010101/87609"
       }
     ]
   },
@@ -4763,6 +5015,109 @@
     "targeted_entities": "Design; R&D",
     "notes": "MSIT-led program to commercialize domestic AI semiconductors (NPUs) on Korean cloud infrastructure; Phase 1 (2022-2025) + Phase 2 (2025-2030, ₩400B)",
     "sources": "https://www.korea.net/Government/Briefing-Room/Press-Releases/view?articleId=8026;https://outlook.stpi.niar.org.tw/index/news/4b11410096d362580196e5fec2d535c1?",
+    "subproject_name": "",
+    "subproject_id": "",
+    "distributions": [
+      {
+        "distribution_name": "Oketto (Orchestro)",
+        "distribution_id": 1,
+        "year_announced": "2026",
+        "effective_period": "2026-2029",
+        "country_region": "SK",
+        "type_and_status": "Grant",
+        "numbers": "₩11.25B",
+        "targeted_entities": "R&D",
+        "notes": "AI-semiconductor cloud software stack and model hub development",
+        "sources": "https://www.etnews.com/20260508000191"
+      }
+    ]
+  },
+  {
+    "project_name": "Semiconductor Special Act",
+    "project_id": "65",
+    "year_announced": "2026",
+    "effective_period": "2026-Indefinitely",
+    "country_region": "SK",
+    "type_and_status": "Framework; Subsidy",
+    "numbers": "50-100% infrastructure support; ₩2tn special account (delayed 2027)",
+    "targeted_entities": "Fabrication; R&D; Infrastructure",
+    "notes": "Establishes comprehensive semiconductor support framework; creates special account through 2036; provides 50–100% infrastructure support for semiconductor clusters; offers tax, fee, and land-use incentives; supports R&D, commercialization, and workforce development",
+    "sources": "https://www.db24.kr/news_view.jsp?news_cd=161",
+    "subproject_name": "",
+    "subproject_id": "",
+    "distributions": []
+  },
+  {
+    "project_name": "3S+1F Semiconductor Megaproject",
+    "project_id": "66",
+    "year_announced": "2026",
+    "effective_period": "2026-2041",
+    "country_region": "SK",
+    "type_and_status": "Framework; Subsidy",
+    "numbers": "See subprojects",
+    "targeted_entities": "Fabrication; APT; Design; Materials; R&D",
+    "notes": "Announced 2026-06-29. Nationwide semiconductor strategy covering regional fabrication, advanced packaging, next-gen semiconductors and ecosystem support. Private capex excluded from tracker.",
+    "sources": "https://www.motir.go.kr/kor/article/ATCL3c536e4ec/79798/view",
+    "subproject_name": "",
+    "subproject_id": "",
+    "distributions": []
+  },
+  {
+    "project_name": "3S+1F Semiconductor Megaproject",
+    "project_id": "66",
+    "year_announced": "2026",
+    "effective_period": "2026-2041",
+    "country_region": "SK",
+    "type_and_status": "Subsidy",
+    "numbers": "₩30tn+ over 15 years",
+    "targeted_entities": "R&D; Design; Fabrication",
+    "notes": "Announced 2026-06-29. Govt investment supporting next-gen memory, edge AI and defense semiconductors across R&D, design, testing and manufacturing.",
+    "sources": "https://www.motir.go.kr/kor/article/ATCL3c536e4ec/79798/view",
+    "subproject_name": "Future Semiconductor Spearhead Program",
+    "subproject_id": "1",
+    "distributions": []
+  },
+  {
+    "project_name": "3S+1F Semiconductor Megaproject",
+    "project_id": "66",
+    "year_announced": "2026",
+    "effective_period": "2026-",
+    "country_region": "SK",
+    "type_and_status": "Subsidy; Loan",
+    "numbers": "₩5tn fund + ₩5tn trade finance + ₩1tn 10-yr program",
+    "targeted_entities": "Materials; Design (fabless & sobujang SMEs)",
+    "notes": "Announced 2026-08-10. Govt support for semiconductor materials/parts/equipment and fabless firms through dedicated fund, trade finance and long-term supplier cooperation support.",
+    "sources": "https://www.reuters.com/world/asia-pacific/south-koreas-lee-wants-military-airbase-relocated-by-mid-2028-chip-cluster-2026-08-10/",
+    "subproject_name": "Sobujang / Fabless Semiconductor Support",
+    "subproject_id": "2",
+    "distributions": []
+  },
+  {
+    "project_name": "EU Chips Act 2.0",
+    "project_id": "67",
+    "year_announced": "2026",
+    "effective_period": "2026- (proposal)",
+    "country_region": "EU",
+    "type_and_status": "Framework; Subsidy",
+    "numbers": "-",
+    "targeted_entities": "Fabrication; APT; WFE; Materials; Design; R&D",
+    "notes": "Commission proposal published 2026-06-03 building on the European Chips Act; expands state-aid eligibility across the full semiconductor value chain; introduces Strategic Projects, Demand Accelerators and faster permitting; strengthens R&D, advanced manufacturing and supply-chain resilience.",
+    "sources": "https://digital-strategy.ec.europa.eu/en/policies/chips-act-2",
+    "subproject_name": "",
+    "subproject_id": "",
+    "distributions": []
+  },
+  {
+    "project_name": "RIE 2030 Semiconductor Flagship",
+    "project_id": "68",
+    "year_announced": "2026",
+    "effective_period": "2026-2030",
+    "country_region": "SG",
+    "type_and_status": "Subsidy",
+    "numbers": "S$800M",
+    "targeted_entities": "R&D; APT; Design",
+    "notes": "S$800 million govt R&D program under RIE2030; coordinates publicly funded semiconductor research focused on advanced packaging, photonics and heterogeneous integration; supports translation of research into commercial products and advanced manufacturing.",
+    "sources": "https://www.edb.gov.sg/en/business-insights/insights/budget-2026-singapore-commits-s800-million-to-semiconductor-research-and-development-to-deepen-high-impact-tech-capabilities.html",
     "subproject_name": "",
     "subproject_id": "",
     "distributions": []
