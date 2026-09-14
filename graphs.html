@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "adce69fde85645ce8c727fbe24b4811f"}'></script><!-- End Cloudflare Web Analytics -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Global Semiconductor Industrial Policy Tracker — Graphs</title>
+  <style>
+    :root {
+      --bg: #0f172a; --card: #111827; --muted: #9ca3af; --fg: #e5e7eb;
+      --accent: #60a5fa; --accent-2: #34d399; --border: #1f2937;
+    }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 20px; flex-wrap: wrap;
+    }
+    h1 { font-size: clamp(20px, 2.4vw, 28px); margin: 0; letter-spacing: 0.2px; }
+    nav { display: flex; gap: 16px; align-items: center; font-size: 14px; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .layout { display: grid; grid-template-columns: 300px 1fr; gap: 16px; }
+    @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+    .sidebar h3 { margin: 0 0 8px; font-size: 13px; color: var(--muted); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; }
+    .sidebar .field { margin-bottom: 14px; }
+    .sidebar label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+    .sidebar select, .sidebar input[type=range] {
+      width: 100%; padding: 8px 10px; border-radius: 8px;
+      background: #0b1220; color: var(--fg); border: 1px solid var(--border);
+      font-size: 14px; box-sizing: border-box; -webkit-appearance: none; appearance: none;
+    }
+    .sidebar input[type=range] { padding: 0; height: 24px; }
+    .sidebar .check { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 14px; }
+    .sidebar .check input { accent-color: var(--accent); }
+    .sidebar .btn {
+      display: inline-block; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border);
+      background: #0b1220; color: var(--fg); cursor: pointer; font-size: 14px; width: 100%;
+      text-align: center; box-sizing: border-box;
+    }
+    .sidebar .btn:hover { border-color: var(--accent); }
+    .sidebar hr { border: 0; border-top: 1px solid var(--border); margin: 14px 0; }
+    #chart { width: 100%; height: 620px; }
+    .note {
+      margin-top: 12px; padding: 12px 16px; background: rgba(255,255,255,0.03);
+      border-radius: 8px; font-size: 12.5px; line-height: 1.55; color: #cbd5e1;
+    }
+    .note strong { color: var(--fg); }
+    .disclaimer { color: var(--muted); font-size: 13px; margin: 6px 0 16px; }
+    .topn-val { color: var(--fg); font-weight: 600; float: right; font-variant-numeric: tabular-nums; }
+    optgroup { color: var(--muted); font-style: normal; font-weight: 600; }
+    option { color: var(--fg); background: var(--card); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Semiconductor Policy — Graph Builder</h1>
+      <nav>
+        <a href="index.html">← Data table</a>
+        <a href="https://ranzhuo17.github.io/">Main site</a>
+      </nav>
+    </header>
+
+    <p class="disclaimer">
+      Interactive visualizations from the same dataset shown on the
+      <a href="index.html">data table</a>. All charts render in-browser; no server required.
+      For methodology questions, email <a href="mailto:ranzhuo@umich.edu">ranzhuo@umich.edu</a>.
+    </p>
+
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="card sidebar">
+        <h3>Data source</h3>
+        <div class="field">
+          <label class="check"><input type="radio" name="source" value="announced" checked> Announced</label>
+          <label class="check"><input type="radio" name="source" value="distributed"> Distributed</label>
+        </div>
+
+        <h3>Chart type</h3>
+        <div class="field">
+          <select id="chart-type">
+            <optgroup label="Country totals">
+              <option value="share_bar">Top countries by funding</option>
+              <option value="ann_vs_dist_stack">Announced vs distributed by country</option>
+            </optgroup>
+            <optgroup label="Value chain">
+              <option value="focus_bubble">Funding by focus</option>
+              <option value="country_focus">Country × focus (stacked)</option>
+              <option value="heatmap">Country × focus (heatmap)</option>
+              <option value="country_focus_facet">Country × focus (small multiples)</option>
+            </optgroup>
+            <optgroup label="Policies">
+              <option value="top_policies">Top policies</option>
+              <option value="top_policies_country">Top policies within top countries</option>
+            </optgroup>
+            <optgroup label="Over time">
+              <option value="cumulative">Cumulative funding</option>
+              <option value="active_line">Active policies</option>
+              <option value="dist_speed_country">Distribution speed by country</option>
+              <option value="dist_speed_policy">Distribution speed by policy</option>
+            </optgroup>
+            <optgroup label="Counts">
+              <option value="policy_count">Policy count by country and type</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="field" id="topn-field">
+          <label>Top N <span class="topn-val" id="topn-val">10</span></label>
+          <input type="range" id="topn" min="3" max="12" value="10" step="1">
+        </div>
+
+        <div class="field" id="ppc-field" style="display:none">
+          <label>Policies per country <span class="topn-val" id="ppc-val">3</span></label>
+          <input type="range" id="ppc" min="1" max="6" value="3" step="1">
+        </div>
+
+        <div class="field" id="speed-field" style="display:none">
+          <label>Years since announcement <span class="topn-val" id="speed-val">12</span></label>
+          <input type="range" id="speed" min="5" max="15" value="12" step="1">
+        </div>
+
+        <div class="field" id="stacked-field" style="display:none">
+          <label class="check"><input type="checkbox" id="stacked"> Stack countries (share view)</label>
+        </div>
+
+        <hr>
+
+        <h3>Display</h3>
+        <label class="check"><input type="checkbox" id="eu-group" checked> Group EU members</label>
+        <label class="check"><input type="checkbox" id="full-names" checked> Full country names</label>
+        <label class="check"><input type="checkbox" id="drop-rd"> Exclude R&D</label>
+
+        <hr>
+        <button class="btn" id="download">Download PNG</button>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="card" style="padding: 20px 24px;">
+        <div id="chart"></div>
+        <div class="note" id="note">Loading…</div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+
+  <script>
+  // Semiconductor Policy Funding -- graph builder. Reads policies.json.
+  // Amount charts sum each policy's parent row; China Big Fund (ID 8) and
+  // Shanghai IC Fund (ID 52) tranches are separate vehicles and are summed
+  // (Big Fund I+II+III = $96.2B). Count charts use one row per project.
+  // Distributions are attached by Project ID in xls_to_json.py.
+
+  // ---- constants ------------------------------------------------------------
+  const INDEF_END = 2030, ACTIVE_MIN = 2015;
+
+  const COUNTRY_NAME = {
+    "US":"United States", "CN":"China", "JP":"Japan", "SK":"South Korea",
+    "TW":"Taiwan", "EU":"European Union", "DE":"Germany", "FR":"France",
+    "NL":"Netherlands", "IT":"Italy", "ES":"Spain", "BE":"Belgium",
+    "AT":"Austria", "CZ":"Czechia", "FI":"Finland", "GR":"Greece",
+    "IE":"Ireland", "RO":"Romania", "SG":"Singapore", "MY":"Malaysia",
+    "TH":"Thailand", "UK":"United Kingdom", "DE/FR":"Germany/France",
+  };
+  const ISO_CODE = Object.fromEntries(Object.entries(COUNTRY_NAME).map(([k,v]) => [v,k]));
+  const EU_FULL = new Set([
+    "Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia","Denmark",
+    "Estonia","Finland","France","Germany","Greece","Hungary","Ireland",
+    "Italy","Latvia","Lithuania","Luxembourg","Malta","Netherlands","Poland",
+    "Portugal","Romania","Slovenia","Spain","Sweden",
+    "EU","European Union","Germany/France","DE/FR"
+  ]);
+  const EU_ISO = new Set([
+    "AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT",
+    "LV","LT","LU","MT","NL","PL","PT","RO","SI","ES","SE","EU","DE/FR"
+  ]);
+
+  const euGroup = (c, on) => (!on ? c : (EU_FULL.has(c) || EU_ISO.has(c)) ? "European Union" : c);
+  const prettify = (c, full) => {
+    if (full) return COUNTRY_NAME[c] !== undefined ? COUNTRY_NAME[c] : c;
+    return ISO_CODE[c] !== undefined ? ISO_CODE[c] : c;
+  };
+
+  // Colorblind-safe Okabe-Ito palette (black moved to end)
+  const OKABE = ["#56B4E9","#D55E00","#009E73","#CC79A7","#E69F00","#0072B2",
+                 "#F0E442","#882255","#44AA99","#332288","#AA4499","#117733",
+                 "#661100","#6699CC","#DDCC77","#117755","#888888","#000000"];
+  const FOCUS_LEVELS = ["Fabrication","R&D","Design","APT","WFE","Materials",
+                        "Talent Development","Workforce Development","Comprehensive Package"];
+  const TYPE_LEVELS = ["Comprehensive Plan","Strategic Plan","Investment","Subsidy",
+                       "Grant","Tax Incentive","Tariff","Control"];
+  const FOCUS_PAL = Object.fromEntries(FOCUS_LEVELS.map((f,i) => [f, OKABE[i % OKABE.length]]));
+  const TYPE_PAL  = Object.fromEntries(TYPE_LEVELS.map((t,i) => [t, OKABE[i % OKABE.length]]));
+
+  const CHART_BG = "#111827", TEXT = "#e5e7eb", MUTED = "#9ca3af", GRID = "#1f2937";
+
+  // ---- data helpers ---------------------------------------------------------
+  const isParent = r => !r.subproject_id || r.subproject_id === "-";
+  const isBigFund = r => (r.project_id === "8" || r.project_id === "52") && !isParent(r);
+  const hasNum   = v => v !== null && v !== undefined && !isNaN(v);
+
+  // Effective-period parser (handles "2014-2029", "2018-Indefinitely", en-dash, etc.)
+  function parsePeriod(s) {
+    if (!s) return {start: null, end: null};
+    const v = String(s).replace(/[\u2013\u2014]/g, "-");
+    const m1 = v.match(/(\d{4})/);
+    const start = m1 ? +m1[1] : null;
+    const m2 = v.match(/\d{4}\s*-\s*(\d{4})/);
+    let end = m2 ? +m2[1] : null;
+    if (/indefinit|infefinit/i.test(v)) end = INDEF_END;
+    if (end === null) end = start;
+    return {start, end};
+  }
+
+  // Consolidation: amount level (matches R consolidate_proj)
+  function consolidateAmount(rows, focusLevel=false) {
+    const withUsd = rows.filter(r => hasNum(r.usd_m));
+    if (focusLevel) {
+      const hasSub = new Set(withUsd.filter(r => !isParent(r)).map(r => r.project_id));
+      return withUsd.filter(r =>
+        (isParent(r) && !hasSub.has(r.project_id)) ||
+        (!isParent(r) && hasSub.has(r.project_id)) ||
+        isBigFund(r)
+      ).filter(r => !(isParent(r) && hasSub.has(r.project_id)));
+    }
+    return withUsd
+      .filter(r => isParent(r) || isBigFund(r))
+      .filter(r => !(r.project_id === "45" && !isParent(r)));
+  }
+
+  // Distributions: flatten and dedupe by (project_id, subproject_id, distribution_id) with max USD
+  function consolidateDist(rows) {
+    const seen = new Map();
+    for (const p of rows) {
+      for (const d of (p.distributions || [])) {
+        const did = (d.distribution_id || "").trim();
+        if (!did || did === "-" || !hasNum(d.usd_m)) continue;
+        const key = `${p.project_id}|${p.subproject_id}|${did}`;
+        const prev = seen.get(key);
+        if (!prev || d.usd_m > prev.usd_m) {
+          seen.set(key, {
+            project_id: p.project_id,
+            project_name: p.project_name,
+            country: d.country_region || p.country_region || "",
+            year: d.year_announced ? +d.year_announced : null,
+            focus: d.focus || "",
+            usd_m: d.usd_m,
+          });
+        }
+      }
+    }
+    return Array.from(seen.values());
+  }
+
+  // One row per project (Big Fund I/II/III collapses to 1 policy)
+  function projectLevel(rows) {
+    const byId = new Map();
+    for (const r of rows) {
+      if (!byId.has(r.project_id) || (isParent(r) && !isParent(byId.get(r.project_id)))) {
+        byId.set(r.project_id, r);
+      }
+    }
+    return Array.from(byId.values()).map(r => ({
+      project_id: r.project_id,
+      project_name: r.project_name,
+      country: r.country_region,
+      policy_type: r.main_type || "",
+      eff_period: r.effective_period,
+    }));
+  }
+
+  // ---- state ----------------------------------------------------------------
+  let SUBSIDIES = [];
+  let AMOUNT_ANN, AMOUNT_ANN_FOCUS, AMOUNT_DIST, PROJECT_LEVEL;
+  let chart = null;
+
+  async function loadData() {
+    const res = await fetch("policies.json", {cache: "no-store"});
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    // Map JSON's `country_region` -> `country`  for consolidation output uniformity
+    SUBSIDIES = await res.json();
+    AMOUNT_ANN       = consolidateAmount(SUBSIDIES, false).map(r => ({...r, country: r.country_region}));
+    AMOUNT_ANN_FOCUS = consolidateAmount(SUBSIDIES, true).map(r =>  ({...r, country: r.country_region}));
+    AMOUNT_DIST      = consolidateDist(SUBSIDIES);
+    PROJECT_LEVEL    = projectLevel(SUBSIDIES);
+  }
+
+  // ---- notes (APA style) ---------------------------------------------------
+  const NOTES = {
+    announced:   "Announced: funding publicly committed when a policy was launched; not necessarily disbursed.",
+    distributed: "Distributed: funds allocated to named recipients and verified from public sources.",
+    bigfund:     "China's National IC Fund I, II and III are counted as three vehicles in dollar charts and one policy in count charts.",
+    eu:          "EU member states are grouped under European Union.",
+    focus:       "APT = advanced packaging & testing; WFE = wafer fabrication equipment. Announced funding may be tagged Comprehensive Package; distributions are tagged to one segment.",
+    speed:       "Share of a policy's announced funding disbursed t years after its announcement, aggregated by announced size.",
+    types:       "Comprehensive Plan: broad package combining several tools. Strategic Plan: roadmap without direct capital. Investment: equity stakes, loans or public funds. Subsidy / Grant: direct financial support. Tax Incentive: credits, deductions or exemptions. Tariff / Control: trade barriers and export or investment restrictions.",
+    active:      `A policy counts as active in every year of its effective period (${ACTIVE_MIN}-${INDEF_END}); 'indefinite' runs to ${INDEF_END}.`,
+  };
+
+  function buildNote(chart, source, euOn) {
+    let n = [source === "distributed" ? NOTES.distributed : NOTES.announced];
+    if (["ann_vs_dist_stack","top_policies","top_policies_country"].includes(chart)) n = [NOTES.announced, NOTES.distributed];
+    if (["focus_bubble","country_focus","heatmap","country_focus_facet"].includes(chart)) n.push(NOTES.focus);
+    if (chart === "dist_speed_country" || chart === "dist_speed_policy") n.push(NOTES.speed);
+    if (chart === "policy_count") n = [NOTES.types];
+    if (chart === "active_line") n = [NOTES.active];
+    if (euOn && !["focus_bubble","top_policies","dist_speed_policy"].includes(chart)) n.push(NOTES.eu);
+    if (!["policy_count","active_line"].includes(chart)) n.push(NOTES.bigfund);
+    return "<ul style='margin:0;padding-left:18px'>" + [...new Set(n)].map(x => `<li>${x}</li>`).join("") + "</ul>";
+  }
+
+  // ---- ECharts defaults -----------------------------------------------------
+  function baseOption(title, subtitle) {
+    return {
+      backgroundColor: "transparent",
+      title: {
+        text: title, subtext: subtitle || "",
+        textStyle: {color: TEXT, fontSize: 16, fontWeight: "bold"},
+        subtextStyle: {color: MUTED, fontSize: 12},
+        left: "left", top: 0,
+      },
+      textStyle: {color: TEXT},
+      tooltip: {
+        trigger: "item",
+        backgroundColor: "rgba(11,18,32,0.95)",
+        borderColor: "#334155", textStyle: {color: TEXT},
+      },
+      legend: {textStyle: {color: TEXT}, top: subtitle ? 44 : 24, right: 0},
+      grid: {left: 60, right: 30, top: subtitle ? 90 : 70, bottom: 60,
+             containLabel: true, borderColor: GRID},
+      xAxis: {axisLine: {lineStyle: {color: GRID}}, axisLabel: {color: MUTED},
+              axisTick: {lineStyle: {color: GRID}}, splitLine: {show: false}},
+      yAxis: {axisLine: {lineStyle: {color: GRID}}, axisLabel: {color: MUTED},
+              axisTick: {lineStyle: {color: GRID}}, splitLine: {lineStyle: {color: GRID, opacity: 0.4}}},
+    };
+  }
+
+  const dollarB = v => "$" + v.toFixed(v < 10 ? 1 : 0) + "B";
+  const dollarBpretty = v => (v == null || isNaN(v)) ? "" :
+    "$" + (Math.abs(v) < 10 ? v.toFixed(1) : v.toFixed(0)) + "B";
+
+  // ---- reactive filters -----------------------------------------------------
+  function getOpts() {
+    return {
+      source: document.querySelector("input[name=source]:checked").value,
+      chart: document.getElementById("chart-type").value,
+      topn: +document.getElementById("topn").value,
+      ppc: +document.getElementById("ppc").value,
+      speed: +document.getElementById("speed").value,
+      stacked: document.getElementById("stacked").checked,
+      euGroup: document.getElementById("eu-group").checked,
+      fullNames: document.getElementById("full-names").checked,
+      dropRd: document.getElementById("drop-rd").checked,
+    };
+  }
+
+  // Utility: aggregate rows by a key -> sum usd (returns [{country, b}, ...])
+  function aggByCountry(rows, opts) {
+    const eu = opts.euGroup, drop = opts.dropRd;
+    const m = new Map();
+    for (const r of rows) {
+      if (drop && r.focus === "R&D") continue;
+      const c = euGroup(r.country || r.country_region, eu);
+      if (!c) continue;
+      m.set(c, (m.get(c) || 0) + r.usd_m);
+    }
+    return [...m.entries()].map(([country, usd]) => ({country, b: usd/1000}))
+      .sort((a,b) => b.b - a.b);
+  }
+  function aggByCountryFocus(rows, opts) {
+    const eu = opts.euGroup, drop = opts.dropRd;
+    const m = new Map();
+    for (const r of rows) {
+      if (drop && r.focus === "R&D") continue;
+      if (!r.focus) continue;
+      const c = euGroup(r.country || r.country_region, eu);
+      if (!c) continue;
+      const k = c + "||" + r.focus;
+      m.set(k, (m.get(k) || 0) + r.usd_m);
+    }
+    return [...m.entries()].map(([k,v]) => {
+      const [country, focus] = k.split("||");
+      return {country, focus, b: v/1000};
+    });
+  }
+
+  // ============================================================================
+  //  CHART RENDERERS  (one per chart type)
+  // ============================================================================
+  const RENDERERS = {
+
+  // 1. share_bar --------------------------------------------------------------
+  share_bar(opts) {
+    const rows = opts.source === "announced" ? AMOUNT_ANN : AMOUNT_DIST;
+    const label = opts.source === "announced" ? "Announced" : "Distributed";
+    const d = aggByCountry(rows, opts).slice(0, opts.topn);
+    const yNames = d.map(x => prettify(x.country, opts.fullNames));
+    return {
+      ...baseOption(`${label} Funding — Top ${opts.topn} Countries`),
+      legend: {show: false},
+      grid: {left: 130, right: 90, top: 60, bottom: 40, containLabel: false},
+      xAxis: {type: "value", axisLabel: {color: MUTED, formatter: dollarB},
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      yAxis: {type: "category", data: yNames.slice().reverse(),
+              axisLabel: {color: TEXT, fontSize: 12},
+              axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      series: [{
+        type: "bar",
+        data: d.slice().reverse().map((x,i) => ({
+          value: x.b, itemStyle: {color: OKABE[(yNames.length-1-i) % OKABE.length]},
+        })),
+        label: {show: true, position: "right", color: TEXT, fontWeight: "bold",
+                formatter: p => dollarBpretty(p.value)},
+        barWidth: "65%",
+      }],
+      tooltip: {trigger: "axis", formatter: p => `${p[0].name}: ${dollarBpretty(p[0].value)}`,
+                backgroundColor: "rgba(11,18,32,0.95)", borderColor:"#334155", textStyle:{color:TEXT}},
+    };
+  },
+
+  // 2. focus_bubble -----------------------------------------------------------
+  focus_bubble(opts) {
+    const rows = opts.source === "announced" ? AMOUNT_ANN_FOCUS : AMOUNT_DIST;
+    const label = opts.source === "announced" ? "Announced" : "Distributed";
+    const m = new Map();
+    for (const r of rows) {
+      if (opts.dropRd && r.focus === "R&D") continue;
+      if (!r.focus) continue;
+      m.set(r.focus, (m.get(r.focus) || 0) + r.usd_m);
+    }
+    const d = [...m.entries()].map(([focus, v]) => ({focus, b: v/1000}))
+      .sort((a,b) => b.b - a.b);
+    const maxB = Math.max(...d.map(x => x.b));
+    return {
+      ...baseOption(`${label} Funding by Value Chain Focus`),
+      legend: {show: false},
+      grid: {left: 140, right: 40, top: 50, bottom: 40, containLabel: false},
+      xAxis: {show: false, min: -0.3, max: 1},
+      yAxis: {type: "category", data: d.slice().reverse().map(x => x.focus),
+              axisLabel: {color: TEXT, fontSize: 12, fontWeight: "bold"},
+              axisLine: {show: false}, axisTick: {show: false}},
+      series: [{
+        type: "scatter",
+        data: d.slice().reverse().map(x => ({
+          value: [0, x.focus],
+          amount: x.b,
+          symbolSize: 15 + Math.sqrt(x.b/maxB) * 90,
+          itemStyle: {color: FOCUS_PAL[x.focus] || "#0072B2", opacity: 0.85,
+                      borderColor: "#fff", borderWidth: 1},
+          label: {show: true, position: "right", color: TEXT, fontWeight: "bold",
+                  formatter: () => dollarBpretty(x.b), offset: [8, 0]},
+        })),
+      }],
+      tooltip: {formatter: p => `${p.name}: ${dollarBpretty(p.data.amount)}`,
+                backgroundColor:"rgba(11,18,32,0.95)", borderColor:"#334155", textStyle:{color:TEXT}},
+    };
+  },
+
+  // 3. country_focus (stacked bar) --------------------------------------------
+  country_focus(opts) {
+    const rows = opts.source === "announced" ? AMOUNT_ANN_FOCUS : AMOUNT_DIST;
+    const label = opts.source === "announced" ? "Announced" : "Distributed";
+    const d = aggByCountryFocus(rows, opts);
+    const countryTotals = new Map();
+    d.forEach(x => countryTotals.set(x.country, (countryTotals.get(x.country) || 0) + x.b));
+    const countryOrder = [...countryTotals.entries()].sort((a,b) => b[1]-a[1])
+      .slice(0, opts.topn).map(x => x[0]);
+    const foci = FOCUS_LEVELS.filter(f => d.some(x => x.focus === f && countryOrder.includes(x.country)));
+    const series = foci.map(f => ({
+      name: f, type: "bar", stack: "total",
+      itemStyle: {color: FOCUS_PAL[f] || "#888", borderColor: CHART_BG, borderWidth: 1},
+      data: countryOrder.map(c => {
+        const row = d.find(x => x.country === c && x.focus === f);
+        return row ? +row.b.toFixed(2) : 0;
+      }),
+    }));
+    return {
+      ...baseOption(`Capital Allocation by Country — ${label}`),
+      grid: {left: 60, right: 30, top: 70, bottom: 60, containLabel: true},
+      xAxis: {type: "category", data: countryOrder.map(c => prettify(c, opts.fullNames)),
+              axisLabel: {color: MUTED, rotate: 30, fontSize: 11},
+              axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      yAxis: {type: "value", axisLabel: {color: MUTED, formatter: v => "$" + v + "B"},
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      series,
+      tooltip: {trigger: "axis", axisPointer: {type: "shadow"},
+                backgroundColor:"rgba(11,18,32,0.95)", borderColor:"#334155", textStyle:{color:TEXT}},
+    };
+  },
+
+  // 4. heatmap ----------------------------------------------------------------
+  heatmap(opts) {
+    const rows = opts.source === "announced" ? AMOUNT_ANN_FOCUS : AMOUNT_DIST;
+    const label = opts.source === "announced" ? "Announced" : "Distributed";
+    const d = aggByCountryFocus(rows, opts);
+    const countryTotals = new Map();
+    d.forEach(x => countryTotals.set(x.country, (countryTotals.get(x.country) || 0) + x.b));
+    const countryOrder = [...countryTotals.entries()].sort((a,b) => a[1]-b[1])
+      .slice(-opts.topn).map(x => x[0]);
+    const foci = FOCUS_LEVELS.filter(f => d.some(x => x.focus === f && countryOrder.includes(x.country)));
+    const cellData = [];
+    let maxV = 0;
+    foci.forEach((f, i) => {
+      countryOrder.forEach((c, j) => {
+        const row = d.find(x => x.country === c && x.focus === f);
+        const v = row ? row.b : null;
+        if (v !== null) {
+          cellData.push([i, j, +v.toFixed(1)]);
+          if (v > maxV) maxV = v;
+        }
+      });
+    });
+    return {
+      ...baseOption(`${label} Funding — Country × Focus`),
+      legend: {show: false},
+      grid: {left: 60, right: 30, top: 60, bottom: 80, containLabel: true},
+      xAxis: {type: "category", data: foci, axisLabel: {color: MUTED, rotate: 30, fontSize: 11},
+              splitArea: {show: true}, axisLine: {show: false}, axisTick: {show: false}},
+      yAxis: {type: "category", data: countryOrder.map(c => prettify(c, opts.fullNames)),
+              axisLabel: {color: TEXT}, splitArea: {show: true},
+              axisLine: {show: false}, axisTick: {show: false}},
+      visualMap: {min: 0, max: maxV, calculable: true, orient: "vertical",
+                  right: 5, top: "middle", inRange: {color: ["#0f172a","#0072B2","#F0A202"]},
+                  textStyle: {color: MUTED},
+                  formatter: v => "$" + v.toFixed(0) + "B"},
+      series: [{
+        type: "heatmap", data: cellData,
+        label: {show: true, formatter: p => p.value[2] >= 1 ? Math.round(p.value[2]) : "",
+                color: "#fff", fontSize: 11},
+        emphasis: {itemStyle: {shadowBlur: 10, shadowColor: "rgba(0,0,0,0.5)"}},
+      }],
+      tooltip: {position: "top",
+                formatter: p => `${foci[p.value[0]]} × ${prettify(countryOrder[p.value[1]], opts.fullNames)}: $${p.value[2]}B`,
+                backgroundColor:"rgba(11,18,32,0.95)", borderColor:"#334155", textStyle:{color:TEXT}},
+    };
+  },
+
+  // 5. country_focus_facet (small multiples) ----------------------------------
+  country_focus_facet(opts) {
+    const rows = opts.source === "announced" ? AMOUNT_ANN_FOCUS : AMOUNT_DIST;
+    const label = opts.source === "announced" ? "Announced" : "Distributed";
+    const d = aggByCountryFocus(rows, opts);
+    const countryTotals = new Map();
+    d.forEach(x => countryTotals.set(x.country, (countryTotals.get(x.country) || 0) + x.b));
+    const countryOrder = [...countryTotals.entries()].sort((a,b) => b[1]-a[1])
+      .slice(0, opts.topn).map(x => x[0]);
+    const foci = FOCUS_LEVELS.filter(f => d.some(x => x.focus === f && countryOrder.includes(x.country)));
+    const nFacets = foci.length;
+    const cols = Math.min(nFacets, 4);
+    const rows_ = Math.ceil(nFacets / cols);
+    const grids = [], xAxes = [], yAxes = [], series = [];
+    foci.forEach((f, i) => {
+      const row = Math.floor(i / cols), col = i % cols;
+      const left = 60 + (col * (95/cols)) + "%", width = (95/cols - 6) + "%";
+      const top = 80 + (row * (500/rows_)) + "px", height = ((500/rows_) - 60) + "px";
+      grids.push({left: (5 + col*(95/cols)) + "%", width, top, height, containLabel: true,
+                  borderColor: GRID});
+      xAxes.push({gridIndex: i, type: "value", axisLabel: {color: MUTED, fontSize: 9, formatter: v => "$"+v+"B"},
+                  axisLine: {lineStyle:{color:GRID}}, splitLine:{lineStyle:{color:GRID,opacity:.3}}});
+      yAxes.push({gridIndex: i, type: "category", data: countryOrder.slice().reverse().map(c => prettify(c, opts.fullNames)),
+                  axisLabel: {color: TEXT, fontSize: 10}, axisLine: {show: false}, axisTick: {show: false}});
+      series.push({
+        name: f, type: "bar", xAxisIndex: i, yAxisIndex: i,
+        data: countryOrder.slice().reverse().map(c => {
+          const row2 = d.find(x => x.country === c && x.focus === f);
+          return row2 ? +row2.b.toFixed(2) : 0;
+        }),
+        itemStyle: {color: FOCUS_PAL[f] || "#888"},
+        label: {show: true, position: "right", color: MUTED, fontSize: 9,
+                formatter: p => p.value > 0 ? dollarBpretty(p.value) : ""},
+      });
+    });
+    const opt = baseOption(`${label} Funding by Country × Focus (small multiples)`);
+    return {...opt, legend: {show: false}, grid: grids, xAxis: xAxes, yAxis: yAxes, series,
+      title: {...opt.title, subtext: "One panel per focus category"}};
+  },
+
+  // 6. cumulative -------------------------------------------------------------
+  cumulative(opts) {
+    const rows = opts.source === "announced" ? AMOUNT_ANN : AMOUNT_DIST;
+    const label = opts.source === "announced" ? "Announced" : "Distributed";
+    // group by (country, year)
+    const m = new Map();
+    let minY = Infinity, maxY = -Infinity;
+    for (const r of rows) {
+      if (opts.dropRd && r.focus === "R&D") continue;
+      const c = euGroup(r.country || r.country_region, opts.euGroup);
+      const y = r.year ? +r.year : (r.year_announced ? +r.year_announced : null);
+      if (!c || !y || isNaN(y)) continue;
+      m.set(`${c}|${y}`, (m.get(`${c}|${y}`) || 0) + r.usd_m);
+      minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+    }
+    const years = [];
+    for (let y = minY; y <= maxY; y++) years.push(y);
+    // country totals for top-N
+    const totals = new Map();
+    for (const [k, v] of m) {
+      const c = k.split("|")[0];
+      totals.set(c, (totals.get(c) || 0) + v);
+    }
+    const keep = [...totals.entries()].sort((a,b) => b[1]-a[1])
+      .slice(0, opts.topn).map(x => x[0]);
+    const series = keep.map((c, i) => {
+      let cum = 0;
+      const data = years.map(y => { cum += (m.get(`${c}|${y}`) || 0); return +(cum/1000).toFixed(2); });
+      return {
+        name: prettify(c, opts.fullNames),
+        type: "line", stack: opts.stacked ? "total" : undefined,
+        areaStyle: opts.stacked ? {opacity: 0.85} : undefined,
+        smooth: false, symbol: "circle", symbolSize: 5,
+        lineStyle: {width: 2, type: ["solid","dashed","dotted","dashdot"][i % 4]},
+        itemStyle: {color: OKABE[i % OKABE.length]},
+        data,
+      };
+    });
+    const opt = baseOption(`Cumulative ${label} Funding by Year (Top ${opts.topn})`,
+                           opts.stacked ? "Heights are additive; top of stack = grand total"
+                                        : "Each line's endpoint equals that country's true total");
+    return {...opt,
+      xAxis: {type: "category", data: years, axisLabel: {color: MUTED},
+              axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      yAxis: {type: "value", axisLabel: {color: MUTED, formatter: v => "$"+v+"B"},
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      series,
+      tooltip: {trigger: "axis", backgroundColor:"rgba(11,18,32,0.95)",
+                borderColor:"#334155", textStyle:{color:TEXT},
+                valueFormatter: v => "$"+v.toFixed(1)+"B"},
+      legend: {textStyle: {color: TEXT}, top: 44, right: 0, orient: "vertical", type: "scroll"},
+      grid: {left: 60, right: 180, top: 90, bottom: 40, containLabel: true},
+    };
+  },
+
+  // 7. top_policies -- single bar with gradient color (0..pct% orange, pct..100% gray)
+  top_policies(opts) {
+    const annMap = new Map();
+    AMOUNT_ANN.forEach(r => annMap.set(r.project_name, (annMap.get(r.project_name) || 0) + r.usd_m));
+    const dstMap = new Map();
+    AMOUNT_DIST.forEach(r => dstMap.set(r.project_name, (dstMap.get(r.project_name) || 0) + r.usd_m));
+    const d = [...annMap.entries()].map(([name, ann]) => {
+      const dst = dstMap.get(name) || 0;
+      return {name, announced: ann/1000, distributed: dst/1000,
+              pct: Math.min(100 * dst / ann, 100), pctRaw: 100 * dst / ann};
+    }).sort((a,b) => b.announced - a.announced).slice(0, opts.topn);
+    const wrapName = s => s.length > 55 ? s.substring(0, 52) + "..." : s;
+    const dRev = d.slice().reverse();
+    return {
+      ...baseOption(`Top ${opts.topn} policies -- announced vs distributed`,
+                    "Full bar = announced; orange = distributed to date"),
+      grid: {left: 300, right: 110, top: 90, bottom: 40, containLabel: false},
+      xAxis: {type: "value", axisLabel: {color: MUTED, formatter: v => "$"+v+"B"},
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      yAxis: {type: "category", data: dRev.map(x => wrapName(x.name)),
+              axisLabel: {color: TEXT, fontSize: 10, width: 290, overflow: "break"},
+              axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      series: [{
+        type: "bar", name: "Announced (orange fill = distributed portion)",
+        barWidth: "65%",
+        data: dRev.map(x => {
+          const stop = Math.max(0.0001, Math.min(x.pct/100, 0.9999));
+          return {value: +x.announced.toFixed(2), itemStyle: {
+            color: {type: "linear", x:0, y:0, x2:1, y2:0,
+              colorStops: [
+                {offset: 0, color: "#D55E00"},
+                {offset: stop, color: "#D55E00"},
+                {offset: stop, color: "#334155"},
+                {offset: 1, color: "#334155"}
+              ]}}};
+        }),
+        label: {show: true, position: "right", color: TEXT, fontSize: 10,
+                formatter: p => {
+                  const r = dRev[p.dataIndex];
+                  return `${r.pctRaw.toFixed(0)}%${r.pctRaw > 100 ? " (over)" : ""}`;
+                }},
+      }],
+      legend: {show: false},
+      tooltip: {trigger: "axis", axisPointer:{type:"shadow"},
+                backgroundColor:"rgba(11,18,32,0.95)", borderColor:"#334155", textStyle:{color:TEXT},
+                formatter: p => {
+                  const r = dRev[p[0].dataIndex];
+                  return `<b>${r.name}</b><br/>Announced: $${r.announced.toFixed(1)}B<br/>` +
+                         `Distributed: $${r.distributed.toFixed(2)}B (${r.pctRaw.toFixed(1)}%)`;
+                }},
+    };
+  },
+
+  // 8. top_policies_country -- single bar with gradient color per policy
+  top_policies_country(opts) {
+    const annMap = new Map();
+    for (const r of AMOUNT_ANN) {
+      const c = euGroup(r.country || r.country_region, opts.euGroup);
+      const key = c + "|" + r.project_name;
+      annMap.set(key, (annMap.get(key) || 0) + r.usd_m);
+    }
+    const dstMap = new Map();
+    AMOUNT_DIST.forEach(r => dstMap.set(r.project_name, (dstMap.get(r.project_name) || 0) + r.usd_m));
+
+    const byCountry = new Map();
+    for (const [k, v] of annMap) {
+      const [c, name] = k.split("|");
+      if (!byCountry.has(c)) byCountry.set(c, []);
+      const dst = dstMap.get(name) || 0;
+      byCountry.get(c).push({name, announced: v/1000, distributed: dst/1000,
+                              pct: Math.min(100 * dst / v, 100), pctRaw: 100 * dst / v});
+    }
+    const countryTotals = [...byCountry.entries()]
+      .map(([c, arr]) => [c, arr.reduce((s,x) => s+x.announced, 0)])
+      .sort((a,b) => b[1]-a[1]).slice(0, opts.topn).map(x => x[0]);
+    const rows_ = [];
+    countryTotals.forEach(c => {
+      byCountry.get(c).sort((a,b) => b.announced - a.announced).slice(0, opts.ppc)
+        .forEach(x => rows_.push({country: c, ...x}));
+    });
+    const wrapName = s => s.length > 38 ? s.substring(0, 35) + "..." : s;
+    const rowsRev = rows_.slice().reverse();
+    return {...baseOption(`Top ${opts.ppc} policies in the top ${opts.topn} countries`,
+                          "Full bar = announced; orange = distributed to date"),
+      grid: {left: 300, right: 110, top: 90, bottom: 40, containLabel: false},
+      xAxis: {type: "value", axisLabel: {color: MUTED, formatter: v => "$"+v+"B"},
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      yAxis: {type: "category",
+              data: rowsRev.map(x => prettify(x.country, opts.fullNames) + "\u0000" + wrapName(x.name)),
+              axisLabel: {color: TEXT, fontSize: 10,
+                formatter: v => {
+                  const [country, name] = v.split("\u0000");
+                  return `{c|${country}}{s|  }{p|${name}}`;
+                },
+                rich: {
+                  c: {color: "#f8fafc", fontSize: 10, fontWeight: "bold", align: "right"},
+                  s: {fontSize: 10},
+                  p: {color: MUTED, fontSize: 10, align: "right"},
+                }},
+              axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      series: [{
+        type: "bar", barWidth: "65%",
+        data: rowsRev.map(x => {
+          const stop = Math.max(0.0001, Math.min(x.pct/100, 0.9999));
+          return {value: +x.announced.toFixed(2), itemStyle: {
+            color: {type: "linear", x:0, y:0, x2:1, y2:0,
+              colorStops: [
+                {offset: 0, color: "#D55E00"},
+                {offset: stop, color: "#D55E00"},
+                {offset: stop, color: "#334155"},
+                {offset: 1, color: "#334155"}
+              ]}}};
+        }),
+        label: {show: true, position: "right", color: TEXT, fontSize: 9,
+                formatter: p => {
+                  const r = rowsRev[p.dataIndex];
+                  return `${r.pctRaw.toFixed(0)}%${r.pctRaw > 100 ? " (over)" : ""}`;
+                }},
+      }],
+      legend: {show: false},
+      tooltip: {trigger: "axis", axisPointer:{type:"shadow"},
+                backgroundColor:"rgba(11,18,32,0.95)", borderColor:"#334155", textStyle:{color:TEXT},
+                formatter: p => {
+                  const r = rowsRev[p[0].dataIndex];
+                  return `<b>${prettify(r.country, opts.fullNames)}</b><br/>${r.name}<br/>` +
+                    `Announced: $${r.announced.toFixed(1)}B<br/>Distributed: $${r.distributed.toFixed(2)}B (${r.pctRaw.toFixed(1)}%)`;
+                }},
+    };
+  },
+
+  // 9. ann_vs_dist_stack -- single vertical bar per country, gradient-colored
+  ann_vs_dist_stack(opts) {
+    const ann = new Map(); AMOUNT_ANN.forEach(r => {
+      const c = euGroup(r.country || r.country_region, opts.euGroup);
+      if (c) ann.set(c, (ann.get(c) || 0) + r.usd_m);
+    });
+    const dst = new Map(); AMOUNT_DIST.forEach(r => {
+      const c = euGroup(r.country, opts.euGroup);
+      if (c) dst.set(c, (dst.get(c) || 0) + r.usd_m);
+    });
+    const d = [...ann.keys()].map(c => {
+      const a = (ann.get(c)||0)/1000, di = (dst.get(c)||0)/1000;
+      return {country: c, announced: a, distributed: di,
+              pct: Math.min(100 * di / a, 100), pctRaw: 100 * di / a};
+    }).sort((a,b) => b.announced - a.announced).slice(0, opts.topn);
+    return {
+      ...baseOption("Announced vs distributed funding by country",
+                    "Full bar = announced; orange = distributed to date"),
+      xAxis: {type: "category", data: d.map(x => prettify(x.country, opts.fullNames)),
+              axisLabel: {color: MUTED, rotate: 30, fontSize: 11},
+              axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      yAxis: {type: "value", axisLabel: {color: MUTED, formatter: v => "$"+v+"B"},
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      series: [{
+        type: "bar", barWidth: "55%",
+        data: d.map(x => {
+          // For vertical bars, gradient runs top-to-bottom (y direction).
+          // Orange from bottom (y=1) up to pct%, gray above.
+          const stop = Math.max(0.0001, Math.min(x.pct/100, 0.9999));
+          return {value: +x.announced.toFixed(2), itemStyle: {
+            color: {type: "linear", x:0, y:1, x2:0, y2:0,
+              colorStops: [
+                {offset: 0, color: "#D55E00"},
+                {offset: stop, color: "#D55E00"},
+                {offset: stop, color: "#334155"},
+                {offset: 1, color: "#334155"}
+              ]}}};
+        }),
+        label: {show: true, position: "top", color: TEXT, fontSize: 10,
+                formatter: p => {
+                  const r = d[p.dataIndex];
+                  return `${r.pctRaw.toFixed(0)}%${r.pctRaw > 100 ? " (over)" : ""}`;
+                }},
+      }],
+      legend: {show: false},
+      tooltip: {trigger: "axis", axisPointer:{type:"shadow"},
+                backgroundColor:"rgba(11,18,32,0.95)", borderColor:"#334155", textStyle:{color:TEXT},
+                formatter: p => {
+                  const r = d[p[0].dataIndex];
+                  return `<b>${prettify(r.country, opts.fullNames)}</b><br/>` +
+                         `Announced: $${r.announced.toFixed(1)}B<br/>` +
+                         `Distributed: $${r.distributed.toFixed(1)}B (${r.pctRaw.toFixed(1)}%)`;
+                }},
+    };
+  },
+
+  // 11. active_line -----------------------------------------------------------
+  active_line(opts) {
+    const rp = PROJECT_LEVEL.map(r => {
+      const p = parsePeriod(r.eff_period);
+      return {...r, start: p.start, end: p.end,
+              country: euGroup(r.country, opts.euGroup)};
+    }).filter(r => r.start != null && r.country);
+    const years = [];
+    for (let y = ACTIVE_MIN; y <= INDEF_END; y++) years.push(y);
+    const byCountry = new Map();
+    for (const y of years) {
+      const active = rp.filter(r => r.start <= y && r.end >= y);
+      const m = new Map();
+      active.forEach(r => m.set(r.country, (m.get(r.country) || 0) + 1));
+      for (const [c, n] of m) {
+        if (!byCountry.has(c)) byCountry.set(c, []);
+        byCountry.get(c).push({y, n});
+      }
+    }
+    const totals = [...byCountry.entries()]
+      .map(([c, arr]) => [c, Math.max(...arr.map(x => x.n))])
+      .sort((a,b) => b[1]-a[1]).slice(0, opts.topn).map(x => x[0]);
+    const series = totals.map((c, i) => {
+      const arr = byCountry.get(c);
+      const data = years.map(y => {
+        const found = arr.find(x => x.y === y);
+        return found ? found.n : 0;
+      });
+      return {name: prettify(c, opts.fullNames), type: "line",
+              symbol: "circle", symbolSize: 6,
+              lineStyle: {width: 2, type: ["solid","dashed","dotted","dashdot"][i % 4]},
+              itemStyle: {color: OKABE[i % OKABE.length]},
+              data};
+    });
+    return {
+      ...baseOption("Active Semiconductor Policies Over Time",
+                    `A policy is active in every year its effective period covers (${ACTIVE_MIN}–${INDEF_END})`),
+      xAxis: {type: "category", data: years, axisLabel: {color: MUTED},
+              axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      yAxis: {type: "value", axisLabel: {color: MUTED}, minInterval: 1,
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      series,
+      legend: {textStyle: {color: TEXT}, top: 44, right: 0, orient: "vertical", type: "scroll"},
+      grid: {left: 60, right: 180, top: 90, bottom: 40, containLabel: true},
+      tooltip: {trigger: "axis", backgroundColor:"rgba(11,18,32,0.95)",
+                borderColor:"#334155", textStyle:{color:TEXT}},
+    };
+  },
+
+  // 12. dist_speed_country ----------------------------------------------------
+  dist_speed_country(opts) {
+    const maxT = opts.speed;
+    // announce year per project (min year for that project's rows)
+    const annYr = new Map();
+    const annAmount = new Map();
+    const projCountry = new Map();
+    for (const r of AMOUNT_ANN) {
+      const y = r.year_announced ? +r.year_announced : null;
+      if (y) {
+        const cur = annYr.get(r.project_id);
+        annYr.set(r.project_id, cur === undefined ? y : Math.min(cur, y));
+      }
+      annAmount.set(r.project_id, (annAmount.get(r.project_id) || 0) + r.usd_m);
+      projCountry.set(r.project_id, euGroup(r.country_region, opts.euGroup));
+    }
+    // dist amount per (project, t)
+    const distPT = new Map();
+    for (const d of AMOUNT_DIST) {
+      const ay = annYr.get(d.project_id);
+      if (!ay || !d.year) continue;
+      const t = Math.max(d.year - ay, 0);
+      const k = d.project_id + "|" + t;
+      distPT.set(k, (distPT.get(k) || 0) + d.usd_m);
+    }
+    // aggregate to country: cum dist / cum announced, by t
+    const byCT = new Map(); // country -> Map(t -> {cumDist, ann})
+    for (const [pid, ann] of annAmount) {
+      const c = projCountry.get(pid);
+      if (!c || !ann) continue;
+      if (!byCT.has(c)) byCT.set(c, {cum: new Array(maxT+1).fill(0), ann: 0});
+      const entry = byCT.get(c);
+      entry.ann += ann;
+      let cum = 0;
+      for (let t = 0; t <= maxT; t++) {
+        cum += (distPT.get(pid + "|" + t) || 0);
+        entry.cum[t] += cum;
+      }
+    }
+    // top N by announced amount
+    const keep = [...byCT.entries()].sort((a,b) => b[1].ann - a[1].ann)
+      .slice(0, opts.topn);
+    const series = keep.map(([c, entry], i) => ({
+      name: prettify(c, opts.fullNames), type: "line",
+      symbol: "circle", symbolSize: 5,
+      lineStyle: {width: 2, type: ["solid","dashed","dotted","dashdot"][i % 4]},
+      itemStyle: {color: OKABE[i % OKABE.length]},
+      data: entry.cum.map(v => +Math.min(v/entry.ann, 1).toFixed(3)),
+    }));
+    const ts = Array.from({length: maxT+1}, (_, i) => i);
+    return {
+      ...baseOption("Distribution Speed Curve — by Country",
+                    "Share of announced funding distributed t years after policy announcement"),
+      xAxis: {type: "category", data: ts, name: "Years since policy announcement", nameLocation: "middle", nameGap: 30,
+              nameTextStyle: {color: MUTED},
+              axisLabel: {color: MUTED}, axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      yAxis: {type: "value", min: 0, max: 1,
+              axisLabel: {color: MUTED, formatter: v => Math.round(v*100)+"%"},
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      series,
+      legend: {textStyle: {color: TEXT}, top: 44, right: 0, orient: "vertical", type: "scroll"},
+      grid: {left: 60, right: 180, top: 90, bottom: 60, containLabel: true},
+      tooltip: {trigger: "axis", backgroundColor:"rgba(11,18,32,0.95)",
+                borderColor:"#334155", textStyle:{color:TEXT},
+                valueFormatter: v => (v*100).toFixed(1)+"%"},
+    };
+  },
+
+  // 13. dist_speed_policy -----------------------------------------------------
+  dist_speed_policy(opts) {
+    const maxT = opts.speed;
+    const annYr = new Map(), annAmount = new Map(), projName = new Map();
+    for (const r of AMOUNT_ANN) {
+      const y = r.year_announced ? +r.year_announced : null;
+      if (y) {
+        const cur = annYr.get(r.project_id);
+        annYr.set(r.project_id, cur === undefined ? y : Math.min(cur, y));
+      }
+      annAmount.set(r.project_id, (annAmount.get(r.project_id) || 0) + r.usd_m);
+      projName.set(r.project_id, r.project_name);
+    }
+    const distPT = new Map();
+    for (const d of AMOUNT_DIST) {
+      const ay = annYr.get(d.project_id);
+      if (!ay || !d.year) continue;
+      const t = Math.max(d.year - ay, 0);
+      distPT.set(d.project_id + "|" + t, (distPT.get(d.project_id + "|" + t) || 0) + d.usd_m);
+    }
+    const keep = [...annAmount.entries()].sort((a,b) => b[1] - a[1])
+      .slice(0, opts.topn);
+    const ts = Array.from({length: maxT+1}, (_, i) => i);
+    const series = keep.map(([pid, ann], i) => {
+      let cum = 0;
+      const data = ts.map(t => { cum += (distPT.get(pid + "|" + t) || 0); return +Math.min(cum/ann, 1).toFixed(3); });
+      let name = projName.get(pid) || pid;
+      if (name.length > 50) name = name.substring(0, 47) + "...";
+      return {name, type: "line", symbol: "circle", symbolSize: 5,
+              lineStyle: {width: 2, type: ["solid","dashed","dotted","dashdot"][i % 4]},
+              itemStyle: {color: OKABE[i % OKABE.length]}, data};
+    });
+    return {
+      ...baseOption("Distribution Speed Curve — by Policy",
+                    `Top ${opts.topn} policies by announced size`),
+      xAxis: {type: "category", data: ts, name: "Years since policy announcement", nameLocation: "middle", nameGap: 30,
+              nameTextStyle: {color: MUTED},
+              axisLabel: {color: MUTED}, axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      yAxis: {type: "value", min: 0, max: 1,
+              axisLabel: {color: MUTED, formatter: v => Math.round(v*100)+"%"},
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      series,
+      legend: {textStyle: {color: TEXT, fontSize: 10}, top: 44, right: 0, orient: "vertical", type: "scroll"},
+      grid: {left: 60, right: 220, top: 90, bottom: 60, containLabel: true},
+      tooltip: {trigger: "axis", backgroundColor:"rgba(11,18,32,0.95)",
+                borderColor:"#334155", textStyle:{color:TEXT},
+                valueFormatter: v => (v*100).toFixed(1)+"%"},
+    };
+  },
+
+  // 14. policy_count ----------------------------------------------------------
+  policy_count(opts) {
+    const rp = PROJECT_LEVEL.map(r => ({...r, country: euGroup(r.country, opts.euGroup)}))
+      .filter(r => r.country && r.policy_type);
+    const m = new Map();  // country -> Map(type -> count)
+    for (const r of rp) {
+      if (!m.has(r.country)) m.set(r.country, new Map());
+      m.get(r.country).set(r.policy_type, (m.get(r.country).get(r.policy_type) || 0) + 1);
+    }
+    const totals = [...m.entries()].map(([c, tm]) => [c, [...tm.values()].reduce((a,b) => a+b, 0)])
+      .sort((a,b) => b[1] - a[1]).slice(0, opts.topn);
+    const countryOrder = totals.map(x => x[0]);
+    const types = TYPE_LEVELS.filter(t => countryOrder.some(c => m.get(c) && m.get(c).has(t)));
+    // Also include any custom types not in TYPE_LEVELS
+    const extraTypes = new Set();
+    for (const c of countryOrder) for (const t of (m.get(c)?.keys() || [])) if (!TYPE_LEVELS.includes(t)) extraTypes.add(t);
+    const allTypes = [...types, ...extraTypes];
+    const series = allTypes.map((t, i) => ({
+      name: t, type: "bar", stack: "total",
+      itemStyle: {color: TYPE_PAL[t] || OKABE[(TYPE_LEVELS.length + i) % OKABE.length], borderColor: CHART_BG, borderWidth: 1},
+      data: countryOrder.map(c => (m.get(c)?.get(t)) || 0),
+    }));
+    return {
+      ...baseOption("Number of Semiconductor Policies by Country (by Policy Type)",
+                    "One row per project. Big Fund I/II/III = one policy."),
+      xAxis: {type: "category", data: countryOrder.map(c => prettify(c, opts.fullNames)),
+              axisLabel: {color: MUTED, rotate: 30, fontSize: 11},
+              axisLine: {lineStyle:{color:GRID}}, axisTick:{show:false}},
+      yAxis: {type: "value", axisLabel: {color: MUTED}, minInterval: 1,
+              axisLine: {lineStyle:{color:GRID}}, splitLine: {lineStyle:{color:GRID,opacity:.4}}},
+      series,
+      legend: {textStyle: {color: TEXT}, top: 44, right: 0},
+      tooltip: {trigger: "axis", axisPointer:{type:"shadow"},
+                backgroundColor:"rgba(11,18,32,0.95)", borderColor:"#334155", textStyle:{color:TEXT}},
+    };
+  },
+  };  // end RENDERERS
+
+  // ============================================================================
+  //  RENDER + UI GLUE
+  // ============================================================================
+  function render() {
+    const opts = getOpts();
+    // toggle UI panels based on chart type
+    document.getElementById("stacked-field").style.display = opts.chart === "cumulative" ? "" : "none";
+    document.getElementById("ppc-field").style.display = opts.chart === "top_policies_country" ? "" : "none";
+    document.getElementById("speed-field").style.display =
+      (opts.chart === "dist_speed_country" || opts.chart === "dist_speed_policy") ? "" : "none";
+
+    // topn range varies by chart
+    const topnSlider = document.getElementById("topn");
+    let maxN = 12, defN = 10;
+    if (opts.chart === "top_policies" || opts.chart === "dist_speed_policy") {
+      maxN = 20; defN = Math.min(defN, +topnSlider.value);
+    } else if (opts.chart === "top_policies_country") {
+      maxN = 6; defN = Math.min(6, +topnSlider.value);
+    }
+    topnSlider.max = maxN;
+    if (+topnSlider.value > maxN) topnSlider.value = maxN;
+    document.getElementById("topn-val").textContent = topnSlider.value;
+    document.getElementById("ppc-val").textContent = document.getElementById("ppc").value;
+    document.getElementById("speed-val").textContent = document.getElementById("speed").value;
+
+    const renderer = RENDERERS[opts.chart];
+    if (!renderer) return;
+
+    const dom = document.getElementById("chart");
+    if (!chart) chart = echarts.init(dom, null, {renderer: "canvas"});
+    chart.clear();
+    const option = renderer(opts);
+    chart.setOption(option, true);
+
+    // figure note
+    document.getElementById("note").innerHTML = buildNote(opts.chart, opts.source, opts.euGroup);
+  }
+
+  // download PNG
+  function downloadPng() {
+    if (!chart) return;
+    const url = chart.getDataURL({backgroundColor: CHART_BG, pixelRatio: 2});
+    const a = document.createElement("a");
+    a.href = url;
+    const opts = getOpts();
+    a.download = `semi_${opts.chart}_${opts.source}.png`;
+    a.click();
+  }
+
+  // ---- init -----------------------------------------------------------------
+  window.addEventListener("DOMContentLoaded", async () => {
+    try {
+      await loadData();
+    } catch (err) {
+      console.error(err);
+      document.getElementById("chart").innerHTML =
+        `<p style="color:#f87171">Couldn't load policies.json: ${err.message}</p>`;
+      return;
+    }
+
+    // wire up controls
+    document.querySelectorAll("input[name=source]").forEach(el => el.addEventListener("change", render));
+    ["chart-type","topn","ppc","speed","stacked","eu-group","full-names","drop-rd"].forEach(id => {
+      const el = document.getElementById(id);
+      const ev = el.type === "range" ? "input" : "change";
+      el.addEventListener(ev, render);
+    });
+    document.getElementById("download").addEventListener("click", downloadPng);
+    window.addEventListener("resize", () => chart && chart.resize());
+
+    render();
+  });
+  </script>
+</body>
+</html>
