@@ -5023,20 +5023,6 @@
         "focus": "Fabrication"
       },
       {
-        "distribution_name": "Micron Manassas Expansion Project",
-        "distribution_id": "2",
-        "year_announced": "2024",
-        "effective_period": "2024-2030",
-        "country_region": "United States",
-        "type_and_status": "Subsidy",
-        "numbers": "$1.5B",
-        "targeted_entities": "Fabrication",
-        "notes": "GF Manassas expansion supports defense automotive chip supply resiliency",
-        "sources": "https://www.nist.gov/chips/chips-america-awards?page=1",
-        "usd_m": 1500.0,
-        "focus": "Fabrication"
-      },
-      {
         "distribution_name": "Infinera APT Facility",
         "distribution_id": "3",
         "year_announced": "2024",
@@ -5155,11 +5141,11 @@
         "effective_period": "2025-2028",
         "country_region": "United States",
         "type_and_status": "Subsidy",
-        "numbers": "$958M",
+        "numbers": "$458M",
         "targeted_entities": "APT",
-        "notes": "HBM advanced packaging fab strengthening U.S. memory supply resiliency",
+        "notes": "HBM advanced packaging fab strengthening U.S. memory supply resiliency; direct funding only (the $500M CHIPS loan is a separate row)",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1",
-        "usd_m": 958.0,
+        "usd_m": 458.0,
         "focus": "APT"
       },
       {
@@ -5253,11 +5239,11 @@
         "effective_period": "2024-2024",
         "country_region": "United States",
         "type_and_status": "Subsidy",
-        "numbers": "$500M",
+        "numbers": "$141M",
         "targeted_entities": "Fabrication; APT",
-        "notes": "Advanced packaging modernization closing U.S. semiconductor capability gap",
+        "notes": "Advanced packaging modernization closing U.S. semiconductor capability gap. Awarded $500M; reduced pro rata to its share of the ~$2.2B Intel received before the remaining $5.7B in unpaid CHIPS grants was converted into the Aug 2025 equity stake (see US Intel Equity Stake row); per-fab split is approximate",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1",
-        "usd_m": 500.0,
+        "usd_m": 141.0,
         "focus": "Fabrication"
       },
       {
@@ -5267,11 +5253,11 @@
         "effective_period": "2024-2030",
         "country_region": "United States",
         "type_and_status": "Subsidy",
-        "numbers": "$1.5B",
+        "numbers": "$423M",
         "targeted_entities": "Fabrication",
-        "notes": "Leading-edge Intel logic fab supporting 14A and successors",
+        "notes": "Leading-edge Intel logic fab supporting 14A and successors. Awarded $1.5B; reduced pro rata to its share of the ~$2.2B Intel received before the remaining $5.7B in unpaid CHIPS grants was converted into the Aug 2025 equity stake (see US Intel Equity Stake row); per-fab split is approximate",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1",
-        "usd_m": 1500.0,
+        "usd_m": 423.0,
         "focus": "Fabrication"
       },
       {
@@ -5281,11 +5267,11 @@
         "effective_period": "2024-2025",
         "country_region": "United States",
         "type_and_status": "Subsidy",
-        "numbers": "$3.94B",
+        "numbers": "$1111M",
         "targeted_entities": "Fabrication",
-        "notes": "Intel 18A fabs expanding modernized domestic advanced logic capacity",
+        "notes": "Intel 18A fabs expanding modernized domestic advanced logic capacity. Awarded $3.94B; reduced pro rata to its share of the ~$2.2B Intel received before the remaining $5.7B in unpaid CHIPS grants was converted into the Aug 2025 equity stake (see US Intel Equity Stake row); per-fab split is approximate",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1",
-        "usd_m": 3940.0,
+        "usd_m": 1111.0,
         "focus": "Fabrication"
       },
       {
@@ -5295,11 +5281,11 @@
         "effective_period": "2024-2025",
         "country_region": "United States",
         "type_and_status": "Subsidy",
-        "numbers": "$1.86B",
+        "numbers": "$525M",
         "targeted_entities": "R&D; Fabrication",
-        "notes": "High-NA EUV development facility expanding technology breakthroughs domestically",
+        "notes": "High-NA EUV development facility expanding technology breakthroughs domestically. Awarded $1.86B; reduced pro rata to its share of the ~$2.2B Intel received before the remaining $5.7B in unpaid CHIPS grants was converted into the Aug 2025 equity stake (see US Intel Equity Stake row); per-fab split is approximate",
         "sources": "https://www.nist.gov/chips/chips-america-awards?page=1",
-        "usd_m": 1860.0,
+        "usd_m": 525.0,
         "focus": "R&D"
       },
       {
@@ -5581,6 +5567,20 @@
         "sources": "https://www.nist.gov/news-events/news/2026/07/department-commerce-announces-direct-funding-agreement-bosch-225-million",
         "usd_m": 225.0,
         "focus": "Fabrication"
+      },
+      {
+        "distribution_name": "SK Hynix West Lafayette IN Fab (CHIPS Loan)",
+        "distribution_id": "43",
+        "year_announced": "2024",
+        "effective_period": "2025-2028",
+        "country_region": "United States",
+        "type_and_status": "Loan",
+        "numbers": "$500M",
+        "targeted_entities": "APT",
+        "notes": "Proposed CHIPS loan accompanying the $458M direct funding award for the HBM advanced packaging fab",
+        "sources": "https://www.nist.gov/chips/chips-america-awards?page=1",
+        "usd_m": 500.0,
+        "focus": "APT"
       }
     ]
   },
